@@ -36,7 +36,16 @@ apply-refact hlint stylish-haskell hasktags hoogle
 * With Stack: `stack install apply-refact hlint stylish-haskell hasktags hoogle`
 * Arch Linux Pacman: `pacman -Syu haskell-refact hlint stylish-haskell stylish-haskell hasktags hoogle`
 
+### JavaScript packages
+To work with JavaScript Emacs requires packages:
+```shell
+npm install -g term js-beautify eslint
+```
+
 For Stack to work you also need to have `~/.local/bin` part in `PATH`.
+
+### Shell packages
+To work with `shell` scripts Emacs requires package `shellcheck` for linting.
 
 ### Creating branch
 To foster expansion of this setup and repo, to make sharing of code and config features easier. And to backup and store your configuration in git repository, create branch in this repository.
@@ -50,7 +59,7 @@ Now you are on your branch.
 
 ### Launch Emacs
 
-### (Optional)
+### (Optional) Tutorials
 If you need Vim tutorial, or Spacemacs tutorial, go and have them.
 
 ### Open properties
