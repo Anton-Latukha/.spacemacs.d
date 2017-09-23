@@ -8,6 +8,30 @@
 This setup is both simple to use and very powerful.
 It also incorporates all main features you need to have perfect ebb and flow in the company.
 
+```
+# File tree:
+~/
+  .emacs.d/               <- here goes all Spacemacs setup (which is distribution for Emacs)
+           init.el        <- this is the main Emacs config file (alias to ~/.emacs)
+  .spacemacs.d/           <- here goes Spacemacs configs itself
+               init.el    <- this is the main Spacemacs config file (alias to ~/.spacemacs)
+
+  (.emacs and .spacemacs files avoided on purpose in setup, use according init.el files)
+  (without .emacs and .spacemacs - folders automagically include full setups and configurations, so it all can be stored in two repos, one is upstream Spacemacs distribution, second (*this one) is Spacemacs config and custom code. And deployed on host with single command: git clone. It is as simple as it gets.)
+```
+
+```
+# Git tree/development logic:
+# Is simple user-based branching
+
+  -----Anton-Latukha branch-------------------
+  |
+  |      -----Your branch---^merge -----------
+  |      |                  |            |
+/----------------------------------------.merge-------master
+
+```
+
 ## Installation
 
 ### Emacs
