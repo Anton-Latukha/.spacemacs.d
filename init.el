@@ -66,8 +66,105 @@ values."
      
      git
      
+     ;; Preferences
      
-     ;; See more layers and information on them on: http://spacemacs.org/layers/LAYERS.html
+     ;; spell-checking
+     ;; auto-completion
+     ;; semantic    ; Collection of Emacs Development Environment Tools
+     ;; ipython-notebook
+     ;; == International support
+     ;; unicode-fonts    ; Fonts for any ethnic languages
+     ;; keyboard-layout    ; Support for any keyboard layouts
+     ;; chinese
+     
+     ;; == Programming languages
+     ;; agda
+     ;; asm
+     ;; c-c++
+     ;; clojure
+     ;; common-lisp
+     ;; coq
+     ;; csharp
+     ;; d
+     ;; elixir
+     ;; erlang
+     ;; fsharp
+     ;; go
+     ;; groovy
+     ;; java
+     ;; lua
+     ;; ocaml
+     ;; perl5
+     ;; perl6
+     ;; php
+     ;; purescript
+     ;; python
+     ;; racket
+     ;; ruby
+     ;; rust
+     ;; scala
+     ;; scheme
+     ;; semantic-web    ; Support of Turtle language
+     ;; swift
+     ;; typescript
+     ;; windows-script
+     
+     ;; == Frameworks
+     ;; django
+     ;; react
+     ;; ruby-on-rails
+     
+     ;; Domain Specific Languages (DSL)
+     ;; gpu    ; Languages to work with GPUs
+     ;; major-modes    ; Support of more rare case DSL languages, like Arduino, MATLAB, QML, Vala, Wolfram...
+     ;; plantuml
+     
+     ;; == Markup languages
+     ;; graphviz
+     ;; latex
+     ;; protobuf
+     ;; restructuredtext
+     
+     ;; == Tools
+     ;; ansible
+     ;; dash    ; macOS documentation tool
+     ;; docker
+     ;; nginx
+     ;; node    ; Package manager
+     ;; pandoc
+     ;; pdf-tools
+     ;; puppet
+     ;; restclient
+     ;; salt    ; Configuration management tool
+     ;; shell
+     ;; sphinx    ; Documentation generator by Python
+     ;; systemd
+     ;; terraform
+     ;; tmux
+     ;; transmission    ; Torrent client
+     ;; vagrant
+     
+     ;; == Great
+     ;; slack
+     ;; osx
+     ;; search-engine    ; Support of many search engines
+     ;; elfeed    ; Atom and RSS feeds. Elfeed, a web feeds client
+     ;; evernote
+     ;; spotify
+     ;; twitter
+     ;; nixos
+     ;; floobits    ; Support for pair programming
+     
+     ;; For fun
+     ;; colors    ; Too extreme fancy coloring
+     ;; emoji    ; yes
+     ;; games
+     ;; selectic    ; Typewriter typing sound
+     ;; xkcd    ; xkcd
+     
+     ;;
+     ;; For more layers and info: http://spacemacs.org/layers/LAYERS.html
+     ;;
      ;; ----------------------------------------------------------------
      )
    ;; List of additional packages that will be installed without being
