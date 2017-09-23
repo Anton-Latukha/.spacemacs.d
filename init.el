@@ -67,6 +67,9 @@ values."
      git
 
      ;; Preferences
+     ;;
+     ;; Note: some layers require installed packages on system to work with, and enable some features. Look at documentation at URL mentioned at the end of code section.
+     ;;
 
      ;; spell-checking
      ;; auto-completion
