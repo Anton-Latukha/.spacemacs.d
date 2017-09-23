@@ -48,26 +48,26 @@ values."
      ;; ----------------------------------------------------------------
      ;; Manually configured block
      ;;
-     
+
      ;; Useful to anyone
      syntax-checking
      org    ; Organization mode (outlining, note-taking, TODO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
-     
+
      haskell
      javascript
      shell-scripts
-     
+
      cvs
      html
      markdown
      yaml
-     
+
      sql
-     
+
      git
-     
+
      ;; Preferences
-     
+
      ;; spell-checking
      ;; auto-completion
      ;; semantic    ; Collection of Emacs Development Environment Tools
@@ -76,7 +76,7 @@ values."
      ;; unicode-fonts    ; Fonts for any ethnic languages
      ;; keyboard-layout    ; Support for any keyboard layouts
      ;; chinese
-     
+
      ;; == Programming languages
      ;; agda
      ;; asm
@@ -108,23 +108,23 @@ values."
      ;; swift
      ;; typescript
      ;; windows-script
-     
+
      ;; == Frameworks
      ;; django
      ;; react
      ;; ruby-on-rails
-     
+
      ;; Domain Specific Languages (DSL)
      ;; gpu    ; Languages to work with GPUs
      ;; major-modes    ; Support of more rare case DSL languages, like Arduino, MATLAB, QML, Vala, Wolfram...
      ;; plantuml
-     
+
      ;; == Markup languages
      ;; graphviz
      ;; latex
      ;; protobuf
      ;; restructuredtext
-     
+
      ;; == Tools
      ;; ansible
      ;; dash    ; macOS documentation tool
@@ -143,7 +143,7 @@ values."
      ;; tmux
      ;; transmission    ; Torrent client
      ;; vagrant
-     
+
      ;; == Great
      ;; slack
      ;; osx
@@ -154,14 +154,14 @@ values."
      ;; twitter
      ;; nixos
      ;; floobits    ; Support for pair programming
-     
+
      ;; For fun
      ;; colors    ; Too extreme fancy coloring
      ;; emoji    ; yes
      ;; games
      ;; selectic    ; Typewriter typing sound
      ;; xkcd    ; xkcd
-     
+
      ;;
      ;; For more layers and info: http://spacemacs.org/layers/LAYERS.html
      ;;
@@ -437,3 +437,17 @@ you should place your code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (yaml-mode web-mode web-beautify tagedit sql-indent slim-mode scss-mode sass-mode pug-mode livid-mode skewer-mode simple-httpd less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc insert-shebang helm-css-scss haml-mode fish-mode emmet-mode coffee-mode ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline smeargle restart-emacs rainbow-delimiters popwin persp-mode pcre2el paradox orgit org-projectile org-present org-pomodoro org-download org-bullets open-junk-file neotree move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum linum-relative link-hint intero info+ indent-guide hungry-delete htmlize hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-hoogle helm-gitignore helm-flx helm-descbinds helm-ag haskell-snippets google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flycheck-pos-tip flycheck-haskell flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word company-ghci company-ghc column-enforce-mode cmm-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
