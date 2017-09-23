@@ -36,21 +36,26 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
+     helm    ; Provides an easy-to-use API for developers wishing to build their own Helm applications in Emacs, powerful search tools and dozens of already built-in commands providing completion to almost everything. Emacs framework for incremental completions and narrowing selections.
      ;; auto-completion
      ;; better-defaults    ; Better keybindings for Emacs hotkey mode (in config contrary Vim bindings used
      emacs-lisp
-     ;; git
-     ;; markdown
-     ;; org    ; Organization mode (outlining, note-taking, TODO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     ;; syntax-checking
      ;; version-control    ; Emacs support for different VCS (caustion, can collide with separate Git control layers/configs
      ;; ----------------------------------------------------------------
      ;; Manually configured block
+     ;;
+     
+     ;; Useful to anyone
+     ;; syntax-checking
+     ;; org    ; Organization mode (outlining, note-taking, TODO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
+     ;; markdown
+     ;; git
+
+     
      ;; ----------------------------------------------------------------
      )
    ;; List of additional packages that will be installed without being
