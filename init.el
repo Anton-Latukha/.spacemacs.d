@@ -66,6 +66,8 @@ values."
      
      git
      
+     
+     ;; See more layers and information on them on: http://spacemacs.org/layers/LAYERS.html
      ;; ----------------------------------------------------------------
      )
    ;; List of additional packages that will be installed without being
