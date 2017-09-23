@@ -22,13 +22,16 @@ It also incorporates all main features you need to have perfect ebb and flow in 
 
 ```
 # Git tree/development logic:
-# Is simple user-based branching
+# Is simple user-based branching with cherry-picking commits from your branch
+# Or feature-based branch for pull request
 
   -----Anton-Latukha branch-------------------
   |
-  |      -----Your branch---^merge -----------
+  |
+  |      -----Your branch---^merge------------
   |      |                  |            |
-/----------------------------------------.merge-------master
+  |      |                  |            |
+/----------------------------------------.cherry-pick-----master
 
 ```
 
