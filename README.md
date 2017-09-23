@@ -75,7 +75,7 @@ If you have suggestions to default setup, create issue/pull request to repositor
 #### Commit to branch
 Store setup in your branch:
 ```shell
-git push -u <your_github_username>
+git push -u origin <your_github_username>
 # -u to create branch on remote and then push
 ```
 
