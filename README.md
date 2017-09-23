@@ -1,6 +1,7 @@
 ﻿## Spacemacs setup
 
-This setup is both simple a\to use and powerful. And incorporates all main features you need to casually worn in company.
+This setup is both simple to use and very powerful.
+It also incorporates all main features you need to have perfect ebb and flow in the company.
 
 ### Installation
 
@@ -21,6 +22,16 @@ git clone git@github.com:serokell/spacemacs-setup.git ~/.spacemacs.d
 ```
 
 Now you made setup.
+
+#### Haskell packages
+To work with Haskell in Emacs you need to have this packages installed:
+```
+apply-refact hlint stylish-haskell hasktags hoogle
+```
+* With Stack: `stack install apply-refact hlint stylish-haskell hasktags hoogle`
+* Arch Linux Pacman: `pacman -Syu haskell-refact hlint stylish-haskell stylish-haskell hasktags hoogle`
+
+And then also check PATH have `~/.local/bin` for Stack to work.
 
 #### Creating branch
 To foster develpment and polish of our setup, to make sharing of code easier. And to backup and store your configuration in git repository, create branch in this repository.
