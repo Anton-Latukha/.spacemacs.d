@@ -311,6 +311,10 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; ----------------------------------------------------------------
   ;; Manually configured block
+  ;;
+  ;; Workaround for Spacemacs stable Version 0.200.9 #9549 bug (Symbol's value as variable is void: helm-bookmark-map)
+  (require 'helm-bookmark)
+  ;;
   ;; ----------------------------------------------------------------
   )
 
