@@ -2,7 +2,7 @@
 <a name="top"></a>
 <a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg" alt="Made with Spacemacs"></a><a href="http://www.twitter.com/spacemacs"><img src="http://i.imgur.com/tXSoThF.png" alt="Twitter" align="right"></a><br>
 ***
-<p align="center"><img src="/doc/img/title2.png" alt="Spacemacs"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/syl20bnr/spacemacs/master/doc/img/title2.png" alt="Spacemacs"/></p>
 <p align="center">
 
 This setup is both simple to use and very powerful.
