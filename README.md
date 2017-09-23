@@ -14,39 +14,39 @@ It also incorporates all main features you need to have perfect ebb and flow in 
 Setup Emacs.
 
 ### Spacemacs distribution
-You need to setup [Spacemacs](https://github.com/syl20bnr/spacemacs) official way, but do not launch it, until we do setup from company. (It would work eather way, but it is cleaner not to have `~/.spacemacs`, and have `~/.spacemacs.d/init.el` instead. Or you can clean `~/.spacemacs`` afterwards)
+_Note: do not launch Emacs until we get to 'Launch Emacs'. It would work in the end properly anyway. But it is cleaner not to have `~/.spacemacs`, and have `~/.spacemacs.d/init.el` instead. Or you can clean `~/.spacemacs`` afterwards)_
 
-To install Spacemacs:
+You need to setup [Spacemacs](https://github.com/syl20bnr/spacemacs) official way:
 ```shell
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 ```
 
-### Spacemacs config from company
+### Spacemacs config
 ```shell
 git clone git@github.com:serokell/spacemacs-setup.git ~/.spacemacs.d
 ```
 
-Now you made setup.
+Now you've made the setup.
 
 ### Haskell packages
-To work with Haskell in Emacs you need to have this packages installed:
+Emacs to work with Haskell requires next packages:
 ```
 apply-refact hlint stylish-haskell hasktags hoogle
 ```
 * With Stack: `stack install apply-refact hlint stylish-haskell hasktags hoogle`
 * Arch Linux Pacman: `pacman -Syu haskell-refact hlint stylish-haskell stylish-haskell hasktags hoogle`
 
-And then also check PATH have `~/.local/bin` for Stack to work.
+For Stack to work you also need to have `~/.local/bin` part in `PATH`.
 
 ### Creating branch
-To foster develpment and polish of our setup, to make sharing of code easier. And to backup and store your configuration in git repository, create branch in this repository.
+To foster expansion of this setup and repo, to make sharing of code and config features easier. And to backup and store your configuration in git repository, create branch in this repository.
 
 ```shell
 git checkout -b <your_github_username>
 # -b to create branch, and then checkout on it
 ```
 
-Now you are on your own branch.
+Now you are on your branch.
 
 ### Launch Emacs
 
