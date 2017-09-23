@@ -38,17 +38,17 @@ values."
      ;; ----------------------------------------------------------------
      helm
      ;; auto-completion
-     ;; better-defaults
+     ;; better-defaults    ; Better keybindings for Emacs hotkey mode (in config contrary Vim bindings used
      emacs-lisp
      ;; git
      ;; markdown
-     ;; org
+     ;; org    ; Organization mode (outlining, note-taking, TODO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
-     ;; version-control
+     ;; version-control    ; Emacs support for different VCS (caustion, can collide with separate Git control layers/configs
      ;; ----------------------------------------------------------------
      ;; Manually configured block
      ;; ----------------------------------------------------------------
