@@ -54,6 +54,10 @@ values."
      org    ; Organization mode (outlining, note-taking, TODO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
      markdown
      git
+     
+     haskell
+     javascript
+     shell-scripts
 
      
      ;; ----------------------------------------------------------------
