@@ -66,7 +66,7 @@ apply-refact hlint stylish-haskell hasktags hoogle
 ### JavaScript packages
 To work with JavaScript Emacs requires packages:
 ```shell
-npm install -g term js-beautify eslint
+npm install -g tern js-beautify eslint
 ```
 
 For Stack to work you also need to have `~/.local/bin` part in `PATH`.
