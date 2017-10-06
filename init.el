@@ -118,7 +118,7 @@ values."
      ;; react
      ;; ruby-on-rails
 
-     ;; Domain Specific Languages (DSL)
+     ;; == Domain Specific Languages (DSL)
      ;; gpu    ; Languages to work with GPUs
      ;; major-modes    ; Support of more rare case DSL languages, like Arduino, MATLAB, QML, Vala, Wolfram...
      ;; plantuml
