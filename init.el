@@ -108,7 +108,7 @@ values."
      ;; rust
      ;; scala
      ;; scheme
-     ;; semantic-web    ; Support of Turtle language
+     ;; semantic-web    ; Support for Turtle language
      ;; swift
      ;; typescript
      ;; windows-script
