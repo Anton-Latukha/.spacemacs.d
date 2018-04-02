@@ -433,10 +433,9 @@ you should place your code here."
   ;; ----------------------------------------------------------------
   ;; Manually configured block
   ;;
-  ;; HACK: Workaround for Spacemacs stable Version 0.200.9 #9549 bug (Symbol's value as variable is void: helm-bookmark-map)
-  ;; (require 'helm-bookmark)
   ;;
-  (global-aggressive-indent-mode 1)
+  ;; FIXME: Agressive intendation broken for Haskell
+  ;; (global-aggressive-indent-mode 1)
   (spacemacs/toggle-indent-guide-globally-on)
   ;; WND: Nix layer global mode intendation problem (https://github.com/NixOS/nix-mode/issues/36) by using relativev-intendation
   ;;(eval-after-load 'nix-mode
