@@ -51,7 +51,8 @@ values."
 
      ;; Useful to anyone
      syntax-checking
-     org    ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
+     (org :variables
+          org-enable-org-journal-support t) ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
 
      (haskell :variables
               haskell-enable-hindent t)
