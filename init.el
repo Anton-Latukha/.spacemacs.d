@@ -53,7 +53,8 @@ values."
      syntax-checking
      org    ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
 
-     haskell
+     (haskell :variables
+              haskell-enable-hindent t)
      javascript
      shell-scripts
 
