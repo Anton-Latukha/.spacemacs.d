@@ -145,7 +145,7 @@ values."
      ;; shell
      ;; sphinx    ; Documentation generator by Python
      systemd
-     terraform
+     (terraform :variables terraform-auto-format-on-save t)
      ;; tmux
      ;; transmission    ; Torrent client
      ;; vagrant
