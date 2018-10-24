@@ -43,6 +43,7 @@ This function should only modify configuration layer settings."
      ;; auto-completion
      ;; better-defaults    ; Better keybindings for Emacs hotkey mode (in config contrary Vim bindings used
      emacs-lisp    ; Crusial, Do not disable!
+     neotree
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -330,7 +331,8 @@ It should only modify the values of Spacemacs settings."
    ;;                            :size 13
    ;;                            :weight normal
    ;;                            :width normal
-   ;;                            :powerline-scale 1.1)
+   ;;                            :powerline-scale 1.1
+   ;;                            )
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
 
