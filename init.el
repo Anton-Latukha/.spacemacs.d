@@ -138,7 +138,7 @@ This function should only modify configuration layer settings."
 
      ;; == Tools
      ansible
-     ;; dash    ; macOS documentation tool
+     dash    ; Dash macOS & Zeal offline documentation tools
      docker
      ;; nginx
      ;; node    ; Package manager
