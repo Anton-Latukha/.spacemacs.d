@@ -59,7 +59,8 @@ This function should only modify configuration layer settings."
           org-enable-org-journal-support t) ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
 
      (haskell :variables
-              haskell-enable-hindent t)
+              haskell-enable-hindent t
+              )
      javascript
      shell-scripts
 
@@ -161,13 +162,13 @@ This function should only modify configuration layer settings."
      ;; search-engine    ; Support of many search engines
      ;; elfeed    ; Atom and RSS feeds. Elfeed, a web feeds client
      ;; evernote
-     ;; spotify
+     spotify
      ;; twitter
      nixos
      ;; floobits    ; Support for pair programming
 
      ;; For fun
-     ;; colors    ; Too extreme fancy coloring
+     colors    ; Too extreme fancy coloring
      ;; emoji    ; yes :satisfied:. But caution, it going to conflict with org-mode ':' symbol in time tracking
      ;; games
      ;; selectic    ; Typewriter typing sound
