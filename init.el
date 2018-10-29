@@ -588,6 +588,7 @@ before packages are loaded."
   ;; FIXME: Agressive intendation broken for Haskell
   ;; (global-aggressive-indent-mode 1)
   (spacemacs/toggle-indent-guide-globally-on)
+  (spacemacs/toggle-truncate-lines-off)
   ;; WND: Nix layer global mode intendation problem (https://github.com/NixOS/nix-mode/issues/36) by using relativev-intendation
   ;;(eval-after-load 'nix-mode
   ;;  (add-hook 'nix-mode-hook
