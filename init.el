@@ -600,6 +600,7 @@ before packages are loaded."
   ;; ----------------------------------------------------------------
   (setq org-journal-dir "~/org/journal/")
   (setq org-journal-file-format "%Y-%m-%d") ;; Change to file format from %Y%m%d to ISO
+  (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
