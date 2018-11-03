@@ -56,7 +56,10 @@ This function should only modify configuration layer settings."
      ;; Useful to anyone
      syntax-checking
      (org :variables
-          org-enable-org-journal-support t) ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
+          org-enable-org-journal-support t ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
+          org-journal-dir "~/org/journal/"
+          org-journal-file-format "%Y-%m-%d"
+          )
 
      (haskell :variables
               haskell-enable-hindent t
@@ -598,8 +601,6 @@ before packages are loaded."
   ;;  (lambda ()
   ;;  (setq-local indent-line-function #'indent-relative))))
   ;; ----------------------------------------------------------------
-  (setq org-journal-dir "~/org/journal/")
-  (setq org-journal-file-format "%Y-%m-%d") ;; Change to file format from %Y%m%d to ISO
   (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)
   )
 
