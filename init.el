@@ -57,6 +57,10 @@ This function should only modify configuration layer settings."
      syntax-checking
      (org :variables
           org-enable-org-journal-support t ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
+          org-agenda-files '(
+                             "~/org"
+                             "~/org/brain"
+                             )
           org-journal-dir "~/org/journal/"
           org-journal-file-format "%Y-%m-%d"
           )
