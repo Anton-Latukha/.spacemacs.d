@@ -61,6 +61,9 @@ This function should only modify configuration layer settings."
                              "~/org"
                              "~/org/brain"
                              )
+          org-highest-priority ?A
+          org-default-priority ?E
+          org-lowest-priority ?E
           org-journal-dir "~/org/journal/"
           org-journal-file-format "%Y-%m-%d"
           )
