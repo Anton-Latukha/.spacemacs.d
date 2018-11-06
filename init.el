@@ -85,7 +85,17 @@ This function should only modify configuration layer settings."
 
      sql
 
-     git
+     (git :variables
+          magit-repository-directories '(
+                                         ("~/src/" . 3)
+                                         ("/etc/nixos/" . 1)
+                                         ("/btrfs/important/Personal/Technical/Git/" . 3)
+                                         ("/btrfs/important/Personal/Technical/Experiments/" . 3)
+                                         ("~/.emacs.d" . 0)
+                                         ("~/.spacemacs.d" . 1)
+                                         ("~/org" . 2)
+                                         )
+          )
 
 
      ;; Preferences
