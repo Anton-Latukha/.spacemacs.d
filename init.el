@@ -64,6 +64,7 @@ This function should only modify configuration layer settings."
           org-highest-priority ?A
           org-default-priority ?E
           org-lowest-priority ?E
+          org-agenda-todo-list-sublevels nil ;; do not include sublevel TODOs into agenda result
           org-todo-keywords '((sequence "TODO" "WAITING" "IN-PROGRESS" "REVIEW" "|" "DONE" "DELEGATED"))
           org-journal-dir "~/org/journal/"
           org-journal-file-format "%Y-%m-%d"
