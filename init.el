@@ -180,7 +180,7 @@ This function should only modify configuration layer settings."
      ;; puppet
      ;; restclient
      ;; salt    ; Configuration management tool
-     ;; shell
+     shell
      ;; sphinx    ; Documentation generator by Python
      systemd
      (terraform :variables terraform-auto-format-on-save t)
