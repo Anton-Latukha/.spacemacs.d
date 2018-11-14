@@ -170,7 +170,10 @@ This function should only modify configuration layer settings."
 
      ;; == Tools
      ansible
-     dash    ; Dash macOS & Zeal offline documentation tools
+     ( dash :variables ; Dash macOS & Zeal offline documentation tools
+            helm-dash-docset-newpath "~/.local/share/Zeal/Zeal/docsets"
+            )
+
      docker
      ;; nginx
      ;; node    ; Package manager
