@@ -74,6 +74,9 @@ This function should only modify configuration layer settings."
                                    "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
 	                                ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
                                    "* [[%:link][%:description]] %?")
+                                  ;;("w" "Web site"
+                                  ;;entry (file+olp "~/org/inbox.org" "Web")
+                                  ;;"* %c :website:\n%U %?%:initial")
                                   )
           )
 
@@ -232,6 +235,8 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(
                                       ;; 'pocket-reader
                                       ;; 'eww
+                                      ;;'s ;; Add string manipulation library particulatry for org-protocol-capture.el
+                                      ;;'org-protocol
                                       )
 
    ;; A list of packages that cannot be updated.
@@ -645,6 +650,8 @@ before packages are loaded."
 
   (require 'org-capture) ;; For org-protocol
   (require 'org-protocol) ;; For org-protocol
+  ;;(autoload 'org-protocol-capture-html "~/.spacemacs.d/org-protocol-capture-html.el") ;; Try to lazy load the org-protocol-capture handler https://github.com/alphapapa/org-protocol-capture-html
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
