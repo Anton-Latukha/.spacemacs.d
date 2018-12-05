@@ -69,6 +69,12 @@ This function should only modify configuration layer settings."
           org-todo-keywords '((sequence "TODO" "WAITING" "IN-PROGRESS" "REVIEW" "|" "DONE" "DELEGATED"))
           org-journal-dir "~/org/journal/"
           org-journal-file-format "%Y-%m-%d"
+          org-capture-templates '(
+	                                ("p" "Protocol" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
+                                   "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+	                                ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
+                                   "* [[%:link][%:description]] %?")
+                                  )
           )
 
      (haskell :variables
@@ -636,6 +642,9 @@ before packages are loaded."
   ;; ----------------------------------------------------------------
   (add-hook 'haskell-mode-hook 'turn-on-haskell-unicode-input-method)
   (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)
+
+  (require 'org-capture) ;; For org-protocol
+  (require 'org-protocol) ;; For org-protocol
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
