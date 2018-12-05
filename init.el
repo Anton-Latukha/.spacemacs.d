@@ -170,7 +170,7 @@ This function should only modify configuration layer settings."
 
      ;; == Tools
      ansible
-     ( dash :variables ; Dash macOS & Zeal offline documentation tools
+     (dash :variables ; Dash macOS & Zeal offline documentation tools
             helm-dash-docset-newpath "~/.local/share/Zeal/Zeal/docsets"
             )
 
@@ -624,7 +624,7 @@ before packages are loaded."
   ;; Manually configured block
   ;;
   ;;
-  ;; FIXME: Agressive intendation broken for Haskell
+  ;; FIXME: Agressive indentation broken for Haskell
   ;; (global-aggressive-indent-mode 1)
   (spacemacs/toggle-indent-guide-globally-on)
   (spacemacs/toggle-truncate-lines-off)
