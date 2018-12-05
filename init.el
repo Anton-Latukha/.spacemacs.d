@@ -58,8 +58,8 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-org-journal-support t ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
           org-agenda-files '(
-                             "~/org"
-                             "~/org/brain"
+                             "~/org/"
+                             "~/org/brain/"
                              )
           org-highest-priority ?A
           org-default-priority ?E
