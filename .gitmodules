@@ -1,0 +1,3 @@
+[submodule "lisp/Emacs-Persistent-Overlays"]
+	path = lisp/Emacs-Persistent-Overlays
+	url = https://github.com/mneilly/Emacs-Persistent-Overlays
