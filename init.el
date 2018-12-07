@@ -679,18 +679,18 @@ before packages are loaded."
                       (outline-flag-region start (point-at-eol) t)
                     (user-error msg))))))))))
 
-  ;; ;;;;
-  ;; ;;;; This once was working org-protocol link capture with:
-  ;; ;;;;
-  ;; (require 'org-capture) ;; For org-protocol
-  ;; (require 'org-protocol) ;; For org-protocol
-  ;; (setq org-capture-templates '(
-  ;;                               ("p" "Protocol" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
-  ;;                                "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
-  ;;                               ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
-  ;;                                "* [[%:link][%:description]] %?")
-  ;;                               )
-  ;;       )
+  ;;;;
+  ;;;; This is working org-protocol link capture with:
+  ;;;;
+  (require 'org-capture) ;; For org-protocol
+  (require 'org-protocol) ;; For org-protocol
+  (setq org-capture-templates `(
+	                              ("p" "Protocol" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
+                                 "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+	                              ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
+                                 "* [[%:link][%:description]] %?")
+                                )
+        )
 
   ;; ;;;;
   ;; ;;;; This tries to make org-protocol work as a Pocket capture with pandoc: https://github.com/alphapapa/org-protocol-capture-html
@@ -698,7 +698,7 @@ before packages are loaded."
   ;; (require 'org-capture) ;; For org-protocol
   ;; (require 'org-protocol) ;; For org-protocol
   ;; (require 'org-protocol-capture-html) ;; Try to lazy load the org-protocol-capture handler https://github.com/alphapapa/org-protocol-capture-html
-  ;; (setq org-capture-templates '(
+  ;; (setq org-capture-templates `(
   ;;                               ("w" "Web site" entry
   ;;                                (file "")
   ;;                                "* %a :website:\n\n%U %?\n\n%:initial")
