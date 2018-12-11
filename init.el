@@ -692,6 +692,10 @@ before packages are loaded."
                                 )
         )
 
+  (setq-default tap-width 2)
+  (setq-default evil-shift-width 2)
+  (setq-default python-indent-offset 2)
+
   ;; ;;;;
   ;; ;;;; This tries to make org-protocol work as a Pocket capture with pandoc: https://github.com/alphapapa/org-protocol-capture-html
   ;; ;;;;
