@@ -692,9 +692,25 @@ before packages are loaded."
                                 )
         )
 
-  (setq-default tap-width 2)
-  (setq-default evil-shift-width 2)
-  (setq-default python-indent-offset 2)
+  (defun my-indent-setup (n) ;; Group the setting of indent into one variable 'standard indent'
+    (setq-default standard-indent n)
+    (setq-default 'evil-shift-width 'standard-indent)
+    (defvaralias 'tab-width 'standard-indent)
+    (defvaralias 'cperl-indent-level 'standard-indent)
+    (defvaralias 'python-indent-offset 'standard-indent)
+    ;; java/c/c++
+    (defvaralias 'c-basic-offset 'standard-indent)
+    ;; web development
+    (defvaralias 'coffee-tab-width 'standard-indent) ; coffeescript
+    (defvaralias 'javascript-indent-level 'standard-indent) ; javascript-mode
+    (defvaralias 'js-indent-level 'standard-indent) ; js-mode
+    (defvaralias 'js2-basic-offset 'standard-indent) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
+    (defvaralias 'web-mode-markup-indent-offset 'standard-indent) ; web-mode, html tag in html file
+    (defvaralias 'web-mode-css-indent-offset 'standard-indent) ; web-mode, css in html file
+    (defvaralias 'web-mode-code-indent-offset 'standard-indent) ; web-mode, js code in html file
+    (defvaralias 'css-indent-offset 'standard-indent) ; css-mode
+    )
+  (my-indent-setup 2)
 
   ;; ;;;;
   ;; ;;;; This tries to make org-protocol work as a Pocket capture with pandoc: https://github.com/alphapapa/org-protocol-capture-html
