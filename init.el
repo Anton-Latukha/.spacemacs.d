@@ -226,7 +226,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(
                                       ;; 'pocket-reader
                                       ;; 'eww
-                                      ;; 's ;; Add string manipulation library particulatry for org-protocol-capture.el
+                                      's ;; Add string manipulation library particulatry for org-protocol-capture.el
                                       ;; 'org-protocol
                                       )
 
@@ -685,7 +685,7 @@ before packages are loaded."
   (require 'org-capture) ;; For org-protocol
   (require 'org-protocol) ;; For org-protocol
   (setq org-capture-templates `(
-	                              ("p" "Protocol" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
+                                ("p" "Protocol" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
                                  "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
 	                              ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
                                  "* [[%:link][%:description]] %?")
@@ -719,8 +719,7 @@ before packages are loaded."
   ;; (require 'org-protocol) ;; For org-protocol
   ;; (require 'org-protocol-capture-html) ;; Try to lazy load the org-protocol-capture handler https://github.com/alphapapa/org-protocol-capture-html
   ;; (setq org-capture-templates `(
-  ;;                               ("w" "Web site" entry
-  ;;                                (file "")
+  ;;                               ("w" "Web site" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
   ;;                                "* %a :website:\n\n%U %?\n\n%:initial")
   ;;                               )
   ;;       )
@@ -770,7 +769,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (evil-mc zeal-at-point yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tide tagedit systemd symon string-inflection sql-indent spotify spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs rainbow-mode rainbow-identifiers rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode prettier-js popwin pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox overseer orgit org-projectile org-present org-pomodoro org-mime org-journal org-download org-bullets org-brain open-junk-file nix-mode neotree nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode link-hint json-navigator js2-refactor js-doc jinja2-mode insert-shebang indent-guide importmagic impatient-mode hungry-delete hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-spotify-plus helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-nixos-options helm-mode-manager helm-make helm-hoogle helm-gitignore helm-git-grep helm-flx helm-descbinds helm-dash helm-css-scss helm-company helm-c-yasnippet helm-ag haskell-snippets google-translate golden-ratio gnuplot gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy font-lock+ flyspell-correct-helm flycheck-pos-tip flycheck-haskell flycheck-bashate flx-ido fish-mode fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline dockerfile-mode docker diminish define-word cython-mode csv-mode counsel-projectile company-web company-terraform company-tern company-statistics company-shell company-nixos-options company-ghci company-cabal company-ansible company-anaconda column-enforce-mode color-identifiers-mode cmm-mode clean-aindent-mode centered-cursor-mode auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile ansible-doc ansible aggressive-indent ace-window ace-link ace-jump-helm-line ac-ispell))))
+    (yasnippet-snippets tide org-brain nix-mode live-py-mode helm-spotify-plus doom-modeline docker anaconda-mode counsel swiper ivy smartparens flycheck company helm helm-core magit ghub markdown-mode org-plus-contrib emoji-cheat-sheet-plus company-emoji flyspell-correct-helm flyspell-correct auto-dictionary helm-company helm-c-yasnippet fuzzy company-web web-completion-data company-tern dash-functional tern company-statistics company-shell company-cabal auto-yasnippet ac-ispell auto-complete csv-mode yaml-mode web-mode web-beautify tagedit sql-indent slim-mode scss-mode sass-mode pug-mode livid-mode skewer-mode simple-httpd less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc insert-shebang helm-css-scss haml-mode fish-mode emmet-mode coffee-mode ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline smeargle restart-emacs rainbow-delimiters popwin persp-mode pcre2el paradox orgit org-projectile org-present org-pomodoro org-download org-bullets open-junk-file neotree move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum linum-relative link-hint intero info+ indent-guide hungry-delete htmlize hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-hoogle helm-gitignore helm-flx helm-descbinds helm-ag haskell-snippets google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flycheck-pos-tip flycheck-haskell flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word company-ghci company-ghc column-enforce-mode cmm-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
