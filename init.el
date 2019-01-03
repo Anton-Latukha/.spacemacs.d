@@ -713,6 +713,16 @@ before packages are loaded."
     )
   (my-indent-setup 2)
 
+  ;; (setq org-tags-column '(-111))    ;; If negative - align right margin to column number static approach
+  ;;;;
+  ;;;; This aligns org-mode tags to the window border
+  (add-hook 'focus-in-hook
+            (lambda () (progn
+                         (setq org-tags-column (- 7 (window-body-width)))) (org-align-all-tags)))
+  (add-hook 'focus-out-hook
+            (lambda () (progn
+                         (setq org-tags-column (- 7 (window-body-width)))) (org-align-all-tags)))
+
   ;; ;;;;
   ;; ;;;; This tries to make org-protocol work as a Pocket capture with pandoc: https://github.com/alphapapa/org-protocol-capture-html
   ;; ;;;;
