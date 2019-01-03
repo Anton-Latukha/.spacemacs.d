@@ -43,6 +43,7 @@ This function should only modify configuration layer settings."
      ;; auto-completion
      ;; better-defaults    ; Better keybindings for Emacs hotkey mode (in config contrary Vim bindings used
      emacs-lisp    ; Crusial, Do not disable!
+     multiple-cursors
      neotree
      ;; (shell :variables
      ;;        shell-default-height 30
