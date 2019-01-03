@@ -227,7 +227,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(
                                       ;; 'pocket-reader
                                       ;; 'eww
-                                      's ;; Add string manipulation library particulatry for org-protocol-capture.el
+                                      ;; 's ;; Add string manipulation library particulatry for org-protocol-capture.el
                                       ;; 'org-protocol
                                       )
 
@@ -630,7 +630,7 @@ before packages are loaded."
   ;; FIXME: Agressive indentation broken for Haskell
   ;; (global-aggressive-indent-mode 1)
   (spacemacs/toggle-indent-guide-globally-on)
-  (spacemacs/toggle-truncate-lines-off)
+  (spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines by default
   ;; WND: Nix layer global mode intendation problem (https://github.com/NixOS/nix-mode/issues/36) by using relativev-intendation
   ;;(eval-after-load 'nix-mode
   ;;  (add-hook 'nix-mode-hook
@@ -638,7 +638,7 @@ before packages are loaded."
   ;;  (setq-local indent-line-function #'indent-relative))))
   ;; ----------------------------------------------------------------
   (add-hook 'haskell-mode-hook 'turn-on-haskell-unicode-input-method)
-  (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)
+  (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines in org-mode - wrap them all
 
   ;;;;
   ;;;; This hides :PROPERTIES: in org files
