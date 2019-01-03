@@ -695,21 +695,21 @@ before packages are loaded."
 
   (defun my-indent-setup (n) ;; Group the setting of indent into one variable 'standard indent'
     (setq-default standard-indent n)
-    (setq-default 'evil-shift-width 'standard-indent)
-    (defvaralias 'tab-width 'standard-indent)
-    (defvaralias 'cperl-indent-level 'standard-indent)
-    (defvaralias 'python-indent-offset 'standard-indent)
+    (setq-default evil-shift-width n)
+    (setq-default tab-width n)
+    (setq-default cperl-indent-level n)
+    (setq-default python-indent-offset n)
     ;; java/c/c++
-    (defvaralias 'c-basic-offset 'standard-indent)
+    (setq-default c-basic-offset n)
     ;; web development
-    (defvaralias 'coffee-tab-width 'standard-indent) ; coffeescript
-    (defvaralias 'javascript-indent-level 'standard-indent) ; javascript-mode
-    (defvaralias 'js-indent-level 'standard-indent) ; js-mode
-    (defvaralias 'js2-basic-offset 'standard-indent) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
-    (defvaralias 'web-mode-markup-indent-offset 'standard-indent) ; web-mode, html tag in html file
-    (defvaralias 'web-mode-css-indent-offset 'standard-indent) ; web-mode, css in html file
-    (defvaralias 'web-mode-code-indent-offset 'standard-indent) ; web-mode, js code in html file
-    (defvaralias 'css-indent-offset 'standard-indent) ; css-mode
+    (setq-default coffee-tab-width n) ; coffeescript
+    (setq-default javascript-indent-level n) ; javascript-mode
+    (setq-default js-indent-level n) ; js-mode
+    (setq-default js2-basic-offset n) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
+    (setq-default web-mode-markup-indent-offset n) ; web-mode, html tag in html file
+    (setq-default web-mode-css-indent-offset n) ; web-mode, css in html file
+    (setq-default web-mode-code-indent-offset n) ; web-mode, js code in html file
+    (setq-default css-indent-offset n) ; css-mode
     )
   (my-indent-setup 2)
 
