@@ -690,6 +690,8 @@ before packages are loaded."
                                  "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
 	                              ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
                                  "* [[%:link][%:description]] %?")
+                                ("d" "Dictionary entry" entry (file+headline ,(concat org-directory "/dictionary/dictionary.org") "Inbox")
+                                 "* %^{word}\n%\\1 - %^{phonetic} - %?")
                                 )
         )
 
