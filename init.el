@@ -694,6 +694,8 @@ before packages are loaded."
                                  "* [[%:link][%:description]] %?")
                                 ("d" "Dictionary entry" entry (file ,(concat org-directory "/dictionary/dictionary.org"))
                                  "* %^{word}\n%\\1 - %^{phonetic} - %?")
+                                ("t" "TODO:" entry (file+headline ,(concat org-directory "/brain/Save.org") "Inbox")
+                                 "* TODO: %^{Name} %?")
                                 )
         )
 
