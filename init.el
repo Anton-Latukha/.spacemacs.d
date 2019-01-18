@@ -70,6 +70,7 @@ This function should only modify configuration layer settings."
           org-todo-keywords '((sequence "TODO" "WAITING" "IN-PROGRESS" "REVIEW" "|" "DONE" "DELEGATED"))
           org-journal-dir "~/org/journal/"
           org-journal-file-format "%Y-%m-%d"
+          org-deadline-warning-days 14
           org-deadline-string "DUET:"
           org-scheduled-string "SCHT:"
           )
