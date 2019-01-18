@@ -643,42 +643,44 @@ before packages are loaded."
   ;;;;
   ;;;; This hides :PROPERTIES: in org files
   ;;;;
-  (require 'org) ;; This is dumb copy-paste requirement for :PROPERTIES: drawer hiding to work in org-cycle-hide-drawers
-  (defun org-cycle-hide-drawers (state) ;; Function to hide all :PROPERTIES: drawers. From this thread: https://www.reddit.com/r/emacs/comments/6tewyl/hide_properties_drawer/
-    "Re-hide all drawers after a visibility state change."
-    (when (and (derived-mode-p 'org-mode)
-               (not (memq state '(overview folded contents))))
-      (save-excursion
-        (let* ((globalp (memq state '(contents all)))
-               (beg (if globalp
-                        (point-min)
-                      (point)))
-               (end (if globalp
-                        (point-max)
-                      (if (eq state 'children)
-                          (save-excursion
-                            (outline-next-heading)
-                            (point))
-                        (org-end-of-subtree t)))))
-          (goto-char beg)
-          (while (re-search-forward org-drawer-regexp end t)
-            (save-excursion
-              (beginning-of-line 1)
-              (when (looking-at org-drawer-regexp)
-                (let* ((start (1- (match-beginning 0)))
-                       (limit
-                        (save-excursion
-                          (outline-next-heading)
-                          (point)))
-                       (msg (format
-                             (concat
-                              "org-cycle-hide-drawers:  "
-                              "`:END:`"
-                              " line missing at position %s")
-                             (1+ start))))
-                  (if (re-search-forward "^[ \t]*:END:" limit t)
-                      (outline-flag-region start (point-at-eol) t)
-                    (user-error msg))))))))))
+  ;; This is dumb copy-paste requirement for :PROPERTIES: drawer hiding to work in org-cycle-hide-drawers
+  ;; Function to hide all :PROPERTIES: drawers. From this thread: https://www.reddit.com/r/emacs/comments/6tewyl/hide_properties_drawer/
+  ;; (require 'org)
+  ;; (defun org-cycle-hide-drawers (state)
+  ;; "Re-hide all drawers after a visibility state change."
+  ;; (when (and (derived-mode-p 'org-mode)
+  ;;            (not (memq state '(overview folded contents))))
+  ;;   (save-excursion
+  ;;     (let* ((globalp (memq state '(contents all)))
+  ;;            (beg (if globalp
+  ;;                   (point-min)
+  ;;                   (point)))
+  ;;            (end (if globalp
+  ;;                   (point-max)
+  ;;                   (if (eq state 'children)
+  ;;                     (save-excursion
+  ;;                       (outline-next-heading)
+  ;;                       (point))
+  ;;                     (org-end-of-subtree t)))))
+  ;;       (goto-char beg)
+  ;;       (while (re-search-forward org-drawer-regexp end t)
+  ;;         (save-excursion
+  ;;           (beginning-of-line 1)
+  ;;           (when (looking-at org-drawer-regexp)
+  ;;             (let* ((start (1- (match-beginning 0)))
+  ;;                    (limit
+  ;;                      (save-excursion
+  ;;                        (outline-next-heading)
+  ;;                          (point)))
+  ;;                    (msg (format
+  ;;                           (concat
+  ;;                             "org-cycle-hide-drawers:  "
+  ;;                             "`:END:`"
+  ;;                             " line missing at position %s")
+  ;;                           (1+ start))))
+  ;;               (if (re-search-forward "^[ \t]*:END:" limit t)
+  ;;                 (outline-flag-region start (point-at-eol) t)
+  ;;                 (user-error msg))))))))))
 
   ;;;;
   ;;;; This is working org-protocol link capture with:
