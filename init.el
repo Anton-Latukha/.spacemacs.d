@@ -93,6 +93,11 @@ This function should only modify configuration layer settings."
           org-enforce-todo-dependencies t
           ;; Ask for a note when DONE the task
           org-log-done 'note
+          ;; Play sound at start?
+          org-pomodoro-start-sound-p
+          org-pomodoro-start-sound "/home/pyro/.spacemacs.d/.audio/bell.wav"
+          org-pomodoro-finished-sound "/home/pyro/.spacemacs.d/.audio/bell.wav"
+          ;; org-pomodoro-killed-sound 
           )
 
      (haskell :variables
@@ -733,17 +738,17 @@ before packages are loaded."
     ;; java/c/c++
     (setq-default c-basic-offset n)
     ;; web development
-    (setq-default coffee-tab-width n) ; coffeescript
-    (setq-default javascript-indent-level n) ; javascript-mode
-    (setq-default js-indent-level n) ; js-mode
-    (setq-default js2-basic-offset n) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
-    (setq-default web-mode-markup-indent-offset n) ; web-mode, html tag in html file
-    (setq-default web-mode-css-indent-offset n) ; web-mode, css in html file
-    (setq-default web-mode-code-indent-offset n) ; web-mode, js code in html file
-    (setq-default css-indent-offset n) ; css-mode
-    (setq-default sh-basic-offset n) ; shell
-    (setq-default sh-indentation n) ; shell
-    (setq-default smie-indent-basic n) ; shell
+    (setq-default coffee-tab-width n) ;; coffeescript
+    (setq-default javascript-indent-level n) ;; javascript-mode
+    (setq-default js-indent-level n) ;; js-mode
+    (setq-default js2-basic-offset n) ;; js2-mode, in latest js2-mode, it's alias of js-indent-level
+    (setq-default web-mode-markup-indent-offset n) ;; web-mode, html tag in html file
+    (setq-default web-mode-css-indent-offset n) ;; web-mode, css in html file
+    (setq-default web-mode-code-indent-offset n) ;; web-mode, js code in html file
+    (setq-default css-indent-offset n) ;; css-mode
+    (setq-default sh-basic-offset n) ;; shell
+    (setq-default sh-indentation n) ;; shell
+    (setq-default smie-indent-basic n) ;; shell
     )
   (my-indent-setup 2)
 
@@ -814,7 +819,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yasnippet-snippets tide doom-modeline centered-cursor-mode counsel swiper ivy flycheck company window-purpose helm helm-core magit avy visual-fill-column org-plus-contrib hydra emoji-cheat-sheet-plus company-emoji flyspell-correct-helm flyspell-correct auto-dictionary helm-company helm-c-yasnippet fuzzy company-web web-completion-data company-tern dash-functional tern company-statistics company-shell company-cabal auto-yasnippet ac-ispell auto-complete csv-mode yaml-mode web-mode web-beautify tagedit sql-indent slim-mode scss-mode sass-mode pug-mode livid-mode skewer-mode simple-httpd less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc insert-shebang helm-css-scss haml-mode fish-mode emmet-mode coffee-mode ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline smeargle restart-emacs rainbow-delimiters popwin persp-mode pcre2el paradox orgit org-projectile org-present org-pomodoro org-download org-bullets open-junk-file neotree move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum linum-relative link-hint intero info+ indent-guide hungry-delete htmlize hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-hoogle helm-gitignore helm-flx helm-descbinds helm-ag haskell-snippets google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flycheck-pos-tip flycheck-haskell flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word company-ghci company-ghc column-enforce-mode cmm-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (zeal-at-point yasnippet-snippets yapfify xterm-color writeroom-mode visual-fill-column treemacs-projectile treemacs-evil treemacs ht pfuture tide typescript-mode systemd symon string-inflection spotify spaceline-all-the-icons powerline shell-pop rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort prettier-js pippel pipenv pip-requirements password-generator spinner overseer org-category-capture alert log4e gntp org-mime org-journal org-brain nix-mode nameless multi-term markdown-mode magit-svn live-py-mode json-navigator hierarchy jinja2-mode importmagic epc ctable concurrent deferred impatient-mode parent-mode helm-xref helm-spotify-plus multi helm-pydoc helm-purpose window-purpose imenu-list helm-org-rifle helm-nixos-options request helm-git-grep helm-dash gitignore-templates gitignore-mode pos-tip flycheck-bashate flycheck flx evil-org magit git-commit with-editor evil-lion iedit evil-goggles evil-cleverparens smartparens paredit anzu eshell-z eshell-prompt-extras esh-help editorconfig doom-modeline eldoc-eval shrink-path all-the-icons memoize dockerfile-mode docker tablist magit-popup docker-tramp cython-mode counsel-projectile projectile counsel swiper ivy pkg-info epl company-terraform terraform-mode hcl-mode company-nixos-options nixos-options haskell-mode company-ansible company-anaconda company color-identifiers-mode centered-cursor-mode yasnippet packed ansible-doc ansible anaconda-mode pythonic f dash s helm avy helm-core popup org-plus-contrib hydra font-lock+ evil goto-chg undo-tree dotenv-mode diminish bind-map bind-key async emoji-cheat-sheet-plus company-emoji flyspell-correct-helm flyspell-correct auto-dictionary helm-company helm-c-yasnippet fuzzy company-web web-completion-data company-tern dash-functional tern company-statistics company-shell company-cabal auto-yasnippet ac-ispell auto-complete csv-mode yaml-mode web-mode web-beautify tagedit sql-indent slim-mode scss-mode sass-mode pug-mode livid-mode skewer-mode simple-httpd less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc insert-shebang helm-css-scss haml-mode fish-mode emmet-mode coffee-mode ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline smeargle restart-emacs rainbow-delimiters popwin persp-mode pcre2el paradox orgit org-projectile org-present org-pomodoro org-download org-bullets open-junk-file neotree move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum linum-relative link-hint intero info+ indent-guide hungry-delete htmlize hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-hoogle helm-gitignore helm-flx helm-descbinds helm-ag haskell-snippets google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flycheck-pos-tip flycheck-haskell flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word company-ghci company-ghc column-enforce-mode cmm-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
