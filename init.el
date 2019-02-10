@@ -94,10 +94,11 @@ This function should only modify configuration layer settings."
           ;; Ask for a note when DONE the task
           org-log-done 'note
           ;; Play sound at start?
-          org-pomodoro-start-sound-p
+          org-pomodoro-start-sound-p t
           org-pomodoro-start-sound "/home/pyro/.spacemacs.d/.audio/bell.wav"
           org-pomodoro-finished-sound "/home/pyro/.spacemacs.d/.audio/bell.wav"
-          ;; org-pomodoro-killed-sound 
+          org-pomodoro-killed-sound-p t
+          org-pomodoro-killed-sound "/home/pyro/.spacemacs.d/.audio/tick.wav"
           )
 
      (haskell :variables
