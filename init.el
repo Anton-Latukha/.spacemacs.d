@@ -719,6 +719,8 @@ before packages are loaded."
                                  "* %^{word}\n%\\1 - %^{phonetic} - %?")
                                 ("t" "TODO:" entry (file+headline ,(concat org-directory "/brain/Save.org") "Inbox")
                                  "* TODO: %^{Name} %?")
+                                ("n" "Note" entry (file+headline ,(concat org-directory "/brain/Note.org") "Inbox")
+                                 "* %^{Name} %?")
                                 )
         )
 
