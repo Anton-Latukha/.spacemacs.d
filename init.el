@@ -89,6 +89,8 @@ This function should only modify configuration layer settings."
                                    ("OGDE:" . (:foreground "white" :weight bold))
                                    ("ELEG:" . (:foreground "grey" :weight bold))
                                    )
+          ;; Don't allow to DONE the task, until all TODO siblings are DONE
+          org-enforce-todo-dependencies t
           )
 
      (haskell :variables
