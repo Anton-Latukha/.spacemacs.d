@@ -98,7 +98,7 @@ This function should only modify configuration layer settings."
           magit-repolist-columns '(
                                    ("Name"    25 magit-repolist-column-ident                  ())
                                    ("Version" 25 magit-repolist-column-version                ())
-                                   ("D"        1 magit-repolist-column-dirty                  ())
+                                   ("Dirty"    5 magit-repolist-column-dirty                  ())
                                    ("L<U"      3 magit-repolist-column-unpulled-from-upstream ((:right-align t)))
                                    ("L>U"      3 magit-repolist-column-unpushed-to-upstream   ((:right-align t)))
                                    ("Path"    99 magit-repolist-column-path                   ())
