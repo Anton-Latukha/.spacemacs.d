@@ -712,6 +712,9 @@ before packages are loaded."
     (setq-default web-mode-css-indent-offset n) ; web-mode, css in html file
     (setq-default web-mode-code-indent-offset n) ; web-mode, js code in html file
     (setq-default css-indent-offset n) ; css-mode
+    (setq-default sh-basic-offset n) ; shell
+    (setq-default sh-indentation n) ; shell
+    (setq-default smie-indent-basic n) ; shell
     )
   (my-indent-setup 2)
 
