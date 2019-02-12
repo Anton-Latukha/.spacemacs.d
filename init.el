@@ -686,11 +686,11 @@ before packages are loaded."
   (require 'org-capture) ;; For org-protocol
   (require 'org-protocol) ;; For org-protocol
   (setq org-capture-templates `(
-                                ("p" "Protocol" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
+                                ("p" "Protocol" entry (file+headline ,(concat org-directory "/brain/Save.org") "Bookmarks save")
                                  "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
-	                              ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
+	                              ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/Save.org") "Bookmarks save")
                                  "* [[%:link][%:description]] %?")
-                                ("d" "Dictionary entry" entry (file ,(concat org-directory "/dictionary/dictionary.org") "Inbox")
+                                ("d" "Dictionary entry" entry (file ,(concat org-directory "/dictionary/dictionary.org"))
                                  "* %^{word}\n%\\1 - %^{phonetic} - %?")
                                 )
         )
