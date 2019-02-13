@@ -91,6 +91,8 @@ This function should only modify configuration layer settings."
                                    )
           ;; Don't allow to DONE the task, until all TODO siblings are DONE
           org-enforce-todo-dependencies t
+          ;; Ask for a note when DONE the task
+          org-log-done 'note
           )
 
      (haskell :variables
