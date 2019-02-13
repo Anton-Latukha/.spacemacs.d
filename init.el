@@ -72,6 +72,10 @@ This function should only modify configuration layer settings."
           org-journal-file-format "%Y-%m-%d"
           ;; start agenda weekly on the current day
           org-agenda-start-on-weekday nil
+          ;; Skip items having a deadline and done
+          org-agenda-skip-deadline-if-done t
+          ;; Skip items haing a schedule and done
+          org-agenda-skip-scheduled-if-done t
           org-deadline-warning-days 14
           org-deadline-string "DUET:"
           org-scheduled-string "SCHT:"
