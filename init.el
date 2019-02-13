@@ -79,6 +79,16 @@ This function should only modify configuration layer settings."
           org-deadline-warning-days 14
           org-deadline-string "DUET:"
           org-scheduled-string "SCHT:"
+          org-todo-keyword-faces '(
+                                   ;; Func list-colors-display to see color names
+                                   ("TODO:" . (:foreground "dark orange" :weight bold))
+                                   ("PAUS:" . (:foreground "grey" :weight bold))
+                                   ("ROGR:" . (:foreground "blue" :weight bold))
+                                   ("VIEW:" . (:foreground "green" :weight bold))
+                                   ("DONE:" . (:foreground "white" :weight bold))
+                                   ("OGDE:" . (:foreground "white" :weight bold))
+                                   ("ELEG:" . (:foreground "grey" :weight bold))
+                                   )
           )
 
      (haskell :variables
