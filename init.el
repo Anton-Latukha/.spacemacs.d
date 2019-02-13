@@ -67,7 +67,7 @@ This function should only modify configuration layer settings."
           org-lowest-priority ?E
           org-tags-match-list-sublevels 'indented ;; in tags search indent sublevels of entries
           org-agenda-todo-list-sublevels nil ;; do not include sublevel TODOs into agenda result
-          org-todo-keywords '((sequence "TODO:" "PAUS:" "PROC:" "REVI:" "|" "DONE:" "DODG:" "DELE:"))
+          org-todo-keywords '((sequence "TODO:(t!)" "PAUS:(p@)" "ROGR:(r@)" "VIEW:(v!)" "|" "DONE:(d!)" "ODGE:(o!)" "ELEG:(e@)" "CANS:(c@)"))
           org-journal-dir "~/org/journal/"
           org-journal-file-format "%Y-%m-%d"
           ;; start agenda weekly on the current day
