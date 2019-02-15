@@ -58,10 +58,11 @@ This function should only modify configuration layer settings."
      syntax-checking
      (org :variables
           org-enable-org-journal-support t ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
-          org-agenda-files '(
-                             "~/org/brain/Flow.org"
-                             "~/org/brain/Save.org"
-                             )
+          org-agenda-files
+          '(
+            "~/org/brain/Flow.org"
+            "~/org/brain/Save.org"
+            )
           org-highest-priority ?A
           org-default-priority ?E
           org-lowest-priority ?E
@@ -79,16 +80,18 @@ This function should only modify configuration layer settings."
           org-deadline-warning-days 14
           org-deadline-string "DUET:"
           org-scheduled-string "SCHT:"
-          org-todo-keyword-faces '(
-                                   ;; Func list-colors-display to see color names
-                                   ("TODO:" . (:foreground "dark orange" :weight bold))
-                                   ("PAUS:" . (:foreground "grey" :weight bold))
-                                   ("ROGR:" . (:foreground "blue" :weight bold))
-                                   ("VIEW:" . (:foreground "green" :weight bold))
-                                   ("DONE:" . (:foreground "white" :weight bold))
-                                   ("OGDE:" . (:foreground "white" :weight bold))
-                                   ("ELEG:" . (:foreground "grey" :weight bold))
-                                   )
+          org-todo-keyword-faces
+          '(
+            ;; Func list-colors-display to see color names
+            ("TODO:" . (:foreground "dark orange" :weight bold))
+            ("PAUS:" . (:foreground "grey" :weight bold))
+            ("ROGR:" . (:foreground "blue" :weight bold))
+            ("VIEW:" . (:foreground "green" :weight bold))
+            ("DONE:" . (:foreground "white" :weight bold))
+            ("OGDE:" . (:foreground "white" :weight bold))
+            ("ELEG:" . (:foreground "grey" :weight bold))
+            ("CANS:" . (:foreground "black" :weight bold))
+            )
           ;; Don't allow to DONE the task, until all TODO siblings are DONE
           org-enforce-todo-dependencies t
           ;; Ask for a note when DONE the task
@@ -115,23 +118,25 @@ This function should only modify configuration layer settings."
      sql
 
      (git :variables
-          magit-repository-directories '(
-                                         ("~/src/" . 3)
-                                         ("/etc/nixos/" . 1)
-                                         ("/btrfs/important/Personal/Technical/Git/" . 3)
-                                         ("/btrfs/important/Personal/Technical/Experiments/" . 3)
-                                         ("~/.emacs.d" . 0)
-                                         ("~/.spacemacs.d" . 1)
-                                         ("~/org" . 2)
-                                         )
-          magit-repolist-columns '(
-                                   ("Name"    25 magit-repolist-column-ident                  ())
-                                   ("Version" 25 magit-repolist-column-version                ())
-                                   ("Dirty"    5 magit-repolist-column-dirty                  ())
-                                   ("L<U"      3 magit-repolist-column-unpulled-from-upstream ((:right-align t)))
-                                   ("L>U"      3 magit-repolist-column-unpushed-to-upstream   ((:right-align t)))
-                                   ("Path"    99 magit-repolist-column-path                   ())
-                                   )
+          magit-repository-directories
+          '(
+            ("~/src/" . 3)
+            ("/etc/nixos/" . 1)
+            ("/btrfs/important/Personal/Technical/Git/" . 3)
+            ("/btrfs/important/Personal/Technical/Experiments/" . 3)
+            ("~/.emacs.d" . 0)
+            ("~/.spacemacs.d" . 1)
+            ("~/org" . 2)
+            )
+          magit-repolist-columns
+          '(
+            ("Name"    25 magit-repolist-column-ident                  ())
+            ("Version" 25 magit-repolist-column-version                ())
+            ("Dirty"    5 magit-repolist-column-dirty                  ())
+            ("L<U"      3 magit-repolist-column-unpulled-from-upstream ((:right-align t)))
+            ("L>U"      3 magit-repolist-column-unpushed-to-upstream   ((:right-align t)))
+            ("Path"    99 magit-repolist-column-path                   ())
+            )
           )
 
 
@@ -716,18 +721,19 @@ before packages are loaded."
   ;;;;
   (require 'org-capture) ;; For org-protocol
   (require 'org-protocol) ;; For org-protocol
-  (setq org-capture-templates `(
-                                ("p" "Protocol" entry (file+headline ,(concat org-directory "/brain/Save.org") "Bookmarks save")
-                                 "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
-	                              ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/Save.org") "Bookmarks save")
-                                 "* [[%:link][%:description]] %?")
-                                ("d" "Dictionary entry" entry (file ,(concat org-directory "/dictionary/dictionary.org"))
-                                 "* %^{word}\n%\\1 - %^{phonetic} - %?")
-                                ("t" "TODO:" entry (file+headline ,(concat org-directory "/brain/Save.org") "Inbox")
-                                 "* TODO: %^{Name} %?")
-                                ("n" "Note" entry (file+headline ,(concat org-directory "/brain/Notes.org") "Inbox")
-                                 "* %^{Name} %?")
-                                )
+  (setq org-capture-templates
+        `(
+          ("p" "Protocol" entry (file+headline ,(concat org-directory "/brain/Save.org") "Bookmarks save")
+           "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+          ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/Save.org") "Bookmarks save")
+           "* [[%:link][%:description]] %?")
+          ("d" "Dictionary entry" entry (file ,(concat org-directory "/dictionary/dictionary.org"))
+           "* %^{word}\n%\\1 - %^{phonetic} - %?")
+          ("t" "TODO:" entry (file+headline ,(concat org-directory "/brain/Save.org") "Inbox")
+           "* TODO: %^{Name} %?")
+          ("n" "Note" entry (file+headline ,(concat org-directory "/brain/Notes.org") "Inbox")
+           "* %^{Name} %?")
+          )
         )
 
   (defun my-indent-setup (n) ;; Group the setting of indent into one variable 'standard indent'
