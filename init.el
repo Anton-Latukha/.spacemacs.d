@@ -800,7 +800,7 @@ before packages are loaded."
   (custom-theme-set-faces
    'user
    ;; Customize the Emacs theme to set all tags the same
-   `(org-tag                   ((t (:foreground "black" :weight bold :height 0.8))))
+   `(org-tag                   ((t (:foreground "gray18" :weight bold :height 0.8))))
    `(org-property-value        ((t (:foreground "black" :weight bold :height 0.8))))
    )
   )
