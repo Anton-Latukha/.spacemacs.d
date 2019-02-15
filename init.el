@@ -764,10 +764,13 @@ before packages are loaded."
   ;;;; This aligns org-mode tags to the window border
   (add-hook 'focus-in-hook
             (lambda () (progn
-                         (setq org-tags-column (- 7 (window-body-width)))) (org-align-all-tags)))
+                         ;; Used to use '-7' right align, but due to headline font size is different, nail to the headline:
+                         ;;(setq org-tags-column (- 7 (window-body-width)))) (org-align-all-tags)))
+                         (setq org-tags-column 0)) (org-align-all-tags)))
   (add-hook 'focus-out-hook
             (lambda () (progn
-                         (setq org-tags-column (- 7 (window-body-width)))) (org-align-all-tags)))
+                         ;;(setq org-tags-column (- 7 (window-body-width)))) (org-align-all-tags)))
+                         (setq org-tags-column 0)) (org-align-all-tags)))
 
   ;; ;;;;
   ;; ;;;; This tries to make org-protocol work as a Pocket capture with pandoc: https://github.com/alphapapa/org-protocol-capture-html
