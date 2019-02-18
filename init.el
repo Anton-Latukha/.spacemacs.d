@@ -67,8 +67,8 @@ This function should only modify configuration layer settings."
           org-default-priority ?E
           org-lowest-priority ?E
           org-tags-match-list-sublevels 'indented ;; in tags search indent sublevels of entries
-          org-todo-keywords '((sequence "TODO:(t!)" "PAUS:(p@)" "ROGR:(r@)" "VIEW:(v!)" "|" "DONE:(d!)" "ODGE:(o!)" "ELEG:(e@)" "CANS:(c@)"))
           ;;org-agenda-todo-list-sublevels nil ;; do not include sublevel TODOs into agenda result
+          org-todo-keywords '((sequence "NEXT:(n@)" "PAUS:(p@)" "VIEW:(v!)" "|" "DONE:(d!)" "ODGE:(o!)" "ELEG:(e@)" "CANS:(c@)")) ;; "TODO:(t!)"
           org-journal-dir "~/org/journal/"
           org-journal-file-format "%Y-%m-%d"
           ;; start agenda weekly on the current day
@@ -83,9 +83,9 @@ This function should only modify configuration layer settings."
           org-todo-keyword-faces
           '(
             ;; Func list-colors-display to see color names
-            ("TODO:" . (:foreground "dark orange" :weight bold))
+            ;;("TODO:" . (:foreground "dark orange" :weight bold))
+            ("NEXT:" . (:foreground "green" :weight bold))
             ("PAUS:" . (:foreground "grey" :weight bold))
-            ("ROGR:" . (:foreground "blue" :weight bold))
             ("VIEW:" . (:foreground "green" :weight bold))
             ("DONE:" . (:foreground "white" :weight bold))
             ("OGDE:" . (:foreground "white" :weight bold))
