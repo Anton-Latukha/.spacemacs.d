@@ -92,16 +92,16 @@ This function should only modify configuration layer settings."
             ("ELEG:" . (:foreground "grey" :weight bold))
             ("CANS:" . (:foreground "black" :weight bold))
             )
-          ;; Don't allow to DONE the task, until all TODO siblings are DONE
+          ;; Don't allow to DONE the task, until all siblings are DONE
           org-enforce-todo-dependencies t
           ;; Ask for a note when DONE the task
           org-log-done 'note
           ;; Play sound at start?
           org-pomodoro-start-sound-p t
-          org-pomodoro-start-sound "/home/pyro/.spacemacs.d/.audio/bell.wav"
-          org-pomodoro-finished-sound "/home/pyro/.spacemacs.d/.audio/bell.wav"
+          org-pomodoro-start-sound "/home/pyro/.spacemacs.d/.audio/bell (+8dB).wav"
+          org-pomodoro-finished-sound "/home/pyro/.spacemacs.d/.audio/bell (+8dB).wav"
           org-pomodoro-killed-sound-p t
-          org-pomodoro-killed-sound "/home/pyro/.spacemacs.d/.audio/tick.wav"
+          org-pomodoro-killed-sound "/home/pyro/.spacemacs.d/.audio/wrapper (norm).wav"
           )
 
      (haskell :variables
