@@ -96,12 +96,18 @@ This function should only modify configuration layer settings."
           org-enforce-todo-dependencies t
           ;; Ask for a note when DONE the task
           org-log-done 'note
+          org-pomodoro-play-sounds t
           ;; Play sound at start?
           org-pomodoro-start-sound-p t
           org-pomodoro-start-sound "/home/pyro/.spacemacs.d/.audio/bell (+8dB).wav"
           org-pomodoro-finished-sound "/home/pyro/.spacemacs.d/.audio/bell (+8dB).wav"
           org-pomodoro-killed-sound-p t
           org-pomodoro-killed-sound "/home/pyro/.spacemacs.d/.audio/wrapper (norm).wav"
+          org-pomodoro-long-break-frequency 4
+          org-pomodoro-ask-upon-killing t
+          org-pomodoro-length 25
+          org-pomodoro-format "%s"
+          ;;org-pomodoro-time-format "%.2m:%.2s"
           )
 
      (haskell :variables
