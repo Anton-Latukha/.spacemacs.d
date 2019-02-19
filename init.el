@@ -108,6 +108,7 @@ This function should only modify configuration layer settings."
           org-pomodoro-length 25
           org-pomodoro-format "%s"
           ;;org-pomodoro-time-format "%.2m:%.2s"
+          org-refile-targets '((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9))
           )
 
      (haskell :variables
