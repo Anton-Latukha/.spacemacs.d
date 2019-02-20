@@ -110,6 +110,7 @@ This function should only modify configuration layer settings."
           ;;org-pomodoro-time-format "%.2m:%.2s"
           org-refile-targets '((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9))
           org-outline-path-complete-in-steps nil         ; Refile in a single go
+          org-refile-use-outline-path t                  ; Show full paths for refiling
           )
 
      (haskell :variables
