@@ -111,6 +111,7 @@ This function should only modify configuration layer settings."
           org-refile-targets '((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9))
           org-outline-path-complete-in-steps nil         ; Refile in a single go
           org-refile-use-outline-path t                  ; Show full paths for refiling
+          org-habit-graph-column 130
           )
 
      (haskell :variables
