@@ -684,6 +684,17 @@ before packages are loaded."
   (add-hook 'haskell-mode-hook 'turn-on-haskell-unicode-input-method)
   (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines in org-mode - wrap them all
 
+  (require 'org)
+
+  (nconc org-modules
+         '(
+           org-capture
+           org-habit
+           org-id
+           org-protocol
+           org-brain
+           ))
+
   ;;;;
   ;;;; This hides :PROPERTIES: in org files
   ;;;;
