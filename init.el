@@ -827,6 +827,18 @@ before packages are loaded."
    `(org-tag                   ((t (:foreground "gray18" :weight bold :height 0.8))))
    `(org-property-value        ((t (:foreground "black" :weight bold :height 0.8))))
    )
+
+  ;; Another function that tries to hide properties
+  ;; (defun org-toggle-properties ()
+  ;;   ;; toggle visibility of properties in current header if it exists
+  ;;   (save-excursion
+  ;;     (when (not (org-at-heading-p))
+  ;;       (org-previous-visible-heading 1))
+  ;;     (when (org-header-property-p)
+  ;;       (let* ((a (re-search-forward "\n\\:" nil t)))
+  ;;         (if (outline-invisible-p (point))
+  ;;             (outline-show-entry)
+  ;;           (org-cycle-hide-drawers 'all))))))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
