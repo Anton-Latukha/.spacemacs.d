@@ -839,6 +839,16 @@ before packages are loaded."
   ;;         (if (outline-invisible-p (point))
   ;;             (outline-show-entry)
   ;;           (org-cycle-hide-drawers 'all))))))
+
+  ;; After org initialized - add the modules
+  ;; (nconc org-modules
+  ;;                          '(
+  ;;                            org-habit
+  ;;                            org-id
+  ;;                            org-capture
+  ;;                            org-protocol
+  ;;                            )
+  ;;                          )
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
