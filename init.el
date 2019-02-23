@@ -848,6 +848,10 @@ before packages are loaded."
            "* %^{Name} %?")
           )
         )
+
+  ;; On client launch - show org-agenda week buffer
+  ;; This does not work due to Spacemacs initial buffer builds itself at startup
+  ;; (setq initial-buffer-choice '(lambda () (get-buffer org-agenda-list)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
