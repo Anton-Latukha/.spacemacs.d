@@ -740,8 +740,6 @@ before packages are loaded."
   ;;;;
   ;;;; This is working org-protocol link capture with:
   ;;;;
-  (require 'org-capture) ;; For org-protocol
-  (require 'org-protocol) ;; For org-protocol
 
   (defun my-indent-setup (n) ;; Group the setting of indent into one variable 'standard indent'
     (setq-default standard-indent n)
