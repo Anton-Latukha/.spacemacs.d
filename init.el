@@ -742,20 +742,6 @@ before packages are loaded."
   ;;;;
   (require 'org-capture) ;; For org-protocol
   (require 'org-protocol) ;; For org-protocol
-  (setq org-capture-templates
-        `(
-          ("p" "Protocol" entry (file+headline ,(concat org-directory "/brain/Save.org") "Bookmarks save")
-           "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
-          ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/Save.org") "Bookmarks save")
-           "* [[%:link][%:description]] %?")
-          ("d" "Dictionary entry" entry (file ,(concat org-directory "/dictionary/dictionary.org"))
-           "* %^{word}\n%\\1 - %^{phonetic} - %?")
-          ("t" "TODO:" entry (file+headline ,(concat org-directory "/brain/Save.org") "Inbox")
-           "* TODO: %^{Name} %?")
-          ("n" "Note" entry (file+headline ,(concat org-directory "/brain/Notes.org") "Inbox")
-           "* %^{Name} %?")
-          )
-        )
 
   (defun my-indent-setup (n) ;; Group the setting of indent into one variable 'standard indent'
     (setq-default standard-indent n)
@@ -849,6 +835,21 @@ before packages are loaded."
   ;;                            org-protocol
   ;;                            )
   ;;                          )
+
+  (setq org-capture-templates
+        `(
+          ("p" "Protocol" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
+           "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+          ("L" "Protocol Link" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
+           "* [[%:link][%:description]] %?")
+          ("d" "Dictionary entry" entry (file ,(concat org-directory "/dictionary/dictionary.org"))
+           "* %^{word}\n%\\1 - %^{phonetic} - %?")
+          ("t" "TODO:" entry (id 8ec8520c-0d07-4d02-9700-f9f204df91b8)
+           "* TODO: %^{Name} %?")
+          ("n" "Note" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
+           "* %^{Name} %?")
+          )
+        )
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
