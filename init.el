@@ -855,6 +855,10 @@ before packages are loaded."
 
   ;; Enable time in the bar
   (display-time-mode 1)
+
+  ;; 2019-02-20: FIXME: TMP fix for '<s[TAB]' - when there PR merge https://github.com/syl20bnr/spacemacs/issues/11798
+  (require 'org-tempo)
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
