@@ -208,7 +208,7 @@ This function should only modify configuration layer settings."
      ;; == Domain Specific Languages (DSL)
      ;; gpu    ; Languages to work with GPUs
      ;; major-modes    ; Support of more rare case DSL languages, like Arduino, MATLAB, QML, Vala, Wolfram...
-     ;; plantuml
+     plantuml
 
      ;; == Markup languages
      ;; graphviz
