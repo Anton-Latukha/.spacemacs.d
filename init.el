@@ -904,6 +904,11 @@ before packages are loaded."
     (helm-org-rifle-files (append my-org-refile-additional-targets org-agenda-files))
     )
 
+  (spacemacs/declare-prefix "o" "custom")
+  (spacemacs/set-leader-keys "od" 'my-insert-current-date)
+  (spacemacs/set-leader-keys "on" 'my-insert-note)
+  (spacemacs/set-leader-keys "or" 'my-helm-org-rifle-files)
+
   (fish-enable-auto-indent t)
   )
 
