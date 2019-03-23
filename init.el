@@ -115,6 +115,11 @@ This function should only modify configuration layer settings."
           org-outline-path-complete-in-steps nil         ; Refile in a single go
           org-refile-use-outline-path t                  ; Show full paths for refiling
           org-habit-graph-column 130
+          ;; Turn off all org autoindentation completely
+          org-startup-indented nil
+          ;; Turn off manual indentation completely
+          org-adapt-indentation nil
+
           )
 
      (haskell :variables
