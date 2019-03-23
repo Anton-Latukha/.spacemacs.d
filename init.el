@@ -869,6 +869,8 @@ before packages are loaded."
            "* TODO: %^{Name} %?")
           ("n" "Note" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
            "* %^{Name} %?")
+          ("c" "Capture Generale" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
+           "* %?")
           )
         )
 
