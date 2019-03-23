@@ -885,6 +885,7 @@ before packages are loaded."
   ;; 2019-02-20: FIXME: TMP fix for '<s[TAB]' - when there PR merge https://github.com/syl20bnr/spacemacs/issues/11798
   (require 'org-tempo)
 
+  (fish-enable-auto-indent t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
