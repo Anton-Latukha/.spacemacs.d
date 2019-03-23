@@ -111,7 +111,19 @@ This function should only modify configuration layer settings."
           org-pomodoro-length 25
           org-pomodoro-format "%s"
           ;;org-pomodoro-time-format "%.2m:%.2s"
-          org-refile-targets '((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9))
+          my-org-refile-additional-targets
+          '(
+            "~/org/brain/Notes.org"
+            "~/org/haskell/haskell.org"
+            "~/org/nix/nix.org"
+            "~/org/tex/tex.org"
+            )
+          org-refile-targets
+          '(
+            (nil :maxlevel . 9)
+            (org-agenda-files :maxlevel . 9)
+            (my-org-refile-additional-targets :maxlevel . 9)
+            )
           org-outline-path-complete-in-steps nil         ; Refile in a single go
           org-refile-use-outline-path 'file                  ; Show full paths for refiling, value 'file' includes the files themself.
           org-habit-graph-column 130
