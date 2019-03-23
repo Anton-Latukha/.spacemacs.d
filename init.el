@@ -888,6 +888,12 @@ before packages are loaded."
   ;; Trigger autosave before quitting org-agenda
   (advice-add 'org-agenda-quit :before 'org-save-all-org-buffers)
 
+  (defun my-insert-current-date ()
+    "Insert ISO date"
+    (interactive)
+    (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d)"))
+    )
+
   (fish-enable-auto-indent t)
   )
 
