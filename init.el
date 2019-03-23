@@ -893,6 +893,11 @@ before packages are loaded."
     (interactive)
     (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d)"))
     )
+  (defun my-insert-note ()
+    "Insert a NOTE comment"
+    (interactive)
+    (insert (shell-command-to-string "echo -n '    # NOTE: '$(date +%Y-%m-%d)': '"))
+    )
 
   (fish-enable-auto-indent t)
   )
