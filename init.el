@@ -898,6 +898,11 @@ before packages are loaded."
     (interactive)
     (insert (shell-command-to-string "echo -n '    # NOTE: '$(date +%Y-%m-%d)': '"))
     )
+  (defun my-helm-org-rifle-files ()
+    "Find the org entry by matching content"
+    (interactive)
+    (helm-org-rifle-files (append my-org-refile-additional-targets org-agenda-files))
+    )
 
   (fish-enable-auto-indent t)
   )
