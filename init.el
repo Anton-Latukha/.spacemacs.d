@@ -769,6 +769,7 @@ before packages are loaded."
     (setq-default sh-basic-offset n) ;; shell
     (setq-default sh-indentation n) ;; shell
     (setq-default smie-indent-basic n) ;; shell
+    (setq-default fish-indent-offset n) ;; fish shell
     )
   (my-indent-setup 2)
 
