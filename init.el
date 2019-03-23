@@ -885,6 +885,9 @@ before packages are loaded."
   ;; 2019-02-20: FIXME: TMP fix for '<s[TAB]' - when there PR merge https://github.com/syl20bnr/spacemacs/issues/11798
   (require 'org-tempo)
 
+  ;; Trigger autosave before quitting org-agenda
+  (advice-add 'org-agenda-quit :before 'org-save-all-org-buffers)
+
   (fish-enable-auto-indent t)
   )
 
