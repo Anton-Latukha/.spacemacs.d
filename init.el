@@ -151,13 +151,15 @@ This function should only modify configuration layer settings."
      (git :variables
           magit-repository-directories
           '(
-            ("~/src/" . 3)
-            ("/etc/nixos/" . 1)
-            ("/btrfs/important/Personal/Technical/Git/" . 3)
-            ("/btrfs/important/Personal/Technical/Experiments/" . 3)
-            ("~/.emacs.d" . 0)
-            ("~/.spacemacs.d" . 1)
-            ("~/org" . 2)
+            ("~/src/" . 2)
+            ("/etc/nixos/" . 0)
+            ("~/.emacs.d/" . 0)
+            ("~/.spacemacs.d/" . 0)
+            ("/home/pyro/.config/fish/" . 0)
+            ("/home/pyro/.config/fish/functions" . 0)
+            ("/home/pyro/.config/git/" . 0)
+            ("~/org/" . 1)
+            ;; ("~/stor/" . 8)
             )
           magit-repolist-columns
           '(
@@ -910,7 +912,6 @@ before packages are loaded."
   (spacemacs/set-leader-keys "on" 'my-insert-note)
   (spacemacs/set-leader-keys "or" 'my-helm-org-rifle-files)
 
-  (fish-enable-auto-indent t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
