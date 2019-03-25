@@ -117,6 +117,7 @@ This function should only modify configuration layer settings."
             "~/org/haskell/haskell.org"
             "~/org/nix/nix.org"
             "~/org/tex/tex.org"
+            "~/org/org/org.org"
             )
           org-refile-targets
           '(
