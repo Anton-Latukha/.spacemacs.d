@@ -918,6 +918,10 @@ before packages are loaded."
   (spacemacs/set-leader-keys "on" 'my-insert-note)
   (spacemacs/set-leader-keys "or" 'my-helm-org-rifle-files)
 
+  (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html")
+
+  (require 'org-protocol-capture-html)
+  ;; (setq recentf-max-saved-items 30)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
