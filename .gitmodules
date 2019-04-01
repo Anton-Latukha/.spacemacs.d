@@ -1,3 +1,6 @@
 [submodule "lisp/Emacs-Persistent-Overlays"]
 	path = lisp/Emacs-Persistent-Overlays
 	url = https://github.com/mneilly/Emacs-Persistent-Overlays
+[submodule "lisp/org-protocol-capture-html"]
+	path = lisp/org-protocol-capture-html
+	url = https://github.com/alphapapa/org-protocol-capture-html.git

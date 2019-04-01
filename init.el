@@ -877,6 +877,9 @@ before packages are loaded."
            "* %^{Name} %?")
           ("c" "Capture Generale" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
            "* %?")
+          ("w" "Web site" entry
+           (file "~/org/web.org")
+           "* %a :website:\n\n%U %?\n\n%:initial")
           )
         )
 
