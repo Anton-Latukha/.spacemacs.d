@@ -764,10 +764,6 @@ before packages are loaded."
   ;;                 (outline-flag-region start (point-at-eol) t)
   ;;                 (user-error msg))))))))))
 
-  ;;;;
-  ;;;; This is working org-protocol link capture with:
-  ;;;;
-
   (defun my-indent-setup (n) ;; Group the setting of indent into one variable 'standard indent'
     (setq-default standard-indent n)
     (setq-default evil-shift-width n)
@@ -792,9 +788,7 @@ before packages are loaded."
     )
   (my-indent-setup 2)
 
-  ;; (setq org-tags-column '(-111))    ;; If negative - align right margin to column number static approach
-  ;;;;
-  ;;;; This aligns org-mode tags to the window border
+  ;; This aligns org-mode tags to the window border
   (add-hook 'focus-in-hook
             (lambda () (progn
                          ;; Used to use '-7' right align, but due to headline font size is different, nail to the headline:
@@ -804,18 +798,6 @@ before packages are loaded."
             (lambda () (progn
                          ;;(setq org-tags-column (- 7 (window-body-width)))) (org-align-all-tags)))
                          (setq org-tags-column 0)) (org-align-all-tags)))
-
-  ;; ;;;;
-  ;; ;;;; This tries to make org-protocol work as a Pocket capture with pandoc: https://github.com/alphapapa/org-protocol-capture-html
-  ;; ;;;;
-  ;; (require 'org-capture) ;; For org-protocol
-  ;; (require 'org-protocol) ;; For org-protocol
-  ;; (require 'org-protocol-capture-html) ;; Try to lazy load the org-protocol-capture handler https://github.com/alphapapa/org-protocol-capture-html
-  ;; (setq org-capture-templates `(
-  ;;                               ("w" "Web site" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
-  ;;                                "* %a :website:\n\n%U %?\n\n%:initial")
-  ;;                               )
-  ;;       )
 
   ;; ;;;;
   ;; ;;;; This block tried to fold all code blocks in files:
@@ -853,16 +835,6 @@ before packages are loaded."
   ;;         (if (outline-invisible-p (point))
   ;;             (outline-show-entry)
   ;;           (org-cycle-hide-drawers 'all))))))
-
-  ;; After org initialized - add the modules
-  ;; (nconc org-modules
-  ;;                          '(
-  ;;                            org-habit
-  ;;                            org-id
-  ;;                            org-capture
-  ;;                            org-protocol
-  ;;                            )
-  ;;                          )
 
   (setq org-capture-templates
         `(
