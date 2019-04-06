@@ -151,7 +151,12 @@ This function should only modify configuration layer settings."
      (git :variables
           magit-repository-directories
           '(
-            ("~/src/" . 2)
+            ("~/src/" . 1)
+            ("~/src/haskell/" . 1)
+            ("~/src/ref/" . 1)
+            ("~/src/synergy/" . 1)
+            ("~/src/zDone/" . 1)
+            ("~/src/zGarage/" . 1)
             ("/etc/nixos/" . 0)
             ("~/.emacs.d/" . 0)
             ("~/.spacemacs.d/" . 0)
@@ -160,7 +165,6 @@ This function should only modify configuration layer settings."
             ("/home/pyro/.config/git/" . 0)
             ("/home/pyro/.config/systemd/user" . 0)
             ("~/org/" . 0)
-            ;; ("~/stor/" . 8)
             )
           magit-repolist-columns
           '(
