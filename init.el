@@ -63,8 +63,8 @@ This function should only modify configuration layer settings."
           org-enable-org-journal-support t ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
           org-agenda-files
           '(
-            "~/org/brain/Flow.org"
-            "~/org/brain/Save.org"
+            "~/org/Flow.org"
+            "~/org/Save.org"
             )
           org-highest-priority ?A
           org-default-priority ?E
@@ -113,7 +113,7 @@ This function should only modify configuration layer settings."
           ;;org-pomodoro-time-format "%.2m:%.2s"
           my-org-refile-additional-targets
           '(
-            "~/org/brain/Notes.org"
+            "~/org/Notes.org"
             "~/org/haskell/haskell.org"
             "~/org/nix/nix.org"
             "~/org/tex/tex.org"
@@ -132,7 +132,7 @@ This function should only modify configuration layer settings."
           org-startup-indented nil
           ;; Turn off manual indentation completely
           org-adapt-indentation nil
-
+          org-brain-path "~/org/"
           )
 
      (haskell :variables
@@ -158,7 +158,8 @@ This function should only modify configuration layer settings."
             ("/home/pyro/.config/fish/" . 0)
             ("/home/pyro/.config/fish/functions" . 0)
             ("/home/pyro/.config/git/" . 0)
-            ("~/org/" . 1)
+            ("/home/pyro/.config/systemd/user" . 0)
+            ("~/org/" . 0)
             ;; ("~/stor/" . 8)
             )
           magit-repolist-columns
@@ -877,8 +878,7 @@ before packages are loaded."
            "* %^{Name} %?")
           ("c" "Capture Generale" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
            "* %?")
-          ("w" "Web site" entry
-           (file "~/org/web.org")
+          ("w" "Web site" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
            "* %a :website:\n\n%U %?\n\n%:initial")
           )
         )
