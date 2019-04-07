@@ -855,10 +855,10 @@ before packages are loaded."
            "* %?" :empty-lines 1)
           ("w" "Web site" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
            "* %a :website:\n\n%U %?\n\n%:initial" :empty-lines 1)
-          )
           ("b" "Brain: add at the end" plain (function org-brain-goto-end)
-                "* %i%?" :empty-lines 1)
+           "* %i%?" :empty-lines 1)
 
+          )
         )
 
   ;; On client launch - show org-agenda week buffer
