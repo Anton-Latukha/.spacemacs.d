@@ -302,8 +302,6 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(
                                       ;; 'pocket-reader
                                       ;; 'eww
-                                      ;; 's ;; Add string manipulation library particulatry for org-protocol-capture.el
-                                      ;; 'org-protocol
                                       )
 
    ;; A list of packages that cannot be updated.
@@ -842,6 +840,7 @@ before packages are loaded."
 
   (setq org-capture-templates
         `(
+
           ("p" "Protocol" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
            "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?" :empty-lines 1)
           ("L" "Protocol Link" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
@@ -859,6 +858,7 @@ before packages are loaded."
           )
           ("b" "Brain: add at the end" plain (function org-brain-goto-end)
                 "* %i%?" :empty-lines 1)
+
         )
 
   ;; On client launch - show org-agenda week buffer
@@ -895,6 +895,7 @@ before packages are loaded."
   (spacemacs/set-leader-keys "od" 'my-insert-current-date)
   (spacemacs/set-leader-keys "on" 'my-insert-note)
   (spacemacs/set-leader-keys "or" 'my-helm-org-rifle-files)
+
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html")
 
