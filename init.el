@@ -896,6 +896,8 @@ before packages are loaded."
   (spacemacs/set-leader-keys "on" 'my-insert-note)
   (spacemacs/set-leader-keys "or" 'my-helm-org-rifle-files)
 
+  (spacemacs/declare-prefix-for-mode 'org-mode "o" "custom")
+  (spacemacs/set-leader-keys-for-major-mode 'org-mode "oi" 'org-id-get-create)
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html")
 
