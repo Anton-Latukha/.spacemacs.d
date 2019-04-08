@@ -907,6 +907,8 @@ before packages are loaded."
 
   (require 'org-protocol-capture-html)
   ;; (setq recentf-max-saved-items 30)
+
+  (setq vc-follow-symlinks t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
