@@ -853,8 +853,8 @@ before packages are loaded."
            "* %^{Name} %?")
           ("c" "Capture Generale" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
            "* %?")
-          ("w" "Web site" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
-           "* %a :website:\n\n%U %?\n\n%:initial")
+          ("w" "Web site" entry (id 5fef2047-2983-41aa-90e7-5cd0cdf6a5b7)
+           "* %a\n:properties:\n:added: %u\n:end:\n\n#+begin_comment\n%?\n#+end_comment\n\n%:initial")
           ("b" "Brain: add at the end" plain (function org-brain-goto-end)
            "* %i%?" :empty-lines 1)
 
