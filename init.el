@@ -166,6 +166,7 @@ This function should only modify configuration layer settings."
             ("~/.config/fish/functions" . 0)
             ("~/.config/git/" . 0)
             ("~/.config/systemd/user" . 0)
+            ("~/.config/nixpkgs/" . 0)
             )
           magit-repolist-columns
           '(
