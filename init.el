@@ -841,10 +841,10 @@ before packages are loaded."
   (setq org-capture-templates
         `(
 
-          ("P" "Protocol" entry (id 5fef2047-2983-41aa-90e7-5cd0cdf6a5b7)
-           "* %^{Title}\n:PROPERTIES:\n:ADDED: %u\n:SOURCE: %c\n:END:\n#+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n%?")
-          ("L" "Protocol Link" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
-           "* [[%:link][%:description]] %?\n:PROPERTIES:\n:ADDED: %u\n:END:")
+          ;; ("P" "Protocol" entry (id 5fef2047-2983-41aa-90e7-5cd0cdf6a5b7)
+          ;;  "* %^{Title}\n:PROPERTIES:\n:ADDED: %u\n:SOURCE: %c\n:END:\n#+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n%?")
+          ;; ("L" "Protocol Link" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
+          ;;  "* [[%:link][%:description]] %?\n:PROPERTIES:\n:ADDED: %u\n:END:")
           ("d" "Dictionary entry" entry (file ,(concat org-directory "/dictionary/dictionary.org"))
            "* %^{word}\n%\\1 - %^{phonetic} - %?")
           ("t" "TODO:" entry (id 8ec8520c-0d07-4d02-9700-f9f204df91b8)
