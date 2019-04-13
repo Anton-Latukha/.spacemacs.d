@@ -161,6 +161,7 @@ This function should only modify configuration layer settings."
             ("/etc/nixos/" . 0)
             ("~/.emacs.d/" . 0)
             ("~/.spacemacs.d/" . 0)
+            ("~/.config/" . 0)
             ("~/.config/fish/" . 0)
             ("~/.config/fish/functions" . 0)
             ("~/.config/git/" . 0)
