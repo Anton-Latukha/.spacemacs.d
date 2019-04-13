@@ -151,6 +151,7 @@ This function should only modify configuration layer settings."
      (git :variables
           magit-repository-directories
           '(
+            ("~/org/" . 0)
             ("~/src/" . 1)
             ("~/src/haskell/" . 1)
             ("~/src/ref/" . 1)
@@ -160,11 +161,10 @@ This function should only modify configuration layer settings."
             ("/etc/nixos/" . 0)
             ("~/.emacs.d/" . 0)
             ("~/.spacemacs.d/" . 0)
-            ("/home/pyro/.config/fish/" . 0)
-            ("/home/pyro/.config/fish/functions" . 0)
-            ("/home/pyro/.config/git/" . 0)
-            ("/home/pyro/.config/systemd/user" . 0)
-            ("~/org/" . 0)
+            ("~/.config/fish/" . 0)
+            ("~/.config/fish/functions" . 0)
+            ("~/.config/git/" . 0)
+            ("~/.config/systemd/user" . 0)
             )
           magit-repolist-columns
           '(
