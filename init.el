@@ -852,6 +852,8 @@ before packages are loaded."
           ;;  "* [[%:link][%:description]] %?\n:PROPERTIES:\n:ADDED: %u\n:END:")
           ("d" "Dictionary entry" entry (file ,(concat org-directory "/dictionary/dictionary.org"))
            "* %^{word}\n%\\1 - %^{phonetic} - %?")
+          ("w" "Word entry" entry (file ,(concat org-directory "/word/word.org"))
+           "* %^{phrase}\n%\\1\n")
           ("t" "TODO:" entry (id 8ec8520c-0d07-4d02-9700-f9f204df91b8)
            "* TODO: %^{Name} %?")
           ("n" "Note" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
