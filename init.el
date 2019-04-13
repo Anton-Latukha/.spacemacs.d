@@ -293,7 +293,7 @@ This function should only modify configuration layer settings."
      ;;
      ;; ----------------------------------------------------------------
 
-     hie-nix
+     ;; hie-nix
 
      )
 
