@@ -290,6 +290,9 @@ This function should only modify configuration layer settings."
      ;; For more layers and info: http://spacemacs.org/layers/LAYERS.html
      ;;
      ;; ----------------------------------------------------------------
+
+     hie-nix
+
      )
 
    ;; List of additional packages that will be installed without being
