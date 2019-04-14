@@ -154,6 +154,7 @@ This function should only modify configuration layer settings."
             ("~/org/" . 0)
             ("~/src/" . 1)
             ("~/src/haskell/" . 1)
+            ("~/src/nix/" . 1)
             ("~/src/ref/" . 1)
             ("~/src/synergy/" . 1)
             ("~/src/zDone/" . 1)
