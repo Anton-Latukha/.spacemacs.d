@@ -938,6 +938,14 @@ Inspiration: https://code.orgmode.org/bzg/org-mode/commit/13424336a6f30c50952d29
           (replace-match (downcase (match-string-no-properties 1)) :fixedcase nil nil 1))
         (message "Lower-cased %d matches" count))))
 
+
+  ;; Special symbols for org-entities-help
+  (nconc org-entities-user
+         (
+          ;; name    LaTeX    mathp HTML   ASCII Latin1 UTF-8
+          '("vdots" "\\vdots{}" t "&x2999" "..." "..." "⁞")
+          ))
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
