@@ -946,6 +946,30 @@ Inspiration: https://code.orgmode.org/bzg/org-mode/commit/13424336a6f30c50952d29
           '("vdots" "\\vdots{}" t "&x2999" "..." "..." "⁞")
           ))
 
+  ;; Setting of org-tempo does not work because instead custom strings in expressions seems now accept only hardcoded template strings
+  ;; (setq tempo-interactive t)
+
+  ;; (defvar my-org-tempo-tags nil
+  ;;   "Tempo tags for Org mode")
+
+  ;; (add-hook 'org-mode-hook '(lambda ()
+	;; 		                      (tempo-use-tag-list 'my-org-tempo-tags)
+	;; 		                      ))
+
+  ;; (tempo-define-template "my-tempo-template-org-haskell"
+  ;;                        '("#+begin_src haskell" n p n "#+end_src" >
+  ;;                          )
+  ;;                        "<z"
+  ;;                        "Insert Haskell template"
+  ;;                        'my-org-tempo-tags)
+
+  ;; (tempo-define-template "my-property"
+  ;;                        '(":PROPERTIES:" p ":END:" >
+  ;;                          )
+  ;;                        "<p"
+  ;;                        "Insert a property tempate"
+  ;;                        'my-org-tempo-tags)
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
