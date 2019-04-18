@@ -129,6 +129,7 @@ This function should only modify configuration layer settings."
           org-outline-path-complete-in-steps nil         ; Refile in a single go
           org-refile-use-outline-path 'file                  ; Show full paths for refiling, value 'file' includes the files themself.
           org-habit-graph-column 130
+          org-habit-preceding-days 56
           ;; Turn off all org autoindentation completely
           org-startup-indented nil
           ;; Turn off manual indentation completely
