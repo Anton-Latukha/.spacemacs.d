@@ -64,6 +64,7 @@ This function should only modify configuration layer settings."
           org-agenda-files
           '(
             "~/org/Flow.org"
+            "~/org/Habit flow.org"
             "~/org/Save.org"
             )
           org-highest-priority ?A
