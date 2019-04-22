@@ -135,6 +135,8 @@ This function should only modify configuration layer settings."
           ;; Turn off manual indentation completely
           org-adapt-indentation nil
           org-brain-path "~/org/"
+
+          org-log-into-drawer t    ; if t log into the :LOGBOOK: drawer
           )
 
      (haskell :variables
