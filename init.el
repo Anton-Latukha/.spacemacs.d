@@ -720,7 +720,7 @@ before packages are loaded."
   ;;  (lambda ()
   ;;  (setq-local indent-line-function #'indent-relative))))
   ;; ----------------------------------------------------------------
-  (add-hook 'haskell-mode-hook 'turn-on-haskell-unicode-input-method)
+  ;; (add-hook 'haskell-mode-hook 'turn-on-haskell-unicode-input-method)    ;; FIXME: 2019-04-23: Temporary disable for HNix upstream contribution
   (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines in org-mode - wrap them all
 
   (require 'org)
