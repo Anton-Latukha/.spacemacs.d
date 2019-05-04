@@ -308,7 +308,11 @@ This function should only modify configuration layer settings."
 
      (geolocation :variables
                   geolocation-enable-location-service t
-                  geolocation-enable-weather-forecast t)
+                  geolocation-enable-weather-forecast t
+
+                  calendar-location-name "Kyiv, Ukraine"
+                  calendar-latitude 50.4755605
+                  calendar-longitude 30.4039573)
      )
 
    ;; List of additional packages that will be installed without being
@@ -983,9 +987,6 @@ Inspiration: https://code.orgmode.org/bzg/org-mode/commit/13424336a6f30c50952d29
   ;;                        "<p"
   ;;                        "Insert a property tempate"
   ;;                        'my-org-tempo-tags)
-  (setq calendar-location-name "Kyiv, Ukraine"
-        calendar-latitude 50.4755605
-        calendar-longitude 30.4039573)
 
   )
 
