@@ -874,7 +874,7 @@ before packages are loaded."
           ;; ("L" "Protocol Link" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
           ;;  "* [[%:link][%:description]] %?\n:PROPERTIES:\n:ADDED: %u\n:END:")
           ("d" "Dictionary entry" entry (file ,(concat org-directory "/dictionary/dictionary.org"))
-           "* %^{word}\n%\\1 - %^{phonetic} - %?")
+           "* %^{word} :drill:\n%\\1 - %^{phonetic} - %?")
           ("w" "Word entry" entry (file ,(concat org-directory "/word/word.org"))
            "* %?\n")
           ("t" "TODO:" entry (id 8ec8520c-0d07-4d02-9700-f9f204df91b8)
