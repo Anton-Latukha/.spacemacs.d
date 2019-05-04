@@ -956,13 +956,13 @@ Inspiration: https://code.orgmode.org/bzg/org-mode/commit/13424336a6f30c50952d29
           (replace-match (downcase (match-string-no-properties 1)) :fixedcase nil nil 1))
         (message "Lower-cased %d matches" count))))
 
-
-  ;; Special symbols for org-entities-help
-  (nconc org-entities-user
-         (
-          ;; name    LaTeX    mathp HTML   ASCII Latin1 UTF-8
-          '("vdots" "\\vdots{}" t "&x2999" "..." "..." "⁞")
-          ))
+  ;; NOTE: 2019-05-02: Not completely figured-out a form and this list was not working properly
+  ;; ;; Special symbols for org-entities-help
+  ;; (nconc org-entities-user
+  ;;        (
+  ;;         ;; name    LaTeX    mathp HTML   ASCII Latin1 UTF-8
+  ;;         '("vdots" "\\vdots{}" t "&x2999" "..." "..." "⁞")
+  ;;         ))
 
   ;; Setting of org-tempo does not work because instead custom strings in expressions seems now accept only hardcoded template strings
   ;; (setq tempo-interactive t)
