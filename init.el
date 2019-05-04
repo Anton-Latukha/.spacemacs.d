@@ -306,6 +306,9 @@ This function should only modify configuration layer settings."
 
      ;; hie-nix
 
+     (geolocation :variables
+                  geolocation-enable-location-service t
+                  geolocation-enable-weather-forecast t)
      )
 
    ;; List of additional packages that will be installed without being
