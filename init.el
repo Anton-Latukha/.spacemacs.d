@@ -741,6 +741,7 @@ before packages are loaded."
            org-id
            org-protocol
            org-brain
+           org-drill
            ))
 
   ;;;;
@@ -982,6 +983,9 @@ Inspiration: https://code.orgmode.org/bzg/org-mode/commit/13424336a6f30c50952d29
   ;;                        "<p"
   ;;                        "Insert a property tempate"
   ;;                        'my-org-tempo-tags)
+  (setq calendar-location-name "Kyiv, Ukraine"
+        calendar-latitude 50.4755605
+        calendar-longitude 30.4039573)
 
   )
 
