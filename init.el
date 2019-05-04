@@ -152,7 +152,7 @@ This function should only modify configuration layer settings."
           ;;                               (tags priority-down category-keep)
           ;;                               (search category-keep))
 
-          ;; List of always declared tags, function my-org-all-tags matches and autoadds occuring words from it
+          ;; List of always declared tags, function my-org-auto-tag matches and autoadds occuring words from it
           org-tag-alist '(
                           ("advanced")
                           ("ai")
@@ -1164,17 +1164,23 @@ Inspiration: https://code.orgmode.org/bzg/org-mode/commit/13424336a6f30c50952d29
   ;;                        "Insert a property tempate"
   ;;                        'my-org-tempo-tags)
 
-  ;; Read words from heading, match with tags, and set tags
+  ;; Read words from heading, match with tag dictionary, try trim 's' from the end and match, and autoset tags
   (defun my-org-auto-tag ()
     (interactive)
     (let ((alltags (append org-tag-persistent-alist org-tag-alist))
           (headline-words (split-string (downcase (org-get-heading t t))))
           )
       (mapcar (lambda (word) (if (assoc word alltags)
-                                 (org-toggle-tag word 'on)))
+                                 (org-toggle-tag word 'on)
+                               (
+                                if (assoc (string-trim-right word "s") alltags)
+                                   (org-toggle-tag (string-trim-right word "s") 'on)
+                                   )))
               headline-words))
     )
-  (add-hook 'org-capture-before-finalize-hook #'my-org-auto-tag)
+  (add-hook 'org-capture-before-finalize-hook '(lambda ()
+			                      (my-org-auto-tag)
+			                      ))
 
   )
 
