@@ -119,6 +119,7 @@ This function should only modify configuration layer settings."
             "~/org/nix/nix.org"
             "~/org/tex/tex.org"
             "~/org/org/org.org"
+            "~/org/Web-archive save.org"
             )
           org-refile-targets
           '(
