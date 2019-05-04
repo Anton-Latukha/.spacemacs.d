@@ -130,6 +130,7 @@ This function should only modify configuration layer settings."
           org-refile-use-outline-path 'file                  ; Show full paths for refiling, value 'file' includes the files themself.
           org-habit-graph-column 130
           org-habit-preceding-days 56
+
           ;; Turn off all org autoindentation completely
           org-startup-indented nil
           ;; Turn off manual indentation completely
@@ -143,6 +144,12 @@ This function should only modify configuration layer settings."
                                  (600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200 2300 2400)
                                  "      "
                                  "----------------"))
+
+          ;; ;; Taken from https://github.com/jwiegley/dot-emacs/blob/master/org-settings.el
+          ;; org-agenda-sorting-strategy '((agenda habit-down time-up todo-state-up priority-down)
+          ;;                               (todo priority-down category-keep)
+          ;;                               (tags priority-down category-keep)
+          ;;                               (search category-keep))
           )
 
      (haskell :variables
