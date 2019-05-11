@@ -337,7 +337,7 @@ This function should only modify configuration layer settings."
                           ("zsh")
                           )
           org-cycle-separator-lines 0 ;; 0 - turns off empty lines between collapsed headers
-          org-catch-invisible-edits smart
+          org-catch-invisible-edits 'smart
           )
 
      (haskell :variables
