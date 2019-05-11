@@ -442,7 +442,12 @@ This function should only modify configuration layer settings."
      ;; == Domain Specific Languages (DSL)
      ;; gpu    ; Languages to work with GPUs
      ;; major-modes    ; Support of more rare case DSL languages, like Arduino, MATLAB, QML, Vala, Wolfram...
-     plantuml
+     (plantuml
+               ;; :variables
+               ;; plantuml-java-command "/run/current-system/sw/bin/plantuml"
+               ;; plantuml-jar-path " "
+               ;; org-plantuml-jar-path "/run/current-system/sw/bin/plantuml"
+               )
 
      ;; == Markup languages
      ;; graphviz
