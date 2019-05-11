@@ -1202,6 +1202,9 @@ Inspiration: https://code.orgmode.org/bzg/org-mode/commit/13424336a6f30c50952d29
   (add-hook 'org-capture-before-finalize-hook '(lambda ()
 			                      (my-org-auto-tag)
 			                      ))
+  ;; 2019-05-09: Toggle truncated lines for some prompts to work correctly in Fish shell
+  ;; link: https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Btools/shell
+  (add-hook 'term-mode-hook 'toggle-truncate-lines)
 
   )
 
