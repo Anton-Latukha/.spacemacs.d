@@ -465,7 +465,9 @@ This function should only modify configuration layer settings."
      ;; restclient
      ;; salt    ; Configuration management tool
      (shell :variables
-            shell-default-shell 'eshell
+            shell-default-shell 'ansi-term
+            ;; shell-default-shell 'eshell
+            shell-default-term-shell "/run/current-system/sw/bin/fish"
             )
      ;; sphinx    ; Documentation generator by Python
      systemd
