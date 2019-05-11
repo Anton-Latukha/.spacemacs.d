@@ -336,6 +336,7 @@ This function should only modify configuration layer settings."
                           ("xmonad")
                           ("zsh")
                           )
+          org-cycle-separator-lines 0 ;; 0 - turns off empty lines between collabsed headers
           )
 
      (haskell :variables
