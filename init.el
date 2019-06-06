@@ -1254,6 +1254,25 @@ Inspiration: https://code.orgmode.org/bzg/org-mode/commit/13424336a6f30c50952d29
   ;; link: https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Btools/shell
   (add-hook 'term-mode-hook 'toggle-truncate-lines)
 
+
+  ;; NOTE: 2019-06-04: Allows to run org-drill on cards with default type and empty body.
+  ;;       Seems like not actually working.
+  (defun org-drill-entry-status-workaround (oldfun &rest args)
+    "Call adviced `org-drill-entry-status' as OLDFUN with ARGS.
+Temporarily let `org-entry-empty-p' return nil for empty drill cards
+with DRILL_CARD_TYPE nil."
+    (let ((oldfun-entry-empty-p (symbol-function 'org-entry-empty-p)))
+      (cl-letf (((symbol-function 'org-entry-empty-p)
+                 (lambda ()
+                   (and (funcall oldfun-entry-empty-p) ;; in principle the old fun
+                        ;; with the exception:
+                        (null (and
+                               (org-drill-entry-p)
+                               (null (org-entry-get (point) "DRILL_CARD_TYPE"))
+                               (nth 3 (assoc nil org-drill-card-type-alist)))))))) ;; DRILL-EMPTY-P
+        (apply oldfun args))))
+
+  (advice-add 'org-drill-entry-status :around #'org-drill-entry-status-workaround)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
