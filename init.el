@@ -539,6 +539,9 @@ This function should only modify configuration layer settings."
                  ;;                                                       :foreground "gray18"
                  ;;                                                       :background "gray18")
                  ;;                                                       )))
+
+                 (org-property-value :foreground "gray18"
+                                     :background "gray18")
                  ))
 
               ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
