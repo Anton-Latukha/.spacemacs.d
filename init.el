@@ -338,6 +338,15 @@ This function should only modify configuration layer settings."
                           )
           org-cycle-separator-lines 0 ;; 0 - turns off empty lines between collapsed headers
           org-catch-invisible-edits 'smart  ;; Determins behaviour when you do invisible edits in (...)
+
+          ;; org-bullets-bullet-list '(" ")    ;; no bullets, needs org-bullets package
+          ;; org-ellipsis ".."    ;; folding symbol
+          org-pretty-entities t    ;; show parsed special syntax (unicode) insted of source code
+          org-hide-emphasis-markers t    ;; show actually italicized text instead of /italicized text/
+          org-agenda-block-separator ""
+          org-fontify-whole-heading-line t
+          org-fontify-done-headline t
+          org-fontify-quote-and-verse-blocks t
           )
 
      (haskell :variables
@@ -515,6 +524,7 @@ This function should only modify configuration layer settings."
                   calendar-location-name "Kyiv, Ukraine"
                   calendar-latitude 50.4755605
                   calendar-longitude 30.4039573)
+
      (theming :variables ;; Streamlines faces modifications
               theming-modifications
               '(
