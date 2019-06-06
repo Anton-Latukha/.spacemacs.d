@@ -533,6 +533,12 @@ This function should only modify configuration layer settings."
                  (org-tag :foreground "gray18"
                           :weight bold
                           :height 0.8)
+
+                 ;;;; This was a try to make all drawer almost invisible. It mimics the source face code and fails miserably.
+                 ;; (org-drawer ((class '((class color) (min-colors 89)) (
+                 ;;                                                       :foreground "gray18"
+                 ;;                                                       :background "gray18")
+                 ;;                                                       )))
                  ))
 
               ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
