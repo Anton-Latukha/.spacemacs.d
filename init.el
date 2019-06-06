@@ -1078,15 +1078,6 @@ before packages are loaded."
 
   ;;   )
 
-  ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
-  (custom-theme-set-faces
-   'user
-   ;; Customize the Emacs theme to set all tags the same
-   `(org-tag                   ((t (:foreground "gray18" :weight bold :height 0.8))))
-   ;; So far not really working
-   `(org-drawer                ((t (:foreground "black" :weight bold :height 0.8))))
-   `(org-property-value        ((t (:foreground "black" :weight bold :height 0.8))))
-   )
 
   ;; Another function that tries to hide properties
   ;; (defun org-toggle-properties ()
