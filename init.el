@@ -515,6 +515,23 @@ This function should only modify configuration layer settings."
                   calendar-location-name "Kyiv, Ukraine"
                   calendar-latitude 50.4755605
                   calendar-longitude 30.4039573)
+     (theming :variables ;; Streamlines faces modifications
+              theming-modifications
+              '(
+                (
+                 spacemacs-dark
+                 ))
+
+              ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
+              ;; (custom-theme-set-faces
+              ;;  'user
+              ;;  ;; Customize the Emacs theme to set all tags the same
+              ;;  `(org-tag                   ((t (:foreground "gray18" :weight bold :height 0.8))))
+              ;;  ;; So far not really working
+              ;;  `(org-drawer                ((t (:foreground "black" :weight bold :height 0.8))))
+              ;;  `(org-property-value        ((t (:foreground "black" :weight bold :height 0.8))))
+              ;;  )
+              )
      )
 
    ;; List of additional packages that will be installed without being
