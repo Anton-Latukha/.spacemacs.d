@@ -1171,6 +1171,21 @@ before packages are loaded."
     (org-toggle-tag "drill")
     )
 
+  (defun my-org-link-delete-link ()
+    "Remove the link part of an org-mode link at point and keep
+only the description"
+    (interactive)
+    (let ((elem (org-element-context)))
+      (if (eq (car elem) 'link)
+          (let* ((content-begin (org-element-property :contents-begin elem))
+                 (content-end  (org-element-property :contents-end elem))
+                 (link-begin (org-element-property :begin elem))
+                 (link-end (org-element-property :end elem)))
+            (if (and content-begin content-end)
+                (let ((content (buffer-substring-no-properties content-begin content-end)))
+                  (delete-region link-begin link-end)
+                  (insert content)))))))
+
   (spacemacs/declare-prefix "o" "custom")
   (spacemacs/set-leader-keys
     "od" 'my-insert-current-date
@@ -1182,6 +1197,7 @@ before packages are loaded."
   (spacemacs/set-leader-keys-for-major-mode 'org-mode
     "oi" 'org-id-get-create
     "od" 'my-org-toggle-tag-drill
+    "oL" 'my-org-link-delete-link
     )
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html")
