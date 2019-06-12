@@ -1165,7 +1165,7 @@ before packages are loaded."
     (interactive)
     (helm-org-rifle-files (append my-org-refile-additional-targets org-agenda-files))
     )
-  (defun my-toggle-tag-drill ()
+  (defun my-org-toggle-tag-drill ()
     "Toggle :drill: tag"
     (interactive)
     (org-toggle-tag "drill")
@@ -1181,7 +1181,7 @@ before packages are loaded."
   (spacemacs/declare-prefix-for-mode 'org-mode "o" "custom")
   (spacemacs/set-leader-keys-for-major-mode 'org-mode
     "oi" 'org-id-get-create
-    "od" 'my-toggle-tag-drill
+    "od" 'my-org-toggle-tag-drill
     )
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html")
