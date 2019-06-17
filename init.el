@@ -1171,6 +1171,8 @@ before packages are loaded."
     (org-toggle-tag "drill")
     )
 
+  ;;;; 2019-06-12: NOTE: Strips link from selected text
+  ;;;; Taken from: https://emacs.stackexchange.com/questions/10707/in-org-mode-how-to-remove-a-link
   (defun my-org-link-delete-link ()
     "Remove the link part of an org-mode link at point and keep
 only the description"
@@ -1318,7 +1320,7 @@ with DRILL_CARD_TYPE nil."
 
   (defun org-hidden-links-hook-function ()
     "Add rule for `org-activate-hidden-links-additional' to `org-font-lock-extra-keywords'.
-You can include this function in `org-font-lock-set-keywords-hook'."
+     You can include this function in `org-font-lock-set-keywords-hook'."
     (add-to-list 'org-font-lock-extra-keywords
                  '(org-activate-hidden-links-additional
                    (1 '(face org-target invisible org-link))
