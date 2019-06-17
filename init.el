@@ -1299,6 +1299,33 @@ with DRILL_CARD_TYPE nil."
         (apply oldfun args))))
 
   (advice-add 'org-drill-entry-status :around #'org-drill-entry-status-workaround)
+
+  ;;;; 2019-06-12: NOTE: Prettify '<<<Radio targets>>>' to be shown as 'Radio targets' when org-descriptive-links set
+  ;;;; This is improvement of the code from: Tobias&glmorous: https://emacs.stackexchange.com/questions/19230/how-to-hide-targets
+  ;;;; There exists library created from the sample: https://github.com/talwrii/org-hide-targets
+  (defcustom org-hidden-links-additional-re "\\(<<<\\)[[:print:]]+?\\(>>>\\)"
+    "Regular expression that matches strings where the invisible-property of the sub-matches 1 and 2 is set to org-link."
+    :type '(choice (const :tag "Off" nil) regexp)
+    :group 'org-link)
+  (make-variable-buffer-local 'org-hidden-links-additional-re)
+
+  (defun org-activate-hidden-links-additional (limit)
+    "Put invisible-property org-link on strings matching `org-hide-links-additional-re'."
+    (if org-hidden-links-additional-re
+        (re-search-forward org-hidden-links-additional-re limit t)
+      (goto-char limit)
+      nil))
+
+  (defun org-hidden-links-hook-function ()
+    "Add rule for `org-activate-hidden-links-additional' to `org-font-lock-extra-keywords'.
+You can include this function in `org-font-lock-set-keywords-hook'."
+    (add-to-list 'org-font-lock-extra-keywords
+                 '(org-activate-hidden-links-additional
+                   (1 '(face org-target invisible org-link))
+                   (2 '(face org-target invisible org-link)))))
+
+  (add-hook 'org-font-lock-set-keywords-hook #'org-hidden-links-hook-function)
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
