@@ -1129,7 +1129,7 @@ before packages are loaded."
           ("c" "Capture Generale" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
            "* %?")
           ("W" "Web site" entry (id cdf8e391-a200-4fd8-8613-356d74303010)
-           "* %a\n:properties:\n:added: %u\n:end:\n\n#+begin_comment\n%?\n#+end_comment\n\n%:initial")
+           "* %a\n:properties:\n:added: %u\n:end:\n%:initial")
           ("b" "Brain: add at the end" plain (function org-brain-goto-end)
            "* %i%?" :empty-lines 1)
 
