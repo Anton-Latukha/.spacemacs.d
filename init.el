@@ -1201,6 +1201,8 @@ only the description"
     "oi" 'org-id-get-create
     "od" 'my-org-toggle-tag-drill
     "oL" 'my-org-link-delete-link
+    "or" 'org-drill-resume
+    "oR" 'org-drill
     )
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html")
