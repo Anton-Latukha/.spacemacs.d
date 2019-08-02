@@ -587,6 +587,13 @@ This function should only modify configuration layer settings."
               ;;  `(org-property-value        ((t (:foreground "black" :weight bold :height 0.8))))
               ;;  )
               )
+
+     ;;;; NOTE: 2019-08-02: Trying to make literate Haskell work in HIE
+     ;; (require 'lsp)
+     ;; (require 'lsp-haskell)
+     ;; (add-hook 'literate-haskell-mode-hook #'lsp-haskell-enable)
+     ;; (add-hook 'literate-haskell-mode-hook #'lsp)
+
      )
 
    ;; List of additional packages that will be installed without being
