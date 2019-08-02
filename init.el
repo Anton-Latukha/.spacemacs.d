@@ -427,7 +427,7 @@ This function should only modify configuration layer settings."
      ;;
 
      ;; spell-checking ; Requires aspell and `aspell` dictionary installed for your national languages (aka `aspell-en`)
-     ;; auto-completion    ;; Completion seems not of quality and unrelevant for now
+     auto-completion    ;; Completion seems not of quality and unrelevant for now
      ;; semantic    ; Collection of Emacs Development Environment Tools
      ;; ipython-notebook
 
