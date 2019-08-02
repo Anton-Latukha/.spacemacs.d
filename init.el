@@ -754,7 +754,7 @@ It should only modify the values of Spacemacs settings."
    ;;`powerline-scale' allows to quickly tweak the mode-line size to make
    ;; separators look not too crappy.
    dotspacemacs-default-font '("Inconsolata LGC"
-                              :size 13
+                              :size 12
                               :weight normal
                               :width normal
                               :powerline-scale 1.1
