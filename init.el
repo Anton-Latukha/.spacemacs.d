@@ -45,6 +45,9 @@ This function should only modify configuration layer settings."
      emacs-lisp    ; Crusial, Do not disable!
      multiple-cursors
      treemacs
+     ;; ----------------------------------------------------------------
+     ;; Manually configured block
+     ;;
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -53,9 +56,6 @@ This function should only modify configuration layer settings."
                      enable-flyspell-auto-completion t
                      )
      ;; version-control    ; Emacs support for different VCS (caution, can collide with separate Git control layers/configs
-     ;; ----------------------------------------------------------------
-     ;; Manually configured block
-     ;;
 
      ;; Useful to anyone
      syntax-checking
