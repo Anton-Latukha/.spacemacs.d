@@ -372,6 +372,8 @@ This function should only modify configuration layer settings."
           )
      (haskell :variables
               haskell-enable-hindent t
+              haskell-completion-backend 'lsp
+              haskell-process-type 'cabal-new-repl
               )
      javascript
      shell-scripts
