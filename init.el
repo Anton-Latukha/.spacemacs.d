@@ -359,6 +359,17 @@ This function should only modify configuration layer settings."
           ;;                         (clock-out   . ""))
           )
 
+     (lsp :variables
+          default-nix-wrapper (lambda (args)
+                                (append
+                                 (append (list "nix-shell" "-I" "." "--command" )
+                                         (list (mapconcat 'identity args " "))
+                                         )
+                                 (list (nix-current-sandbox))
+                                 )
+                                )
+          lsp-haskell-process-wrapper-function default-nix-wrapper
+          )
      (haskell :variables
               haskell-enable-hindent t
               )
