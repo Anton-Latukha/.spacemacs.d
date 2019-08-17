@@ -606,6 +606,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(
                                       direnv
                                       nix-sandbox
+                                      haskell-snippets
                                       )
 
    ;; A list of packages that cannot be updated.
