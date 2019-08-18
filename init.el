@@ -1373,6 +1373,8 @@ with DRILL_CARD_TYPE nil."
   ;; (add-hook 'literate-haskell-mode-hook #'lsp-haskell-enable)
   ;; (add-hook 'literate-haskell-mode-hook #'lsp)
 
+  (add-hook 'haskell-mode-hook 'direnv-update-environment) ;; If direnv configured
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
