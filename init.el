@@ -1160,7 +1160,7 @@ before packages are loaded."
            "* %?\n")
           ("t" "TODO:" entry (id 8ec8520c-0d07-4d02-9700-f9f204df91b8)
            "* TODO: %^{Name} %?")
-          ("n" "Note" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
+          ("N" "Note" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
            "* %^{Name} %?")
           ("c" "Capture Generale" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
            "* %?")
@@ -1168,6 +1168,8 @@ before packages are loaded."
            "* %a\n:properties:\n:added: %u\n:end:\n%:initial")
           ("b" "Brain: add at the end" plain (function org-brain-goto-end)
            "* %i%?" :empty-lines 1)
+          ("n" "Next:" entry (id ebc243d3-f040-49a0-940d-fbfd16b46edd)
+           "* NEXT: %?\nSCHT: %t")
 
           )
         )
