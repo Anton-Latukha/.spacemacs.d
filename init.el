@@ -1421,11 +1421,33 @@ with DRILL_CARD_TYPE nil."
           ;;              :order 1)
           ;; ;; After the last group, the agenda will display items that didn't
           ;; ;; match any of these groups, with the default order position of 99
+          (:name "Flow"
+                 :tag "work"
+                 :order 1)
           (:name "Habit"
                  :tag "habit"
                  :order 9)
-          (:auto-category)
-          ))
+          )
+        )
+
+  (setq org-agenda-prefix-format
+        '(
+          ;; (agenda . " %i %-12:c%?-12t% s")
+          ;; (todo . " %i %-12:c")
+          ;; (tags . " %i %-12:c")
+          ;; (search . " %i %-12:c")
+          ;; (agenda  . "  • ")
+          ;; (agenda  . "  ")
+          ;; (agenda . " %i %-5t%-5s")
+          (agenda . "  %i")
+          (timeline  . "  % s")
+          (todo  . " %i %-12:c")
+          (tags  . " %i %-12:c")
+          (search . " %i %-12:c")
+          )
+        )
+
+  (org-super-agenda-mode t)
 
   )
 
