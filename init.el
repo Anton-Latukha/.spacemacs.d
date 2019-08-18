@@ -589,12 +589,6 @@ This function should only modify configuration layer settings."
               ;;  )
               )
 
-     ;;;; NOTE: 2019-08-02: Trying to make literate Haskell work in HIE
-     ;; (require 'lsp)
-     ;; (require 'lsp-haskell)
-     ;; (add-hook 'literate-haskell-mode-hook #'lsp-haskell-enable)
-     ;; (add-hook 'literate-haskell-mode-hook #'lsp)
-
      )
 
    ;; List of additional packages that will be installed without being
@@ -1372,6 +1366,12 @@ with DRILL_CARD_TYPE nil."
                    (2 '(face org-target invisible org-link)))))
 
   (add-hook 'org-font-lock-set-keywords-hook #'org-hidden-links-hook-function)
+
+  ;;;; NOTE: 2019-08-02: Trying to make literate Haskell work in HIE
+  ;; (require 'lsp)
+  ;; (require 'lsp-haskell)
+  ;; (add-hook 'literate-haskell-mode-hook #'lsp-haskell-enable)
+  ;; (add-hook 'literate-haskell-mode-hook #'lsp)
 
   )
 
