@@ -371,11 +371,13 @@ This function should only modify configuration layer settings."
                                 )
           lsp-haskell-process-wrapper-function default-nix-wrapper
           )
+
      (haskell :variables
               haskell-enable-hindent t
               haskell-completion-backend 'lsp
               haskell-process-type 'cabal-new-repl
               )
+
      javascript
      shell-scripts
 
@@ -602,6 +604,7 @@ This function should only modify configuration layer settings."
                                       direnv
                                       nix-sandbox
                                       haskell-snippets
+                                      org-super-agenda
                                       )
 
    ;; A list of packages that cannot be updated.
@@ -1232,6 +1235,7 @@ only the description"
     "on" 'my-insert-note
     "or" 'my-helm-org-rifle-files
     "op" 'sp-splice-sexp-killing-around
+    "oa" 'org-agenda-list
     )
 
   (spacemacs/declare-prefix-for-mode 'org-mode "o" "custom")
