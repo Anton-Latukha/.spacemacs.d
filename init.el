@@ -360,6 +360,10 @@ This function should only modify configuration layer settings."
           ;;                         (refile      . "%t: re-filed")
           ;;                         (clock-out   . ""))
           org-export-headline-levels 10
+          org-enable-github-support t
+          org-enable-bootstrap-support t
+          org-enable-reveal-js-support t
+
           )
 
      (lsp :variables
