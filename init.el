@@ -605,6 +605,7 @@ This function should only modify configuration layer settings."
                                       nix-sandbox
                                       haskell-snippets
                                       org-super-agenda
+                                      outshine ;; For managing code with Outlines
                                       )
 
    ;; A list of packages that cannot be updated.
@@ -1448,6 +1449,40 @@ with DRILL_CARD_TYPE nil."
         )
 
   (org-super-agenda-mode t)
+
+  ;; Managing code with Outlines using =outshine=
+  (add-hook 'outline-minor-mode-hook 'outshine-mode)
+
+  ;; Enables outline-minor-mode for *ALL* programming buffers
+  (add-hook 'prog-mode-hook 'outline-minor-mode)
+
+  ;; Narrowing now works within the headline rather than requiring to be on it
+  (advice-add 'outshine-narrow-to-subtree :before
+              (lambda (&rest args) (unless (outline-on-heading-p t)
+                                     (outline-previous-visible-heading 1))))
+
+  (spacemacs/set-leader-keys
+    ;; Narrowing
+    "nn" 'outshine-narrow-to-subtree
+    "nw" 'widen
+
+    ;; Structural edits
+    "nj" 'outline-move-subtree-down
+    "nk" 'outline-move-subtree-up
+    "nh" 'outline-promote
+    "nl" 'outline-demote)
+
+  (let ((kmap outline-minor-mode-map))
+    (define-key kmap (kbd "M-RET") 'outshine-insert-heading)
+    (define-key kmap (kbd "<backtab>") 'outshine-cycle-buffer)
+
+    ;; Evil outline navigation keybindings
+    (evil-define-key '(normal visual motion) kmap
+      "gh" 'outline-up-heading
+      "gj" 'outline-forward-same-level
+      "gk" 'outline-backward-same-level
+      "gl" 'outline-next-visible-heading
+      "gu" 'outline-previous-visible-heading))
 
   )
 
