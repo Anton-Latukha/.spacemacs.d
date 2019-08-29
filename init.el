@@ -1384,7 +1384,7 @@ with DRILL_CARD_TYPE nil."
                    (1 '(face org-target invisible org-link))
                    (2 '(face org-target invisible org-link)))))
 
-  (add-hook 'org-font-lock-set-keywords-hook #'org-hidden-links-hook-function)
+  (add-hook 'org-font-lock-set-keywords-hook 'org-hidden-links-hook-function)
 
   ;;;; NOTE: 2019-08-02: Trying to make literate Haskell work in HIE
   ;; (require 'lsp)
