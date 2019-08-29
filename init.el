@@ -611,6 +611,7 @@ This function should only modify configuration layer settings."
                                       nix-sandbox
                                       haskell-snippets
                                       org-super-agenda
+                                      shm ;; Structured Haskell mode
                                       outshine ;; For managing code with Outlines
                                       )
 
@@ -1386,6 +1387,8 @@ with DRILL_CARD_TYPE nil."
 
   (add-hook 'org-font-lock-set-keywords-hook 'org-hidden-links-hook-function)
 
+  ;; (add-hook 'haskell-mode-hook 'spacemacs/toggle-highlight-long-lines-on)
+
   ;;;; NOTE: 2019-08-02: Trying to make literate Haskell work in HIE
   ;; (require 'lsp)
   ;; (require 'lsp-haskell)
@@ -1461,6 +1464,8 @@ with DRILL_CARD_TYPE nil."
         )
 
   (org-super-agenda-mode t)
+
+  ;; (add-hook 'haskell-mode-hook 'structured-haskell-mode)
 
   ;; Managing code with Outlines using =outshine=
   (add-hook 'outline-minor-mode-hook 'outshine-mode)
