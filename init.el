@@ -2,6 +2,8 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+;;; Layers configuration
+
 (defun dotspacemacs/layers ()
   "Layer configuration:
 This function should only modify configuration layer settings."
@@ -623,6 +625,8 @@ This function should only modify configuration layer settings."
    ;; (default is `used-only')
    dotspacemacs-install-packages 'used-only))
 
+;;; Init configuration
+
 (defun dotspacemacs/init ()
   "Initialization:
 This function is called at the very beginning of Spacemacs startup,
@@ -987,6 +991,8 @@ It should only modify the values of Spacemacs settings."
    ;; (default nil)
    dotspacemacs-pretty-docs nil))
 
+;;; User-{env, init, config}
+
 (defun dotspacemacs/user-env ()
   "Environment variables setup.
 This function defines the environment variables for your Emacs session. By
@@ -1009,6 +1015,8 @@ This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
 dump."
   )
+
+;;; User-config
 
 (defun dotspacemacs/user-config ()
   "Configuration for user code:
@@ -1485,6 +1493,8 @@ with DRILL_CARD_TYPE nil."
       "gu" 'outline-previous-visible-heading))
 
   )
+
+;;; Emacs-custom-settings
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
