@@ -359,7 +359,7 @@ This function should only modify configuration layer settings."
           ;;                         (deldeadline . "%t: rm deadline %S")
           ;;                         (refile      . "%t: re-filed")
           ;;                         (clock-out   . ""))
-          org-export-headline-levels 4
+          org-export-headline-levels 10
           )
 
      (lsp :variables
