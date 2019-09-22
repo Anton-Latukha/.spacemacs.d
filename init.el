@@ -606,6 +606,8 @@ This function should only modify configuration layer settings."
               ;;  )
               )
 
+;;;; Other layers
+
      )
 
    ;; List of additional packages that will be installed without being
@@ -623,6 +625,7 @@ This function should only modify configuration layer settings."
                                       org-super-agenda
                                       shm ;; Structured Haskell mode
                                       outshine ;; For managing code with Outlines
+;;;; Misc package options
                                       )
 
    ;; A list of packages that cannot be updated.
