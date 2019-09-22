@@ -1579,6 +1579,19 @@ with DRILL_CARD_TYPE nil."
 
 
 ;;;; Mathematical symbols
+;;;; Line number
+  (setq-default
+   dotspacemacs-line-numbers
+   '(
+     :relative t
+
+     :size-limit-kb 1000
+     )
+   )
+
+  (setq linum-format "%4d ")
+
+
   )
 
 
