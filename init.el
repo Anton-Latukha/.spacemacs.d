@@ -64,6 +64,7 @@ This function should only modify configuration layer settings."
      ;; Useful to anyone
      syntax-checking
      (org :variables
+;;;; Org
           org-enable-org-journal-support t ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
           org-agenda-files
           '(
@@ -369,6 +370,7 @@ This function should only modify configuration layer settings."
           )
 
      (lsp :variables
+;;;; LSP
           default-nix-wrapper (lambda (args)
                                 (append
                                  (append (list "nix-shell" "-I" "." "--command" )
@@ -381,6 +383,7 @@ This function should only modify configuration layer settings."
           )
 
      (haskell :variables
+;;;; Haskell
               haskell-enable-hindent t
               haskell-completion-backend 'lsp
               haskell-process-type 'cabal-new-repl
@@ -397,6 +400,7 @@ This function should only modify configuration layer settings."
      sql
 
      (git :variables
+;;;; Git
           magit-repository-directories
           '(
             ("~/org/" . 0)
@@ -515,6 +519,7 @@ This function should only modify configuration layer settings."
      ;; restclient
      ;; salt    ; Configuration management tool
      (shell :variables
+;;;; Shell
             shell-default-shell 'ansi-term
             ;; shell-default-shell 'eshell
             shell-default-term-shell "/run/current-system/sw/bin/fish"
@@ -552,6 +557,7 @@ This function should only modify configuration layer settings."
      ;; hie-nix
 
      (geolocation :variables
+;;;; Geolocation
                   geolocation-enable-location-service t
                   geolocation-enable-weather-forecast t
 
@@ -560,6 +566,7 @@ This function should only modify configuration layer settings."
                   calendar-longitude 30.4039573)
 
      (theming :variables ;; Streamlines faces modifications
+;;;; Theming
               theming-modifications
               '(
                 (
@@ -609,6 +616,7 @@ This function should only modify configuration layer settings."
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
+;;;; Packages
                                       direnv
                                       nix-sandbox
                                       haskell-snippets
@@ -1207,6 +1215,7 @@ before packages are loaded."
   ;; Trigger autosave before quitting org-agenda
   (advice-add 'org-agenda-quit :before 'org-save-all-org-buffers)
 
+;;;; My functions
   (defun my-insert-current-date ()
     "Insert ISO date"
     (interactive)
@@ -1245,6 +1254,8 @@ only the description"
                   (delete-region link-begin link-end)
                   (insert content)))))))
 
+;;;; Keybindings
+;;;;; Global
   (spacemacs/declare-prefix "o" "custom")
   (spacemacs/set-leader-keys
     "od" 'my-insert-current-date
@@ -1254,6 +1265,7 @@ only the description"
     "oa" 'org-agenda-list
     )
 
+;;;;; Local
   (spacemacs/declare-prefix-for-mode 'org-mode "o" "custom")
   (spacemacs/set-leader-keys-for-major-mode 'org-mode
     "oi" 'org-id-get-create
@@ -1503,7 +1515,13 @@ with DRILL_CARD_TYPE nil."
       "gl" 'outline-next-visible-heading
       "gu" 'outline-previous-visible-heading))
 
+
+;;;; Pretty-fonts
+
+
+;;;; Mathematical symbols
   )
+
 
 ;;; Emacs-custom-settings
 
