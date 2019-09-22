@@ -1181,22 +1181,62 @@ before packages are loaded."
           ;;  "* %^{Title}\n:PROPERTIES:\n:ADDED: %u\n:SOURCE: %c\n:END:\n#+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n%?")
           ;; ("L" "Protocol Link" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
           ;;  "* [[%:link][%:description]] %?\n:PROPERTIES:\n:ADDED: %u\n:END:")
-          ("d" "Dictionary entry" entry (file ,(concat org-directory "/dictionary/dictionary.org"))
-           "* %^{word} :drill:\n%\\1 - %^{phonetic} - %?")
-          ("w" "Word entry" entry (file ,(concat org-directory "/word/word.org"))
-           "* %?\n")
-          ("t" "TODO:" entry (id 8ec8520c-0d07-4d02-9700-f9f204df91b8)
-           "* TODO: %^{Name} %?")
-          ("N" "Note" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
-           "* %^{Name} %?")
-          ("c" "Capture Generale" entry (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
-           "* %?")
-          ("W" "Web site" entry (id cdf8e391-a200-4fd8-8613-356d74303010)
-           "* %a\n:properties:\n:added: %u\n:end:\n%:initial")
-          ("b" "Brain: add at the end" plain (function org-brain-goto-end)
-           "* %i%?" :empty-lines 1)
-          ("n" "Next:" entry (id ebc243d3-f040-49a0-940d-fbfd16b46edd)
-           "* NEXT: %?\nSCHT: %t")
+
+          ("d" "Dictionary entry" entry
+           (file ,(concat org-directory "/dictionary/dictionary.org"))
+           "* %^{word} :drill:\n%\\1 - %^{phonetic} - %?"
+           ::empty-lines-before 1
+           ::empty-lines-after 1
+           )
+
+          ("w" "Word entry" entry
+           (file ,(concat org-directory "/word/word.org"))
+           "* %?\n"
+           ::empty-lines-before 1
+           ::empty-lines-after 1
+           )
+
+          ("t" "TODO:" entry
+           (id 8ec8520c-0d07-4d02-9700-f9f204df91b8)
+           "* TODO: %^{Name} %?"
+           ::empty-lines-before 1
+           ::empty-lines-after 1
+           )
+
+          ("N" "Note" entry
+           (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
+           "* %^{Name} %?"
+           ::empty-lines-before 1
+           ::empty-lines-after 1
+           )
+
+          ("c" "Capture Generale" entry
+           (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
+           "* %?"
+           ::empty-lines-before 1
+           ::empty-lines-after 1
+           )
+
+          ("W" "Web site" entry
+           (id cdf8e391-a200-4fd8-8613-356d74303010)
+           "* %a\n:properties:\n:added: %u\n:end:\n%:initial"
+           ::empty-lines-before 1
+           ::empty-lines-after 1
+           )
+
+          ("b" "Brain: add at the end" plain
+           (function org-brain-goto-end)
+           "* %i%?" :empty-lines 1
+           ::empty-lines-before 1
+           ::empty-lines-after 1
+           )
+
+          ("n" "Next:" entry
+           (id ebc243d3-f040-49a0-940d-fbfd16b46edd)
+           "* NEXT: %?\nSCHT: %t"
+           ::empty-lines-before 1
+           ::empty-lines-after 1
+           )
 
           )
         )
