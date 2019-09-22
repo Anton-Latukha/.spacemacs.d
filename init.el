@@ -63,6 +63,48 @@ This function should only modify configuration layer settings."
 
      ;; Useful to anyone
      syntax-checking
+
+     javascript
+     shell-scripts
+
+     csv
+     html
+     markdown
+     yaml
+
+     sql
+
+     ;; sphinx    ; Documentation generator by Python
+     systemd
+     (terraform :variables terraform-auto-format-on-save t)
+     ;; tmux
+     ;; transmission    ; Torrent client
+     ;; vagrant
+
+     ;; == Great
+     ;; slack
+     ;; osx
+     ;; search-engine    ; Support of many search engines
+     ;; elfeed    ; Atom and RSS feeds. Elfeed, a web feeds client
+     ;; evernote
+     spotify
+     ;; twitter
+     nixos
+     ;; floobits    ; Support for pair programming
+
+     ;; For fun
+     colors    ; Too extreme fancy coloring
+     ;; emoji    ; yes :satisfied:. But caution, it going to conflict with org-mode ':' symbol in time tracking
+     ;; games
+     ;; selectic    ; Typewriter typing sound
+     ;; xkcd    ; xkcd
+
+     ;;
+     ;; For more layers and info: http://spacemacs.org/layers/LAYERS.html
+     ;;
+     ;; ----------------------------------------------------------------
+
+     ;; hie-nix
      (org :variables
 ;;;; Org
           org-enable-org-journal-support t ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
@@ -389,16 +431,6 @@ This function should only modify configuration layer settings."
               haskell-process-type 'cabal-new-repl
               )
 
-     javascript
-     shell-scripts
-
-     csv
-     html
-     markdown
-     yaml
-
-     sql
-
      (git :variables
 ;;;; Git
           magit-repository-directories
@@ -524,37 +556,6 @@ This function should only modify configuration layer settings."
             ;; shell-default-shell 'eshell
             shell-default-term-shell "/run/current-system/sw/bin/fish"
             )
-     ;; sphinx    ; Documentation generator by Python
-     systemd
-     (terraform :variables terraform-auto-format-on-save t)
-     ;; tmux
-     ;; transmission    ; Torrent client
-     ;; vagrant
-
-     ;; == Great
-     ;; slack
-     ;; osx
-     ;; search-engine    ; Support of many search engines
-     ;; elfeed    ; Atom and RSS feeds. Elfeed, a web feeds client
-     ;; evernote
-     spotify
-     ;; twitter
-     nixos
-     ;; floobits    ; Support for pair programming
-
-     ;; For fun
-     colors    ; Too extreme fancy coloring
-     ;; emoji    ; yes :satisfied:. But caution, it going to conflict with org-mode ':' symbol in time tracking
-     ;; games
-     ;; selectic    ; Typewriter typing sound
-     ;; xkcd    ; xkcd
-
-     ;;
-     ;; For more layers and info: http://spacemacs.org/layers/LAYERS.html
-     ;;
-     ;; ----------------------------------------------------------------
-
-     ;; hie-nix
 
      (geolocation :variables
 ;;;; Geolocation
