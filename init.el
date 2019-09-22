@@ -112,7 +112,6 @@ This function should only modify configuration layer settings."
           '(
             "~/org/Flow.org"
             "~/org/Habit flow.org"
-            "~/org/Save.org"
             )
           org-highest-priority ?A
           org-default-priority ?E
@@ -167,6 +166,7 @@ This function should only modify configuration layer settings."
             "~/org/tex/tex.org"
             "~/org/org/org.org"
             "~/org/Web-archive save.org"
+            "~/org/Save.org"
             )
           org-refile-targets
           '(
