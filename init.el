@@ -609,6 +609,8 @@ This function should only modify configuration layer settings."
 
 ;;;; Other layers
 
+     unicode-fonts
+
      )
 
    ;; List of additional packages that will be installed without being
