@@ -1054,7 +1054,7 @@ before packages are loaded."
   ;;  (lambda ()
   ;;  (setq-local indent-line-function #'indent-relative))))
   ;; ----------------------------------------------------------------
-  ;; (add-hook 'haskell-mode-hook 'turn-on-haskell-unicode-input-method)    ;; FIXME: 2019-04-23: Temporary disable for HNix upstream contribution
+  (add-hook 'haskell-mode-hook #'turn-on-haskell-unicode-input-method)
   (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines in org-mode - wrap them all
 
   (require 'org)
@@ -1409,7 +1409,7 @@ with DRILL_CARD_TYPE nil."
   ;; (add-hook 'literate-haskell-mode-hook #'lsp-haskell-enable)
   ;; (add-hook 'literate-haskell-mode-hook #'lsp)
 
-  (add-hook 'haskell-mode-hook 'direnv-update-environment) ;; If direnv configured
+  (add-hook 'haskell-mode-hook #'direnv-update-environment) ;; If direnv configured
 
   (setq org-super-agenda-groups
         '(;; Each group has an implicit boolean OR operator between its selectors.
@@ -1479,13 +1479,13 @@ with DRILL_CARD_TYPE nil."
 
   (org-super-agenda-mode t)
 
-  ;; (add-hook 'haskell-mode-hook 'structured-haskell-mode)
+  ;; (add-hook 'haskell-mode-hook #'structured-haskell-mode)
 
   ;; Managing code with Outlines using =outshine=
-  (add-hook 'outline-minor-mode-hook 'outshine-mode)
+  (add-hook 'outline-minor-mode-hook #'outshine-mode)
 
   ;; Enables outline-minor-mode for *ALL* programming buffers
-  (add-hook 'prog-mode-hook 'outline-minor-mode)
+  (add-hook 'prog-mode-hook #'outline-minor-mode)
 
   ;; Narrowing now works within the headline rather than requiring to be on it
   (advice-add 'outshine-narrow-to-subtree :before
