@@ -187,11 +187,15 @@ This function should only modify configuration layer settings."
 
           org-log-into-drawer t    ; if t log into the :LOGBOOK: drawer
 
-          org-agenda-time-grid (quote
-                                ((daily today require-timed)
-                                 (600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200 2300 2400)
-                                 "      "
-                                 "----------------"))
+          org-agenda-time-grid
+          (quote
+           (
+            (daily today require-timed)
+            (600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200 2300 2400)
+            "      "
+            "----------------"
+            )
+           )
 
           ;; ;; Taken from https://github.com/jwiegley/dot-emacs/blob/master/org-settings.el
           ;; org-agenda-sorting-strategy '((agenda habit-down time-up todo-state-up priority-down)
