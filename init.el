@@ -1392,6 +1392,16 @@ only the description"
           )
     )
 
+  ;; Refile only in current file
+  (defun my-local-org-refile ()
+    "Refile only in current org-file"
+    (interactive)
+    (let ((org-refile-targets
+           '((my-current-org-file :maxlevel . 10))
+           ))
+      (org-refile)
+      ))
+
 ;;;; Keybindings
 
 ;;;;; Global
@@ -1414,6 +1424,7 @@ only the description"
     "oL" 'my-org-link-delete-link
     "or" 'org-drill-resume
     "oR" 'org-drill
+    "ol" 'my-local-org-refile
     )
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html")
