@@ -642,6 +642,7 @@ This function should only modify configuration layer settings."
 
      unicode-fonts
 
+     ;; github
 
      )
 
@@ -1156,6 +1157,8 @@ before packages are loaded."
   ;;                 (outline-flag-region start (point-at-eol) t)
   ;;                 (user-error msg))))))))))
 
+;;;; Indenting setup
+
   (defun my-indent-setup (n) ;; Group the setting of indent into one variable 'standard indent'
     (setq-default standard-indent n)
     (setq-default evil-shift-width n)
@@ -1179,6 +1182,8 @@ before packages are loaded."
     (setq-default fish-indent-offset n) ;; fish shell
     )
   (my-indent-setup 2)
+
+;;;; Align tags
 
   ;; This aligns org-mode tags to the window border
   (add-hook 'focus-in-hook
@@ -1218,6 +1223,8 @@ before packages are loaded."
   ;;         (if (outline-invisible-p (point))
   ;;             (outline-show-entry)
   ;;           (org-cycle-hide-drawers 'all))))))
+
+;;;; Org capture templates
 
   (setq org-capture-templates
         `(
@@ -1377,7 +1384,9 @@ only the description"
   ;;         )
   ;;   )
 ;;;; Keybindings
+
 ;;;;; Global
+
   (spacemacs/declare-prefix "o" "custom")
   (spacemacs/set-leader-keys
     "od" 'my-insert-current-date
@@ -1388,6 +1397,7 @@ only the description"
     )
 
 ;;;;; Local
+
   (spacemacs/declare-prefix-for-mode 'org-mode "o" "custom")
   (spacemacs/set-leader-keys-for-major-mode 'org-mode
     "oi" 'org-id-get-create
