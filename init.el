@@ -1383,6 +1383,15 @@ only the description"
   ;;         (buffer-file-name (current-buffer))
   ;;         )
   ;;   )
+
+  ;; Get my current org file name
+  (defun my-current-org-file ()
+    (delq nil
+          (list
+           (buffer-file-name (current-buffer)))
+          )
+    )
+
 ;;;; Keybindings
 
 ;;;;; Global
