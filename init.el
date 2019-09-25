@@ -1103,15 +1103,16 @@ before packages are loaded."
 
   (require 'org)
 
-  (nconc org-modules
-         '(
-           org-capture
-           org-habit
-           org-id
-           org-protocol
-           org-brain
-           org-drill
-           ))
+  (nconc
+   org-modules
+   '(
+     org-capture
+     org-habit
+     org-id
+     org-protocol
+     org-brain
+     org-drill
+     ))
 
   ;;;;
   ;;;; This hides :PROPERTIES: in org files
