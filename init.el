@@ -652,16 +652,20 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(
 ;;;; Packages
-                                      direnv
-                                      nix-sandbox
-                                      haskell-snippets
-                                      org-super-agenda
-                                      shm ;; Structured Haskell mode
-                                      outshine ;; For managing code with Outlines
+
+   dotspacemacs-additional-packages
+   '(
+     direnv
+     nix-sandbox
+     haskell-snippets
+     org-super-agenda
+     shm ;; Structured Haskell mode
+     outshine ;; For managing code with Outlines
+     pretty-mode
+     )
+
 ;;;; Misc package options
-                                      )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
