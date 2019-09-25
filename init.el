@@ -1686,6 +1686,36 @@ with DRILL_CARD_TYPE nil."
   ;; (display/init-pretty-fonts)
 
 ;;;; Mathematical symbols
+  ;; Doing setup from: http://www.modernemacs.com/post/prettify-mode/
+
+  ;; Pretty mode
+  (require 'pretty-mode)
+  ;; (global-pretty-mode t)
+
+  (pretty-deactivate-groups
+   '(
+     :equality
+     :ordering
+     :ordering-double
+     :ordering-triple
+     :arrows
+     :arrows-twoheaded
+     :punctuation
+     :logic
+     :sets
+     )
+   )
+
+  (pretty-activate-groups
+   '(
+     ;; :sub-and-superscripts
+     ;; :greek
+     ;; :arithmetic-nary
+     )
+   )
+
+  ;; (global-prettify-symbols-mode 1)
+
 ;;;; Line number
   (setq-default
    dotspacemacs-line-numbers
