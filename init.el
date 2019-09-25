@@ -629,15 +629,19 @@ This function should only modify configuration layer settings."
       ;;  )
       )
 
+;;;; WakaTime
+
+     (wakatime
+      :variables
+      wakatime-api-key  "b5292c00-f691-4070-9a8c-2a3b61e6e360"
+      ;; use the actual wakatime path
+      wakatime-cli-path "/run/current-system/sw/bin/wakatime"
+      )
+
 ;;;; Other layers
 
      unicode-fonts
 
-     (wakatime :variables
-               wakatime-api-key  "b5292c00-f691-4070-9a8c-2a3b61e6e360"
-               ;; use the actual wakatime path
-               wakatime-cli-path "/run/current-system/sw/bin/wakatime"
-               )
 
      )
 
