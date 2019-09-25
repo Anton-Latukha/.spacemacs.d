@@ -1640,6 +1640,8 @@ with DRILL_CARD_TYPE nil."
 
 ;;;; Pretty-fonts
 
+  (add-to-list 'load-path "~/.spacemacs.d/lisp/pretty-fonts/")
+  (require 'pretty-fonts)
 
 ;;;; Mathematical symbols
 ;;;; Line number
