@@ -1427,7 +1427,7 @@ only the description"
     "ol" 'my-local-org-refile
     )
 
-  (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html")
+  (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html/")
 
   (require 'org-protocol-capture-html)
   ;; (setq recentf-max-saved-items 30)
