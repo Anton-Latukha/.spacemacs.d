@@ -1642,6 +1642,48 @@ with DRILL_CARD_TYPE nil."
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/pretty-fonts/")
   (require 'pretty-fonts)
+  ;; (pretty-fonts-set-kwds
+  ;;  '((pretty-fonts-fira-font prog-mode-hook org-mode-hook)))
+
+  (defun display/init-pretty-fonts ()
+    (use-package pretty-fonts
+      :config
+      ;; !! This is required to avoid segfault when using emacs as daemon !!
+      (spacemacs|do-after-display-system-init
+       ;;;; Disabled this, because guy has ridicilous symbols set, and they override my setup.
+       ;; (pretty-fonts-add-hook 'prog-mode-hook pretty-fonts-fira-code-alist)
+       ;; (pretty-fonts-add-hook 'org-mode-hook  pretty-fonts-fira-code-alist)
+       ;; (pretty-fonts-add-hook 'haskell-mode-hook  pretty-fonts-fira-code-alist)
+
+       (pretty-fonts-set-fontsets-for-fira-code)
+       ;;;; This symbols are not supported on my setup
+       ;; (pretty-fonts-set-fontsets
+       ;;  '(;; All-the-icons fontsets
+       ;;    ("fontawesome"
+       ;;     ;;                         
+       ;;     #xf07c #xf0c9 #xf0c4 #xf0cb #xf017 #xf101)
+
+       ;;    ("all-the-icons"
+       ;;     ;;    
+       ;;     #xe907 #xe928)
+
+       ;;    ("github-octicons"
+       ;;     ;;                               
+       ;;     #xf091 #xf059 #xf076 #xf075 #xe192  #xf016 #xf071)
+
+       ;;    ("material icons"
+       ;;     ;;              
+       ;;     #xe871 #xe918 #xe3e7  #xe5da
+       ;;     ;;              
+       ;;     #xe3d0 #xe3d1 #xe3d2 #xe3d4)
+       ;;    )
+       ;;  )
+       )
+      )
+    )
+
+  ;;;; This is an empty call to notexistent func
+  ;; (display/init-pretty-fonts)
 
 ;;;; Mathematical symbols
 ;;;; Line number
