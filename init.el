@@ -529,11 +529,11 @@ This function should only modify configuration layer settings."
      ;; gpu    ; Languages to work with GPUs
      ;; major-modes    ; Support of more rare case DSL languages, like Arduino, MATLAB, QML, Vala, Wolfram...
      (plantuml
-               ;; :variables
-               ;; plantuml-java-command "/run/current-system/sw/bin/plantuml"
-               ;; plantuml-jar-path " "
-               ;; org-plantuml-jar-path "/run/current-system/sw/bin/plantuml"
-               )
+      ;; :variables
+      ;; plantuml-java-command "/run/current-system/sw/bin/plantuml"
+      ;; plantuml-jar-path " "
+      ;; org-plantuml-jar-path "/run/current-system/sw/bin/plantuml"
+      )
 
      ;; == Markup languages
      ;; graphviz
@@ -543,9 +543,11 @@ This function should only modify configuration layer settings."
 
      ;; == Tools
      ansible
-     (dash :variables ; Dash macOS & Zeal offline documentation tools
-           helm-dash-docset-newpath "~/.local/share/Zeal/Zeal/docsets"
-           )
+     (
+      dash
+      :variables ; Dash macOS & Zeal offline documentation tools
+      helm-dash-docset-newpath "~/.local/share/Zeal/Zeal/docsets"
+      )
 
      docker
      ;; nginx
@@ -555,62 +557,77 @@ This function should only modify configuration layer settings."
      ;; puppet
      ;; restclient
      ;; salt    ; Configuration management tool
-     (shell :variables
 ;;;; Shell
-            shell-default-shell 'ansi-term
-            ;; shell-default-shell 'eshell
-            shell-default-term-shell "/run/current-system/sw/bin/fish"
-            )
 
-     (geolocation :variables
+     (
+      shell
+      :variables
+      shell-default-shell 'ansi-term
+      ;; shell-default-shell 'eshell
+      shell-default-term-shell "/run/current-system/sw/bin/fish"
+      )
+
 ;;;; Geolocation
-                  geolocation-enable-location-service t
-                  geolocation-enable-weather-forecast t
+     (
+      geolocation
+      :variables
+      geolocation-enable-location-service t
+      geolocation-enable-weather-forecast t
 
-                  calendar-location-name "Kyiv, Ukraine"
-                  calendar-latitude 50.4755605
-                  calendar-longitude 30.4039573)
+      calendar-location-name "Kyiv, Ukraine"
+      calendar-latitude 50.4755605
+      calendar-longitude 30.4039573
+      )
 
-     (theming :variables ;; Streamlines faces modifications
 ;;;; Theming
-              theming-modifications
-              '(
-                (
-                 spacemacs-dark
 
-                 ;; Font locking
-                 ;; (font-lock-comment-face :slant italic)
-                 ;; (web-mode-html-attr-name-face :inherit font-lock-variable-name-face
-                 ;;                               :foreground nil)
-                 ;; ;; Modeline
-                 ;; (powerline-active1 :box (:color "#999999"
-                 ;;                                 :line-width 1
-                 ;;                                 :style released-button)
-                 ;;                    :background "#5a5a5a")))
-                 (org-tag :foreground "gray18"
-                          :weight bold
-                          :height 0.8)
+     (theming
+      :variables ;; Streamlines faces modifications
 
-                 ;;;; This was a try to make all drawer almost invisible. It mimics the source face code and fails miserably.
-                 ;; (org-drawer ((class '((class color) (min-colors 89)) (
-                 ;;                                                       :foreground "gray18"
-                 ;;                                                       :background "gray18")
-                 ;;                                                       )))
+      theming-modifications
+      '(
+        (
+         spacemacs-dark
 
-                 (org-property-value :foreground "gray18"
-                                     :background "gray18")
-                 ))
+         ;; Font locking
+         ;; (font-lock-comment-face :slant italic)
+         ;; (web-mode-html-attr-name-face :inherit font-lock-variable-name-face
+         ;;                               :foreground nil)
+         ;; ;; Modeline
+         ;; (powerline-active1 :box (:color "#999999"
+         ;;                                 :line-width 1
+         ;;                                 :style released-button)
+         ;;                    :background "#5a5a5a")))
+         (
+          org-tag
+          :foreground "gray18"
+          :weight bold
+          :height 0.8)
 
-              ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
-              ;; (custom-theme-set-faces
-              ;;  'user
-              ;;  ;; Customize the Emacs theme to set all tags the same
-              ;;  `(org-tag                   ((t (:foreground "gray18" :weight bold :height 0.8))))
-              ;;  ;; So far not really working
-              ;;  `(org-drawer                ((t (:foreground "black" :weight bold :height 0.8))))
-              ;;  `(org-property-value        ((t (:foreground "black" :weight bold :height 0.8))))
-              ;;  )
-              )
+         ;;;; This was a try to make all drawer almost invisible. It mimics the source face code and fails miserably.
+         ;; (org-drawer ((class '((class color) (min-colors 89)) (
+         ;;                                                       :foreground "gray18"
+         ;;                                                       :background "gray18")
+         ;;                                                       )))
+
+         (
+          org-property-value
+          :foreground "gray18"
+          :background "gray18"
+          )
+         )
+        )
+
+      ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
+      ;; (custom-theme-set-faces
+      ;;  'user
+      ;;  ;; Customize the Emacs theme to set all tags the same
+      ;;  `(org-tag                   ((t (:foreground "gray18" :weight bold :height 0.8))))
+      ;;  ;; So far not really working
+      ;;  `(org-drawer                ((t (:foreground "black" :weight bold :height 0.8))))
+      ;;  `(org-property-value        ((t (:foreground "black" :weight bold :height 0.8))))
+      ;;  )
+      )
 
 ;;;; Other layers
 
