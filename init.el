@@ -1667,6 +1667,12 @@ with DRILL_CARD_TYPE nil."
       "gl" 'outline-next-visible-heading
       "gu" 'outline-previous-visible-heading))
 
+  ;; From https://github.com/travisbhartwell/nix-emacs#flycheck
+  ;; Flycheck can find executables of checkers that would be only accessible via nix-shell
+  ;; (setq flycheck-command-wrapper-function
+  ;;       (lambda (command) (apply 'nix-shell-command (nix-current-sandbox) command))
+  ;;       flycheck-executable-find
+  ;;       (lambda (cmd) (nix-executable-find (nix-current-sandbox) cmd)))
 
 ;;;; Pretty-fonts
 
