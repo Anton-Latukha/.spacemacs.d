@@ -1633,7 +1633,8 @@ with DRILL_CARD_TYPE nil."
 
   ;; (add-hook 'haskell-mode-hook #'structured-haskell-mode)
 
-  ;; Managing code with Outlines using =outshine=
+;;;; Managing code with Outlines using =outshine=
+
   (add-hook 'outline-minor-mode-hook #'outshine-mode)
 
   ;; Enables outline-minor-mode for *ALL* programming buffers
