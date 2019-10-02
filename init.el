@@ -517,6 +517,11 @@ This function should only modify configuration layer settings."
           :foreground "gray18"
           :background "gray18"
           )
+         (
+          default
+          :background
+          "#000000"
+          )
          )
 
         )
