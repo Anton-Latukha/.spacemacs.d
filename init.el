@@ -1942,6 +1942,10 @@ with DRILL_CARD_TYPE nil."
   (setq linum-format "%4d ")
 
 
+;;;; Misc init
+
+  (setq copy-as-format-default "github")
+
   )
 
 
