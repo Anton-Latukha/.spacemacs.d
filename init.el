@@ -627,6 +627,7 @@ This function should only modify configuration layer settings."
       ;;  `(org-drawer                ((t (:foreground "black" :weight bold :height 0.8))))
       ;;  `(org-property-value        ((t (:foreground "black" :weight bold :height 0.8))))
       ;;  )
+
       )
 
 ;;;; WakaTime
@@ -1308,25 +1309,35 @@ before packages are loaded."
   (advice-add 'org-agenda-quit :before 'org-save-all-org-buffers)
 
 ;;;; My functions
+
   (defun my-insert-current-date ()
     "Insert ISO date"
     (interactive)
     (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d)"))
     )
+
   (defun my-insert-note ()
     "Insert a NOTE comment"
     (interactive)
     (insert (shell-command-to-string "echo -n '    # NOTE: '$(date +%Y-%m-%d)': '"))
     )
+
   (defun my-helm-org-rifle-files ()
     "Find the org entry by matching content"
     (interactive)
     (helm-org-rifle-files (append my-org-refile-additional-targets org-agenda-files))
     )
+
   (defun my-org-toggle-tag-drill ()
     "Toggle :drill: tag"
     (interactive)
     (org-toggle-tag "drill")
+    )
+
+  (defun my-safe-exit ()
+    "Saving all files on exit"
+    (interactive)
+    (save-buffers-kill-terminal t)
     )
 
   ;;;; 2019-06-12: NOTE: Strips link from selected text
@@ -1915,6 +1926,7 @@ with DRILL_CARD_TYPE nil."
              ))))
 
 ;;;; Line number
+
   (setq-default
    dotspacemacs-line-numbers
    '(
