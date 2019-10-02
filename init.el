@@ -1946,6 +1946,8 @@ with DRILL_CARD_TYPE nil."
 
   (setq copy-as-format-default "github")
 
+  (setq dotspacemacs-scratch-mode 'lisp-interaction-mode)
+
   )
 
 
