@@ -35,7 +35,9 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+
 ;;; Layers
+
 ;;;; Initial, misc
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -526,6 +528,7 @@ This function should only modify configuration layer settings."
           :background "gray18"
           )
          )
+
         )
 
       ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
