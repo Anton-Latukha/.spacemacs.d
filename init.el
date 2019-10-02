@@ -1941,6 +1941,27 @@ with DRILL_CARD_TYPE nil."
 
   (setq linum-format "%4d ")
 
+;;;; Custom Org-mode priorities
+
+  ;;;;; Org-priority regexp
+
+  (setq org-priority-regexp ".*?\\(\\[\\([0-9][0-9]\\)\\] ?\\)")
+
+  ;;;;; Org-priority range declaration
+
+  (setq org-highest-priority 99)
+  (setq org-default-priority 50)
+  (setq org-lowest-priority 00)
+
+  ;;;;; Overload default priority function with my own
+
+  (defun org-get-priority (s)
+    "My custom overload to find priority cookie and return priority."
+    (save-match-data
+      (if (string-match org-priority-regexp s)
+          (string-to-number (match-string 2 s))
+        org-default-priority
+        )))
 
 ;;;; Misc init
 
