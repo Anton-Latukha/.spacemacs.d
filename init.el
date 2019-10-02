@@ -1426,6 +1426,7 @@ only the description"
     "or" 'my-helm-org-rifle-files
     "op" 'sp-splice-sexp-killing-around
     "oa" 'org-agenda-list
+    "qq" 'my-safe-exit
     )
 
 ;;;;; Local
