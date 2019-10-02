@@ -49,19 +49,11 @@ This function should only modify configuration layer settings."
      helm    ; Crusial, Do not disable! Provides an easy-to-use API for developers wishing to build their own Helm applications in Emacs, powerful search tools and dozens of already built-in commands providing completion to almost everything. Emacs framework for incremental completions and narrowing selections.
      multiple-cursors
      treemacs
-     ;; ----------------------------------------------------------------
-     ;; Manually configured block
-     ;;
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
      (spell-checking :variables
                      spell-checking-enable-by-default nil
                      enable-flyspell-auto-completion t
                      )
-     ;; version-control    ; Emacs support for different VCS (caution, can collide with separate Git control layers/configs
 
-     ;; Useful to anyone
      syntax-checking
 
      javascript
@@ -74,39 +66,17 @@ This function should only modify configuration layer settings."
 
      sql
 
-     ;; sphinx    ; Documentation generator by Python
      systemd
      (terraform :variables terraform-auto-format-on-save t)
      ;; tmux
-     ;; transmission    ; Torrent client
-     ;; vagrant
 
-     ;; == Great
-     ;; slack
-     ;; osx
-     ;; search-engine    ; Support of many search engines
-     ;; elfeed    ; Atom and RSS feeds. Elfeed, a web feeds client
-     ;; evernote
-     spotify
-     ;; twitter
      nixos
-     ;; floobits    ; Support for pair programming
 
-     ;; For fun
      colors    ; Too extreme fancy coloring
-     ;; emoji    ; yes :satisfied:. But caution, it going to conflict with org-mode ':' symbol in time tracking
-     ;; games
-     ;; selectic    ; Typewriter typing sound
-     ;; xkcd    ; xkcd
 
-     ;;
-     ;; For more layers and info: http://spacemacs.org/layers/LAYERS.html
-     ;;
-     ;; ----------------------------------------------------------------
-
-     ;; hie-nix
-     (org :variables
 ;;;; Org
+
+     (org :variables
           org-enable-org-journal-support t ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
           org-agenda-files
           '(
@@ -416,8 +386,9 @@ This function should only modify configuration layer settings."
 
           )
 
-     (lsp :variables
 ;;;; LSP
+
+     (lsp :variables
           default-nix-wrapper (lambda (args)
                                 (append
                                  (append (list "nix-shell" "-I" "." "--command" )
@@ -429,15 +400,17 @@ This function should only modify configuration layer settings."
           lsp-haskell-process-wrapper-function default-nix-wrapper
           )
 
-     (haskell :variables
 ;;;; Haskell
+
+     (haskell :variables
               haskell-enable-hindent t
               haskell-completion-backend 'lsp
               haskell-process-type 'cabal-new-repl
               )
 
-     (git :variables
 ;;;; Git
+
+     (git :variables
           magit-repository-directories
           '(
             ("~/org/" . 0)
@@ -473,73 +446,16 @@ This function should only modify configuration layer settings."
           )
 
 
-     ;; Preferences
-     ;;
-     ;; Note: some layers require installed packages on system to work with, and enable some features. Look at documentation at URL mentioned at the end of code section.
-     ;;
-
-     ;; spell-checking ; Requires aspell and `aspell` dictionary installed for your national languages (aka `aspell-en`)
      auto-completion    ;; Completion seems not of quality and unrelevant for now
-     ;; semantic    ; Collection of Emacs Development Environment Tools
-     ;; ipython-notebook
 
-     ;; == International support
-     ;; unicode-fonts    ; Fonts for any ethnic languages
-     ;; keyboard-layout    ; Support for any keyboard layouts
-     ;; chinese
-
-     ;; == Programming languages
-     ;; agda
-     ;; asm
-     ;; c-c++
-     ;; clojure
-     ;; common-lisp
-     ;; coq
-     ;; csharp
-     ;; d
-     ;; elixir
-     ;; erlang
-     ;; fsharp
-     ;; go
-     ;; groovy
-     ;; java
-     ;; lua
-     ;; ocaml
-     ;; perl5
-     ;; perl6
-     ;; php
-     ;; purescript
      python
-     ;; racket
-     ;; ruby
-     ;; rust
-     ;; scala
-     ;; scheme
-     ;; semantic-web    ; Support for Turtle language
-     ;; swift
      typescript
-     ;; windows-script
-
-     ;; == Frameworks
-     ;; django
-     ;; react
-     ;; ruby-on-rails
-
-     ;; == Domain Specific Languages (DSL)
-     ;; gpu    ; Languages to work with GPUs
-     ;; major-modes    ; Support of more rare case DSL languages, like Arduino, MATLAB, QML, Vala, Wolfram...
      (plantuml
       ;; :variables
       ;; plantuml-java-command "/run/current-system/sw/bin/plantuml"
       ;; plantuml-jar-path " "
       ;; org-plantuml-jar-path "/run/current-system/sw/bin/plantuml"
       )
-
-     ;; == Markup languages
-     ;; graphviz
-     ;; latex
-     ;; protobuf
-     ;; restructuredtext
 
      ;; == Tools
      ansible
@@ -550,13 +466,8 @@ This function should only modify configuration layer settings."
       )
 
      docker
-     ;; nginx
-     ;; node    ; Package manager
      pandoc
-     ;; pdf-tools
-     ;; puppet
-     ;; restclient
-     ;; salt    ; Configuration management tool
+
 ;;;; Shell
 
      (
@@ -760,9 +671,6 @@ It should only modify the values of Spacemacs settings."
    ;; section of the documentation for details on available variables.
    ;; (default 'vim)
    dotspacemacs-editing-style 'vim
-
-   ;; If non-nil output loading progress in `*Messages*' buffer. (default nil)
-   dotspacemacs-verbose-loading nil
 
    ;; Specify the startup banner. Default value is `official', it displays
    ;; the official spacemacs logo. An integer value is the index of text
