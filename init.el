@@ -370,16 +370,6 @@ This function should only modify configuration layer settings."
           org-fontify-whole-heading-line t
           org-fontify-done-headline t
           org-fontify-quote-and-verse-blocks t
-          ;;;; 2019-06-10: NOTE: Submitted a bug report that Org-habit is hardcoded for default org-log-note-headings
-          ;; org-log-note-headings '((done        . "CLOSED %t: NOTE:")
-          ;;                         (state       . "%t: upd state %-12s (old %-12S)")
-          ;;                         (note        . "%t: NOTE:")
-          ;;                         (reschedule  . "%t: re-scheduled %S")
-          ;;                         (delschedule . "%t: unscheduled %S")
-          ;;                         (redeadline  . "%t: add deadline %S")
-          ;;                         (deldeadline . "%t: rm deadline %S")
-          ;;                         (refile      . "%t: re-filed")
-          ;;                         (clock-out   . ""))
           org-export-headline-levels 10
           org-enable-github-support t
           org-enable-bootstrap-support t
