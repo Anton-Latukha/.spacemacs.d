@@ -566,6 +566,34 @@ This function should only modify configuration layer settings."
           :foreground
           "#000030"
           )
+         (haskell-constructor-face
+          :foreground
+          "#ffa600"
+          )
+         (haskell-type-face
+          :foreground
+          "#7a37ff"
+          )
+         (haskell-definition-face
+          :foreground
+          "#ca8300"
+          )
+         (haskell-keyword-face
+          :foreground
+          "#00dede"
+          ;; "#00ffff"
+          ;; "#0084ff"
+          )
+         (haskell-operator-face
+          :foreground
+          "#00dede"
+          ;; "#00ffff"
+          ;; "dodger blue"
+          )
+         (font-lock-string-face
+          :foreground
+          "#356a00")
+         ))
 
       ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
       ;; (custom-theme-set-faces
