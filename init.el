@@ -99,10 +99,10 @@ This function should only modify configuration layer settings."
             ("NEXT:" . (:foreground "green" :weight bold))
             ("PAUS:" . (:foreground "grey" :weight bold))
             ("VIEW:" . (:foreground "green" :weight bold))
-            ("DONE:" . (:foreground "white" :weight bold))
+            ("DONE:" . (:foreground "black" :background "grey" :weight bold))
             ("OGDE:" . (:foreground "white" :weight bold))
             ("ELEG:" . (:foreground "grey" :weight bold))
-            ("CANS:" . (:foreground "black" :weight bold))
+            ("CANS:" . (:foreground "black" :background "grey" :weight bold))
             )
           ;; Don't allow to DONE the task, until all siblings are DONE
           org-enforce-todo-dependencies t
