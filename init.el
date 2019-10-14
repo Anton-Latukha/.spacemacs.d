@@ -86,12 +86,9 @@ This function should only modify configuration layer settings."
           org-todo-keywords '((sequence "NEXT:(n@)" "PAUS:(p@)" "VIEW:(v!)" "|" "DONE:(d!)" "ODGE:(o!)" "ELEG:(e@)" "CANS:(c@)")) ;; "TODO:(t!)"
           org-journal-dir "~/org/journal/"
           org-journal-file-format "%Y-%m-%d"
-          ;; start agenda weekly on the current day
-          org-agenda-start-on-weekday nil
-          ;; Skip items having a deadline and done
-          org-agenda-skip-deadline-if-done t
-          ;; Skip items haing a schedule and done
-          org-agenda-skip-scheduled-if-done t
+          org-agenda-start-on-weekday nil    ;; Start agenda weekly on the current day
+          org-agenda-skip-deadline-if-done t    ;; Skip done with deadline
+          org-agenda-skip-scheduled-if-done t    ;; Skip done with schedule
           org-deadline-warning-days 14
           org-deadline-string "DUET:"
           org-scheduled-string "SCHT:"
