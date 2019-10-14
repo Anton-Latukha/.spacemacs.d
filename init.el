@@ -506,8 +506,8 @@ This function should only modify configuration layer settings."
          (
           org-property-value
           :foreground "gray18"
-          :background "gray18"
           )
+
          (
           default
           :background
