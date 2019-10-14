@@ -795,7 +795,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-default-font
    '(
      "Inconsolata LGC"
-     :size 14
+     :size 15
      :weight normal
      :width normal
      :powerline-scale 1.1
