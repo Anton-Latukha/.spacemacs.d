@@ -511,11 +511,13 @@ This function should only modify configuration layer settings."
          (
           default
           :background
-          "#000000"
+          "black"
           )
-         )
-
-        )
+         (
+          h1-line
+          :background
+          "black"
+          )
 
       ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
       ;; (custom-theme-set-faces
