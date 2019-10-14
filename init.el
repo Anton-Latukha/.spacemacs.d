@@ -518,6 +518,54 @@ This function should only modify configuration layer settings."
           :background
           "black"
           )
+         (font-lock-comment-face
+          :background
+          "black"
+          :foreground
+          "Navajowhite4"
+          )
+         (font-lock-comment-delimiter-face
+          :background
+          "black"
+          :foreground
+          "grey16"
+          )
+         (helm-buffer-file
+          :background
+          "black"
+          )
+         (helm-buffer-directory
+          :background
+          "black"
+          )
+         (helm-ff-directory
+          :background
+          "black"
+          )
+         (helm-ff-file
+          :background
+          "black"
+          )
+         (org-special-keyword
+          :foreground
+          "grey18"
+          )
+         (org-block-begin-line
+          :background
+          "#000030"
+          :foreground
+          "#000030"
+          )
+         (org-block
+          :background
+          "#000030"
+          )
+         (org-block-end-line
+          :background
+          "#000030"
+          :foreground
+          "#000030"
+          )
 
       ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
       ;; (custom-theme-set-faces
