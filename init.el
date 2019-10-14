@@ -1627,7 +1627,7 @@ with DRILL_CARD_TYPE nil."
 
   ;; Enables outline-minor-mode for *ALL* programming buffers
   (add-hook 'prog-mode-hook #'outline-minor-mode)
-  (add-hook 'nix-mode-hook #'outline-minor-mode)
+  ;; (add-hook 'nix-mode-hook #'outline-minor-mode)    ;; Seems like not worked
 
   ;; Narrowing now works within the headline rather than requiring to be on it
   (advice-add 'outshine-narrow-to-subtree :before
