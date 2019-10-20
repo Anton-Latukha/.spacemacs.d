@@ -1426,7 +1426,7 @@ only the description"
   (setq vc-follow-symlinks t)
 
   ;; Convert code blocks #+FOO -> #+foo
-  (defun modi/lower-case-org-keywords ()
+  (defun my-lower-case-org-keywords ()
     "Lower case Org keywords and block identifiers.
 Example: \"#+TITLE\" -> \"#+title\"
          \"#+BEGIN_EXAMPLE\" -> \"#+begin_example\"
