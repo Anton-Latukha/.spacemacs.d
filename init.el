@@ -1918,6 +1918,11 @@ with DRILL_CARD_TYPE nil."
 
   (setq linum-format "%4d ")
 
+;;;; Saving Emacs Desktop
+
+  ;; (setq  desktop-path '(("~/.spacemacs.d/desktops/")))
+  ;; (desktop-save-mode 1)
+
 ;;;; Custom Org-mode priorities
 
   ;;;;; Org-priority regexp
