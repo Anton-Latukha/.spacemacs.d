@@ -645,6 +645,7 @@ This function should only modify configuration layer settings."
      shm ;; Structured Haskell mode
      outshine ;; For managing code with Outlines
      pretty-mode
+     telega ;; Emacs Telega.el client TODO: Wait when https://github.com/syl20bnr/spacemacs/issues/12800 solved
      )
 
 ;;;; Misc package options
