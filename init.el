@@ -1901,7 +1901,7 @@ with DRILL_CARD_TYPE nil."
              ("then"        . ?\⊢)
              ("else"        . ?\⊬)
              ("forall"      . ?\∀)
-             ("exists"      . ?\∃)
+             ("exists"      . ?\Ǝ) ;;ヨⴺƎᗱョᴲ∋ⱻॻՅ∍ᙐ℈ᗲЄє
 
              ))))
 
