@@ -1318,6 +1318,12 @@ before packages are loaded."
     (save-buffers-kill-terminal t)
     )
 
+  ;; TODO: not used
+  (defun my-archive-when-done ()
+    "Archive current entry if it is marked as DONE (see `org-done-keywords')."
+    (when (org-entry-is-done-p)
+      (org-archive-subtree-default)))
+
   ;;;; 2019-06-12: NOTE: Strips link from selected text
   ;;;; Taken from: https://emacs.stackexchange.com/questions/10707/in-org-mode-how-to-remove-a-link
   (defun my-org-link-delete-link ()
