@@ -1909,6 +1909,13 @@ with DRILL_CARD_TYPE nil."
              ("else"        . ?\⊬)
              ("forall"      . ?\∀)
              ("exists"      . ?\Ǝ) ;;ヨⴺƎᗱョᴲ∋ⱻॻՅ∍ᙐ℈ᗲЄє
+             ("instance"    . ?\𝐈)
+             ("instance"    . ?\𝐈)
+             ("import"      . ?\i)
+             ("module"      . ?\m)
+             ("LANGUAGE"    . ?\ℒ)  ;ム
+             ("deriving"    . ?\ට)  ;ᘐ ච ᘑ
+             ("newtype"     . ?\ﬦ)
 
              ))))
 
