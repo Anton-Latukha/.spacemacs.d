@@ -1078,7 +1078,7 @@ before packages are loaded."
   ;;  (lambda ()
   ;;  (setq-local indent-line-function #'indent-relative))))
   ;; ----------------------------------------------------------------
-  (add-hook 'haskell-mode-hook #'turn-on-haskell-unicode-input-method)
+  ;; (add-hook 'haskell-mode-hook #'turn-on-haskell-unicode-input-method) ;; May be in conflict with Unicode visual replacement function that is also haskell-mode-hook
   (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines in org-mode - wrap them all
 
   (require 'org)
