@@ -1943,6 +1943,17 @@ with DRILL_CARD_TYPE nil."
 
   (setq org-priority-regexp ".*?\\(\\[\\([0-9][0-9]\\)\\] ?\\)")
 
+  (defun org-font-lock-add-priority-faces (limit)
+    "Add the special priority faces."
+    ;; NOTE: 2019-10-26: Here regexp was: "^\\*+ .*?\\(\\[#\\(.\\)\\]\\)"
+    ;; was in the place of org-priority-regexp, which should supply data here.
+    ;; Remove note after battletesting went good.
+    (while (re-search-forward org-priority-regexp limit t)
+      (add-text-properties
+       (match-beginning 1) (match-end 1)
+       (list 'face (org-get-priority-face (string-to-char (match-string 2)))
+             'font-lock-fontified t))))
+
   ;;;;; Org-priority range declaration
 
   (setq org-highest-priority 99)
