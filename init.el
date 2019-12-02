@@ -1939,7 +1939,7 @@ with DRILL_CARD_TYPE nil."
   ;;;;; Org-priority range declaration
 
   (setq org-highest-priority 99)
-  (setq org-default-priority 50)
+  (setq org-default-priority 49)
   (setq org-lowest-priority 00)
 
   ;;;;; Overload default priority function with my own
