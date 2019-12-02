@@ -1965,6 +1965,8 @@ with DRILL_CARD_TYPE nil."
 
   (setq dotspacemacs-scratch-mode 'lisp-interaction-mode)
 
+  (setq haskell-font-lock-symbols 't)  ;; Enable font ligatures
+
   )
 
 
