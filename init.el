@@ -1947,10 +1947,10 @@ with DRILL_CARD_TYPE nil."
   (defun org-get-priority (s)
     "My custom overload to find priority cookie and return priority."
     (save-match-data
-      (if (string-match org-priority-regexp s)
+      (* 1000 (if (string-match org-priority-regexp s)
           (string-to-number (match-string 2 s))
         org-default-priority
-        )))
+        ))))
 
 ;;;; Misc init
 
