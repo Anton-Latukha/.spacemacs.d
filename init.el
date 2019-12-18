@@ -1916,6 +1916,8 @@ with DRILL_CARD_TYPE nil."
              ("LANGUAGE"    . ?\ℒ)  ;ム
              ("deriving"    . ?\ට)  ;ᘐ ච ᘑ
              ("newtype"     . ?\ﬦ)
+             ("Right"       . ?\𝕽)
+             ("Left"        . ?\𝕷)
 
              ))))
 
