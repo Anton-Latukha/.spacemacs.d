@@ -1919,6 +1919,7 @@ with DRILL_CARD_TYPE nil."
              ("newtype"     . ?\ﬦ)
              ("Right"       . ?\𝕽)
              ("Left"        . ?\𝕷)
+             ("*"           . ?\★)
 
              ))))
 
