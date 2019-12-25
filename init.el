@@ -646,6 +646,7 @@ This function should only modify configuration layer settings."
      outshine ;; For managing code with Outlines
      pretty-mode
      telega ;; Emacs Telega.el client TODO: Wait when https://github.com/syl20bnr/spacemacs/issues/12800 solved
+     org-drill ;; Moved-out of org-mode at 9.3
      )
 
 ;;;; Misc package options
