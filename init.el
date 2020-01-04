@@ -625,6 +625,8 @@ This function should only modify configuration layer settings."
 
      copy-as-format
 
+     speed-reading
+
      )
 
    ;; List of additional packages that will be installed without being
