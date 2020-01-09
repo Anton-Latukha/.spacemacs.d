@@ -619,6 +619,14 @@ This function should only modify configuration layer settings."
 
 ;;;; Other layers
 
+     (elfeed
+      ;; :variables
+      ;; rmh-elfeed-org-files (list "~/org/elfreed.org")
+      ;; elfeed-enable-web-interface t
+      ;; httpd-port 8081
+      ;; url-queue-timeout 30
+      )
+
      unicode-fonts
 
      ;; github
