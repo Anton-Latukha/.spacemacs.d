@@ -620,10 +620,13 @@ This function should only modify configuration layer settings."
       )
 
 ;;;; Other layers
+;;;; Elfeed
 
      (elfeed
-      ;; :variables
-      ;; rmh-elfeed-org-files (list "~/org/elfreed.org")
+      :variables
+      rmh-elfeed-org-files (list "~/org/elfeed.org")
+      elfeed-db-directory "~/.cache/elfeed/"
+      elfeed-initial-tags '(unread)
       ;; elfeed-enable-web-interface t
       ;; httpd-port 8081
       ;; url-queue-timeout 30
