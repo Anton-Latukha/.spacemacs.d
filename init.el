@@ -1638,7 +1638,7 @@ with DRILL_CARD_TYPE nil."
           ;; (agenda  . "  ")
           ;; (agenda . " %i %-5t%-5s")
           (agenda . "  %i")
-          (timeline  . "  % s")
+          ;; (timeline  . "  % s")
           (todo  . " %i %-12:c")
           (tags  . " %i %-12:c")
           (search . " %i %-12:c")
