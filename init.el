@@ -166,6 +166,8 @@ This function should only modify configuration layer settings."
           ;;                               (search category-keep))
 
           ;; List of always declared tags, function my-org-auto-tag matches and autoadds occuring words from it
+
+          org-agenda-time-grid nil    ;; Disable the time grid
           org-tag-alist
           '(
             ("advanced")
