@@ -1268,10 +1268,11 @@ before packages are loaded."
            )
 
           ("W" "Web site" entry
-           (id cdf8e391-a200-4fd8-8613-356d74303010)
+           (file ,(concat org-directory "/Web-archive save.org"))
            "* %a\n:properties:\n:added: %u\n:end:\n%:initial"
            :empty-lines-before 1
            :empty-lines-after 1
+           ;; (id cdf8e391-a200-4fd8-8613-356d74303010)
            )
 
           ("b" "Brain: add at the end" plain
