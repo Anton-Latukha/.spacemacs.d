@@ -619,7 +619,6 @@ This function should only modify configuration layer settings."
       wakatime-cli-path "/run/current-system/sw/bin/wakatime"
       )
 
-;;;; Other layers
 ;;;; Elfeed
 
      (elfeed
@@ -631,6 +630,8 @@ This function should only modify configuration layer settings."
       ;; httpd-port 8081
       ;; url-queue-timeout 30
       )
+
+;;;; Other layers
 
      unicode-fonts
 
