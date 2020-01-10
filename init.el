@@ -1311,7 +1311,7 @@ before packages are loaded."
   (defun my-insert-current-date ()
     "Insert ISO date"
     (interactive)
-    (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d)"))
+    (insert (format-time-string "%Y-%m-%d"))
     )
 
   (defun my-insert-note ()
