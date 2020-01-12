@@ -2007,6 +2007,10 @@ with DRILL_CARD_TYPE nil."
 
   (setq haskell-font-lock-symbols 't)  ;; Enable font ligatures
 
+  ;;;;; For being safe that opening a PDF uses pdf-tools and not DocView - enable PDF tools
+
+  (pdf-tools-install)
+
   )
 
 
