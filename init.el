@@ -2011,6 +2011,10 @@ with DRILL_CARD_TYPE nil."
 
   (pdf-tools-install)
 
+  ;;;;; Highlight LaTeX blocks
+
+  (setq org-highlight-latex-and-related '(latex))
+
   ;;;;; Global short key for NEXT capture template
   (define-key global-map (kbd "<f5>")
     (lambda () (interactive) (org-capture nil "n")))
