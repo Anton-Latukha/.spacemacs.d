@@ -645,6 +645,7 @@ This function should only modify configuration layer settings."
      (pdf
       :variable
       pdf-view-display-size 'fit-page    ;; Use fit-page by default
+      pdf-annot-activate-created-annotations t    ;; Automatically start annotating what is highlighted
       )
 
      )
