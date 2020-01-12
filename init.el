@@ -71,305 +71,306 @@ This function should only modify configuration layer settings."
 
 ;;;; Org
 
-     (org :variables
-          org-enable-org-journal-support t ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
-          org-agenda-files
-          '(
-            "~/org/Flow.org"
-            "~/org/Habit flow.org"
-            )
-          org-highest-priority ?A
-          org-default-priority ?E
-          org-lowest-priority ?E
-          org-tags-match-list-sublevels 'indented ;; in tags search indent sublevels of entries
-          ;;org-agenda-todo-list-sublevels nil ;; do not include sublevel TODOs into agenda result
-          org-todo-keywords '((sequence "NEXT:(n@)" "PAUS:(p@)" "VIEW:(v!)" "|" "DONE:(d!)" "ODGE:(o!)" "ELEG:(e@)" "CANS:(c@)")) ;; "TODO:(t!)"
-          org-journal-dir "~/org/journal/"
-          org-journal-file-format "%Y-%m-%d"
-          org-agenda-start-on-weekday nil    ;; Start agenda weekly on the current day
-          org-agenda-skip-deadline-if-done t    ;; Skip done with deadline
-          org-agenda-skip-scheduled-if-done t    ;; Skip done with schedule
-          org-deadline-warning-days 14
-          org-deadline-string "DUET:"
-          org-scheduled-string "SCHT:"
-          org-todo-keyword-faces
-          '(
-            ;; Func list-colors-display to see color names
-            ;;("TODO:" . (:foreground "dark orange" :weight bold))
-            ("NEXT:" . (:foreground "green" :weight bold))
-            ("PAUS:" . (:foreground "grey" :weight bold))
-            ("VIEW:" . (:foreground "green" :weight bold))
-            ("DONE:" . (:foreground "black" :background "grey" :weight bold))
-            ("OGDE:" . (:foreground "white" :weight bold))
-            ("ELEG:" . (:foreground "grey" :weight bold))
-            ("CANS:" . (:foreground "black" :background "grey" :weight bold))
-            )
-          ;; Don't allow to DONE the task, until all siblings are DONE
-          org-enforce-todo-dependencies t
-          ;; Ask for a note when DONE the task
-          org-log-done 'note
-          org-pomodoro-play-sounds t
-          ;; Play sound at start?
-          org-pomodoro-start-sound-p t
-          org-pomodoro-start-sound "/home/pyro/.spacemacs.d/.audio/bell (+8dB).wav"
-          org-pomodoro-finished-sound "/home/pyro/.spacemacs.d/.audio/bell (+8dB).wav"
-          org-pomodoro-killed-sound-p t
-          org-pomodoro-killed-sound "/home/pyro/.spacemacs.d/.audio/wrapper (norm).wav"
-          org-pomodoro-long-break-frequency 4
-          org-pomodoro-ask-upon-killing t
-          org-pomodoro-length 25
-          org-pomodoro-format "%s"
-          ;;org-pomodoro-time-format "%.2m:%.2s"
-          my-org-refile-additional-targets
-          '(
-            "~/org/Notes.org"
-            "~/org/haskell/haskell.org"
-            "~/org/nix/nix.org"
-            "~/org/tex/tex.org"
-            "~/org/org/org.org"
-            "~/org/Web-archive save.org"
-            "~/org/Save.org"
-            )
-          org-refile-targets
-          '(
-            (nil :maxlevel . 9)
-            (org-agenda-files :maxlevel . 9)
-            (my-org-refile-additional-targets :maxlevel . 9)
-            )
-          org-outline-path-complete-in-steps nil         ; Refile in a single go
-          org-refile-use-outline-path 'file                  ; Show full paths for refiling, value 'file' includes the files themself.
-          org-habit-graph-column 130
-          org-habit-preceding-days 56
+     (org;; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
+      :variables
+      org-enable-org-journal-support t
+      org-agenda-files
+      '(
+        "~/org/Flow.org"
+        "~/org/Habit flow.org"
+        )
+      org-highest-priority ?A
+      org-default-priority ?E
+      org-lowest-priority ?E
+      org-tags-match-list-sublevels 'indented ;; in tags search indent sublevels of entries
+      ;;org-agenda-todo-list-sublevels nil ;; do not include sublevel TODOs into agenda result
+      org-todo-keywords '((sequence "NEXT:(n@)" "PAUS:(p@)" "VIEW:(v!)" "|" "DONE:(d!)" "ODGE:(o!)" "ELEG:(e@)" "CANS:(c@)")) ;; "TODO:(t!)"
+      org-journal-dir "~/org/journal/"
+      org-journal-file-format "%Y-%m-%d"
+      org-agenda-start-on-weekday nil    ;; Start agenda weekly on the current day
+      org-agenda-skip-deadline-if-done t    ;; Skip done with deadline
+      org-agenda-skip-scheduled-if-done t    ;; Skip done with schedule
+      org-deadline-warning-days 14
+      org-deadline-string "DUET:"
+      org-scheduled-string "SCHT:"
+      org-todo-keyword-faces
+      '(
+        ;; Func list-colors-display to see color names
+        ;;("TODO:" . (:foreground "dark orange" :weight bold))
+        ("NEXT:" . (:foreground "green" :weight bold))
+        ("PAUS:" . (:foreground "grey" :weight bold))
+        ("VIEW:" . (:foreground "green" :weight bold))
+        ("DONE:" . (:foreground "black" :background "grey" :weight bold))
+        ("OGDE:" . (:foreground "white" :weight bold))
+        ("ELEG:" . (:foreground "grey" :weight bold))
+        ("CANS:" . (:foreground "black" :background "grey" :weight bold))
+        )
+      ;; Don't allow to DONE the task, until all siblings are DONE
+      org-enforce-todo-dependencies t
+      ;; Ask for a note when DONE the task
+      org-log-done 'note
+      org-pomodoro-play-sounds t
+      ;; Play sound at start?
+      org-pomodoro-start-sound-p t
+      org-pomodoro-start-sound "/home/pyro/.spacemacs.d/.audio/bell (+8dB).wav"
+      org-pomodoro-finished-sound "/home/pyro/.spacemacs.d/.audio/bell (+8dB).wav"
+      org-pomodoro-killed-sound-p t
+      org-pomodoro-killed-sound "/home/pyro/.spacemacs.d/.audio/wrapper (norm).wav"
+      org-pomodoro-long-break-frequency 4
+      org-pomodoro-ask-upon-killing t
+      org-pomodoro-length 25
+      org-pomodoro-format "%s"
+      ;;org-pomodoro-time-format "%.2m:%.2s"
+      my-org-refile-additional-targets
+      '(
+        "~/org/Notes.org"
+        "~/org/haskell/haskell.org"
+        "~/org/nix/nix.org"
+        "~/org/tex/tex.org"
+        "~/org/org/org.org"
+        "~/org/Web-archive save.org"
+        "~/org/Save.org"
+        )
+      org-refile-targets
+      '(
+        (nil :maxlevel . 9)
+        (org-agenda-files :maxlevel . 9)
+        (my-org-refile-additional-targets :maxlevel . 9)
+        )
+      org-outline-path-complete-in-steps nil         ; Refile in a single go
+      org-refile-use-outline-path 'file                  ; Show full paths for refiling, value 'file' includes the files themself.
+      org-habit-graph-column 130
+      org-habit-preceding-days 56
 
-          ;; Turn off all org autoindentation completely
-          org-startup-indented nil
-          ;; Turn off manual indentation completely
-          org-adapt-indentation nil
-          org-brain-path "~/org/"
+      ;; Turn off all org autoindentation completely
+      org-startup-indented nil
+      ;; Turn off manual indentation completely
+      org-adapt-indentation nil
+      org-brain-path "~/org/"
 
-          org-log-into-drawer t    ; if t log into the :LOGBOOK: drawer
+      org-log-into-drawer t    ; if t log into the :LOGBOOK: drawer
 
-          ;; org-agenda-time-grid
-          ;; (quote
-          ;;  (
-          ;;   (daily today require-timed)
-          ;;   (600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200 2300 2400)
-          ;;   "      "
-          ;;   "----------------"
-          ;;   )
-          ;;  )
+      ;; org-agenda-time-grid
+      ;; (quote
+      ;;  (
+      ;;   (daily today require-timed)
+      ;;   (600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200 2300 2400)
+      ;;   "      "
+      ;;   "----------------"
+      ;;   )
+      ;;  )
 
-          ;; ;; Taken from https://github.com/jwiegley/dot-emacs/blob/master/org-settings.el
-          ;; org-agenda-sorting-strategy '((agenda habit-down time-up todo-state-up priority-down)
-          ;;                               (todo priority-down category-keep)
-          ;;                               (tags priority-down category-keep)
-          ;;                               (search category-keep))
+      ;; ;; Taken from https://github.com/jwiegley/dot-emacs/blob/master/org-settings.el
+      ;; org-agenda-sorting-strategy '((agenda habit-down time-up todo-state-up priority-down)
+      ;;                               (todo priority-down category-keep)
+      ;;                               (tags priority-down category-keep)
+      ;;                               (search category-keep))
 
-          ;; List of always declared tags, function my-org-auto-tag matches and autoadds occuring words from it
+      ;; List of always declared tags, function my-org-auto-tag matches and autoadds occuring words from it
 
-          org-agenda-time-grid nil    ;; Disable the time grid
-          org-tag-alist
-          '(
-            ("advanced")
-            ("ai")
-            ("analyze")
-            ("android")
-            ("api")
-            ("applicative")
-            ("article")
-            ("auto")
-            ("automate")
-            ("automation")
-            ("babel")
-            ("backup")
-            ("bartosz")
-            ("bash")
-            ("basic")
-            ("benchmark")
-            ("best")
-            ("blog")
-            ("blogpost")
-            ("book")
-            ("bookmark")
-            ("bpf")
-            ("cache")
-            ("calculus")
-            ("category")
-            ("chapter")
-            ("cli")
-            ("cloud")
-            ("code")
-            ("combinator")
-            ("computer")
-            ("computer_science")
-            ("conf")
-            ("conference")
-            ("config")
-            ("configuration")
-            ("container")
-            ("continuation")
-            ("contrib")
-            ("course")
-            ("cps")
-            ("database")
-            ("db")
-            ("debug")
-            ("default")
-            ("denotation")
-            ("dep")
-            ("devops")
-            ("doc")
-            ("drill")
-            ("ebpf")
-            ("efficiency")
-            ("emacs")
-            ("error")
-            ("everything")
-            ("experience")
-            ("feature")
-            ("firefox")
-            ("fish")
-            ("flow")
-            ("forall")
-            ("functional")
-            ("functional_programming")
-            ("functor")
-            ("gadt")
-            ("generic")
-            ("git")
-            ("good")
-            ("good_code")
-            ("gtd")
-            ("guide")
-            ("hackage")
-            ("haskell")
-            ("hedgehog")
-            ("helm")
-            ("ide")
-            ("immidiately")
-            ("important")
-            ("integration")
-            ("io")
-            ("kde")
-            ("key")
-            ("lambda")
-            ("lambda_calculus")
-            ("later")
-            ("learn")
-            ("learning")
-            ("lenses")
-            ("lib")
-            ("library")
-            ("lisp")
-            ("ltp")
-            ("mantra")
-            ("math")
-            ("medium")
-            ("memory")
-            ("middle")
-            ("minimal")
-            ("minimize")
-            ("monad")
-            ("monoid")
-            ("news")
-            ("nix")
-            ("nixops")
-            ("nixos")
-            ("nixpkgs")
-            ("notation")
-            ("note")
-            ("optimization")
-            ("optimize")
-            ("order")
-            ("order_theory")
-            ("org")
-            ("org-mode")
-            ("organize")
-            ("package")
-            ("pattern")
-            ("patternmatch")
-            ("performance")
-            ("pine64")
-            ("pitfall")
-            ("pkg")
-            ("plan")
-            ("planning")
-            ("pr")
-            ("pragma")
-            ("profiling")
-            ("programming")
-            ("project")
-            ("projectile")
-            ("property")
-            ("proxy")
-            ("quickcheck")
-            ("reddit")
-            ("regex")
-            ("report")
-            ("request")
-            ("research")
-            ("resource")
-            ("safe")
-            ("science")
-            ("semantic")
-            ("servant")
-            ("set")
-            ("share")
-            ("sh")
-            ("shell")
-            ("spacemacs")
-            ("stability")
-            ("style")
-            ("style_guide")
-            ("symbol")
-            ("sync")
-            ("term")
-            ("terminal")
-            ("termux")
-            ("test")
-            ("testing")
-            ("text")
-            ("theory")
-            ("thread")
-            ("time")
-            ("tool")
-            ("tooling")
-            ("top")
-            ("trace")
-            ("tracing")
-            ("tray")
-            ("tutorial")
-            ("type")
-            ("vi")
-            ("video")
-            ("vim")
-            ("web")
-            ("webpage")
-            ("website")
-            ("wiki")
-            ("work")
-            ("workflow")
-            ("xmonad")
-            ("zsh")
-            )
-          org-cycle-separator-lines 0 ;; 0 - turns off empty lines between collapsed headers
-          org-catch-invisible-edits 'smart  ;; Determins behaviour when you do invisible edits in (...)
+      org-agenda-time-grid nil    ;; Disable the time grid
+      org-tag-alist
+      '(
+        ("advanced")
+        ("ai")
+        ("analyze")
+        ("android")
+        ("api")
+        ("applicative")
+        ("article")
+        ("auto")
+        ("automate")
+        ("automation")
+        ("babel")
+        ("backup")
+        ("bartosz")
+        ("bash")
+        ("basic")
+        ("benchmark")
+        ("best")
+        ("blog")
+        ("blogpost")
+        ("book")
+        ("bookmark")
+        ("bpf")
+        ("cache")
+        ("calculus")
+        ("category")
+        ("chapter")
+        ("cli")
+        ("cloud")
+        ("code")
+        ("combinator")
+        ("computer")
+        ("computer_science")
+        ("conf")
+        ("conference")
+        ("config")
+        ("configuration")
+        ("container")
+        ("continuation")
+        ("contrib")
+        ("course")
+        ("cps")
+        ("database")
+        ("db")
+        ("debug")
+        ("default")
+        ("denotation")
+        ("dep")
+        ("devops")
+        ("doc")
+        ("drill")
+        ("ebpf")
+        ("efficiency")
+        ("emacs")
+        ("error")
+        ("everything")
+        ("experience")
+        ("feature")
+        ("firefox")
+        ("fish")
+        ("flow")
+        ("forall")
+        ("functional")
+        ("functional_programming")
+        ("functor")
+        ("gadt")
+        ("generic")
+        ("git")
+        ("good")
+        ("good_code")
+        ("gtd")
+        ("guide")
+        ("hackage")
+        ("haskell")
+        ("hedgehog")
+        ("helm")
+        ("ide")
+        ("immidiately")
+        ("important")
+        ("integration")
+        ("io")
+        ("kde")
+        ("key")
+        ("lambda")
+        ("lambda_calculus")
+        ("later")
+        ("learn")
+        ("learning")
+        ("lenses")
+        ("lib")
+        ("library")
+        ("lisp")
+        ("ltp")
+        ("mantra")
+        ("math")
+        ("medium")
+        ("memory")
+        ("middle")
+        ("minimal")
+        ("minimize")
+        ("monad")
+        ("monoid")
+        ("news")
+        ("nix")
+        ("nixops")
+        ("nixos")
+        ("nixpkgs")
+        ("notation")
+        ("note")
+        ("optimization")
+        ("optimize")
+        ("order")
+        ("order_theory")
+        ("org")
+        ("org-mode")
+        ("organize")
+        ("package")
+        ("pattern")
+        ("patternmatch")
+        ("performance")
+        ("pine64")
+        ("pitfall")
+        ("pkg")
+        ("plan")
+        ("planning")
+        ("pr")
+        ("pragma")
+        ("profiling")
+        ("programming")
+        ("project")
+        ("projectile")
+        ("property")
+        ("proxy")
+        ("quickcheck")
+        ("reddit")
+        ("regex")
+        ("report")
+        ("request")
+        ("research")
+        ("resource")
+        ("safe")
+        ("science")
+        ("semantic")
+        ("servant")
+        ("set")
+        ("share")
+        ("sh")
+        ("shell")
+        ("spacemacs")
+        ("stability")
+        ("style")
+        ("style_guide")
+        ("symbol")
+        ("sync")
+        ("term")
+        ("terminal")
+        ("termux")
+        ("test")
+        ("testing")
+        ("text")
+        ("theory")
+        ("thread")
+        ("time")
+        ("tool")
+        ("tooling")
+        ("top")
+        ("trace")
+        ("tracing")
+        ("tray")
+        ("tutorial")
+        ("type")
+        ("vi")
+        ("video")
+        ("vim")
+        ("web")
+        ("webpage")
+        ("website")
+        ("wiki")
+        ("work")
+        ("workflow")
+        ("xmonad")
+        ("zsh")
+        )
+      org-cycle-separator-lines 0 ;; 0 - turns off empty lines between collapsed headers
+      org-catch-invisible-edits 'smart  ;; Determins behaviour when you do invisible edits in (...)
 
-          ;; org-bullets-bullet-list '(" ")    ;; no bullets, needs org-bullets package
-          org-ellipsis "…"    ;; folding symbol
-          org-pretty-entities t    ;; show parsed special syntax (unicode) insted of source code
-          org-hide-emphasis-markers t    ;; show actually italicized text instead of /italicized text/
-          org-agenda-block-separator ""
-          org-fontify-whole-heading-line t
-          org-fontify-done-headline t
-          org-fontify-quote-and-verse-blocks t
-          org-export-headline-levels 10
-          org-enable-github-support t
-          org-enable-bootstrap-support t
-          org-enable-reveal-js-support t
-          org-agenda-dim-blocked-tasks 'invisible    ;; Make blocked tasks invisible, show only child tasks.
+      ;; org-bullets-bullet-list '(" ")    ;; no bullets, needs org-bullets package
+      org-ellipsis "…"    ;; folding symbol
+      org-pretty-entities t    ;; show parsed special syntax (unicode) insted of source code
+      org-hide-emphasis-markers t    ;; show actually italicized text instead of /italicized text/
+      org-agenda-block-separator ""
+      org-fontify-whole-heading-line t
+      org-fontify-done-headline t
+      org-fontify-quote-and-verse-blocks t
+      org-export-headline-levels 10
+      org-enable-github-support t
+      org-enable-bootstrap-support t
+      org-enable-reveal-js-support t
+      org-agenda-dim-blocked-tasks 'invisible    ;; Make blocked tasks invisible, show only child tasks.
 
-          )
+      )
 
 ;;;; LSP
 
