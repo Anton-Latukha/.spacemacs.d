@@ -2011,6 +2011,10 @@ with DRILL_CARD_TYPE nil."
 
   (pdf-tools-install)
 
+  ;;;;; Global short key for NEXT capture template
+  (define-key global-map (kbd "<f5>")
+    (lambda () (interactive) (org-capture nil "n")))
+
   )
 
 
