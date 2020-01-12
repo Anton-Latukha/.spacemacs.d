@@ -642,7 +642,10 @@ This function should only modify configuration layer settings."
 
      speed-reading
 
-     pdf
+     (pdf
+      :variable
+      pdf-view-display-size 'fit-page    ;; Use fit-page by default
+      )
 
      )
 
