@@ -2015,6 +2015,19 @@ with DRILL_CARD_TYPE nil."
 
   (setq org-highlight-latex-and-related '(latex))
 
+  ;;;;; Remove org comments from org document for use with export hook
+  ;; https://emacs.stackexchange.com/questions/22574/orgmode-export-how-to-prevent-a-new-line-for-comment-lines
+  (defun delete-org-comments (backend)
+    (loop for comment in (reverse (org-element-map (org-element-parse-buffer)
+                                      'comment 'identity))
+          do
+          (setf (buffer-substring (org-element-property :begin comment)
+                                  (org-element-property :end comment))
+                "")))
+
+  ;; add to export hook
+  (add-hook 'org-export-before-processing-hook 'delete-org-comments)
+
   ;;;;; Global short key for NEXT capture template
   (define-key global-map (kbd "<f5>")
     (lambda () (interactive) (org-capture nil "n")))
