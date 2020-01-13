@@ -4,3 +4,6 @@
 [submodule "lisp/org-protocol-capture-html"]
 	path = lisp/org-protocol-capture-html
 	url = https://github.com/alphapapa/org-protocol-capture-html.git
+[submodule "private-layer-eww"]
+	path = lisp/private-layers/eww
+	url = https://github.com/coljamkop/eww-layer.git
