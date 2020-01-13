@@ -632,6 +632,15 @@ This function should only modify configuration layer settings."
       ;; url-queue-timeout 30
       )
 
+;;;; PDF
+
+     (pdf
+      :variables
+      pdf-view-display-size 'fit-page    ;; Use fit-page by default
+      pdf-annot-activate-created-annotations t    ;; Automatically start annotating what is highlighted
+      pdf-view-resize-factor 1.1    ;; Grain of the zooming step
+      )
+
 ;;;; Other layers
 
      unicode-fonts
@@ -642,12 +651,6 @@ This function should only modify configuration layer settings."
 
      speed-reading
 
-     (pdf
-      :variables
-      pdf-view-display-size 'fit-page    ;; Use fit-page by default
-      pdf-annot-activate-created-annotations t    ;; Automatically start annotating what is highlighted
-      pdf-view-resize-factor 1.1    ;; Grain of the zooming step
-      )
 
      )
 
