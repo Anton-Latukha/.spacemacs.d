@@ -2035,6 +2035,12 @@ with DRILL_CARD_TYPE nil."
   (define-key global-map (kbd "<f5>")
     (lambda () (interactive) (org-capture nil "n")))
 
+  ;;;;; Add paths to search private layers in
+
+  ;; TODO: This does not work, I have symlinks into: ~/.emacs.d/private/
+  (add-to-list 'dotspacemacs-configuration-layer-path "~/.spacemacs.d/lisp/private-layers/")
+  (add-to-list 'dotspacemacs-configuration-layer-path "~/.spacemacs.d/lisp/private-layers/eww/")
+
   )
 
 
