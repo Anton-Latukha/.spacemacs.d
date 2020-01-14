@@ -602,6 +602,10 @@ This function should only modify configuration layer settings."
           :foreground
           "gray16"
           )
+         (elfeed-search-tag-face
+          :foreground
+          "gray20"
+          )
 
       ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
       ;; (custom-theme-set-faces
