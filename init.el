@@ -649,6 +649,7 @@ This function should only modify configuration layer settings."
       ;; httpd-port 8081
       ;; url-queue-timeout 30
       elfeed-goodies/powerline-default-separator 'wave
+      elfeed-show-entry-switch 'switch-to-buffer
       )
 
 ;;;; PDF
