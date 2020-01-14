@@ -2042,6 +2042,10 @@ with DRILL_CARD_TYPE nil."
   (add-to-list 'dotspacemacs-configuration-layer-path "~/.spacemacs.d/lisp/private-layers/")
   (add-to-list 'dotspacemacs-configuration-layer-path "~/.spacemacs.d/lisp/private-layers/eww/")
 
+  ;;;;; Use eww as default Emacs browser
+
+  (setq browse-url-browser-function 'eww-browse-url)
+
   )
 
 
