@@ -596,8 +596,12 @@ This function should only modify configuration layer settings."
           )
          (font-lock-string-face
           :foreground
-          "#356a00")
-         ))
+          "#356a00"
+          )
+         (elfeed-search-title-face
+          :foreground
+          "gray16"
+          )
 
       ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
       ;; (custom-theme-set-faces
