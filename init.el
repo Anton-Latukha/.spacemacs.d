@@ -610,6 +610,12 @@ This function should only modify configuration layer settings."
           :foreground
           "gray16"
           )
+         (elfeed-search-date-face
+          :foreground
+          "black"
+          )
+         )
+        )
 
       ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
       ;; (custom-theme-set-faces
