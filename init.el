@@ -1423,6 +1423,21 @@ only the description"
                   (delete-region link-begin link-end)
                   (insert content)))))))
 
+  ;;;; Execute async shell operation without showing buffer result
+
+  (defun my-async-shell-command
+      (command)
+    (progn
+      (async-shell-command
+       command)
+      ;; Close buffer with force
+      (evil-normal-state)
+      (evil-normal-state)
+      (bury-buffer "\*Async Shell Command\*")
+      (spacemacs/delete-window)
+      )
+    )
+
   ;;;; Example of a more intriquiret refile
   ;; (defun my-local-org-refile (arg)
   ;;   "Refile to /level/ in /file/ by using use /prefix args/: 2+/this/[none], 1+/this/1, 1/choose-file/2"
