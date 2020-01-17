@@ -2113,6 +2113,29 @@ with DRILL_CARD_TYPE nil."
 
   (setq browse-url-browser-function 'eww-browse-url)
 
+  ;;;;; Autocommit after dictionary entry
+  (defun my-org-capture-dictionary-finalize ()
+    "Autocommit entry after capture to dictionary"
+    (let
+        (
+          (key  (plist-get org-capture-plist :key))
+          (word (car (cdr (split-string (car (split-string (plist-get org-capture-plist :template) " :drill:")) "* "))))
+          )
+
+      (if org-note-abort
+          (message "Template with key %s and description “%s” aborted" key desc)
+        ;; Autocommit word/phrase added to dictionary.org with capture template
+        (if (string-equal key "d")
+            (progn
+              ;; asynchronously & silent
+              (my-async-shell-command
+               (concat "cd '" (f-parent (concat org-directory "/dictionary/dictionary.org")) "' && git add ./dictionary.org && git commit -m 'add " word "' &> /dev/null && git push &> /dev/null && exit")
+               )
+              )
+          )
+        )
+      )
+    )
   )
 
 
