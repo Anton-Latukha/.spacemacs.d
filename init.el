@@ -518,7 +518,7 @@ This function should only modify configuration layer settings."
           "black"
           )
          (
-          h1-line
+          hl-line
           :background
           "black"
           )
