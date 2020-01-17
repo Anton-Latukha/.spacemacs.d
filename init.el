@@ -527,6 +527,11 @@ This function should only modify configuration layer settings."
           :background
           "grey5"
           )
+         (
+          line-number
+          :foreground
+          "grey10"
+          :background
           "black"
           )
          (font-lock-comment-face
