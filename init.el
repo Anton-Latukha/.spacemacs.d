@@ -2097,7 +2097,7 @@ with DRILL_CARD_TYPE nil."
                 "")))
 
   ;; add to export hook
-  (add-hook 'org-export-before-processing-hook 'delete-org-comments)
+  (add-hook 'org-export-before-processing-hook #'delete-org-comments)
 
   ;;;;; Global short key for NEXT capture template
   (define-key global-map (kbd "<f5>")
