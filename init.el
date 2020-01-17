@@ -2138,6 +2138,8 @@ with DRILL_CARD_TYPE nil."
     )
 
   (add-hook 'org-capture-after-finalize-hook #'my-org-capture-dictionary-finalize)
+
+  (set-fringe-mode 0)
   )
 
 
