@@ -548,6 +548,12 @@ This function should only modify configuration layer settings."
           :background
           "black"
           )
+         (
+          fringe
+          :background
+          "black"
+          )
+
          (font-lock-comment-face
           :background
           "black"
