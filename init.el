@@ -522,6 +522,11 @@ This function should only modify configuration layer settings."
           :background
           "grey4"
           )
+         (
+          helm-selection-line
+          :background
+          "grey5"
+          )
           "black"
           )
          (font-lock-comment-face
