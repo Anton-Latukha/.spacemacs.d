@@ -520,6 +520,8 @@ This function should only modify configuration layer settings."
          (
           hl-line
           :background
+          "grey4"
+          )
           "black"
           )
          (font-lock-comment-face
