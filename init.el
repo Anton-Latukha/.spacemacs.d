@@ -541,6 +541,13 @@ This function should only modify configuration layer settings."
           :background
           "grey4"
           )
+         (
+          border
+          :foreground
+          "black"
+          :background
+          "black"
+          )
          (font-lock-comment-face
           :background
           "black"
