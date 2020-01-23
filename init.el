@@ -2145,6 +2145,8 @@ with DRILL_CARD_TYPE nil."
 
   (add-hook 'org-capture-mode-hook 'evil-insert-state)
 
+  (setq pdf-view-midnight-colors '("#bbbbbb" . "#000000" ))
+
   )
 
 
