@@ -2173,6 +2173,20 @@ with DRILL_CARD_TYPE nil."
 
   ;; (setq browse-url-browser-function 'eww-browse-url)
 
+  ;;;;; FIXME: ('B' does not work): In elfeed 'b' is for eww, 'B' is for default browser
+
+  ;; browse article in gui browser instead of eww
+  (defun bjm/elfeed-show-visit-gui ()
+    "Wrapper for elfeed-show-visit to use gui browser instead of eww"
+    (interactive)
+    (let ((browse-url-generic-program "/run/current-system/sw/bin/firefox"))
+      (elfeed-show-visit t)))
+
+  ;; Trying to map Firefox browsing on B
+  ;; (define-key elfeed-show-mode-map (kbd "B") 'bjm/elfeed-show-visit-gui)
+
+  ;; (setq elfeed-show-entry-switch 'switch-to-buffer)
+  ;; (setq elfeed-search-trailing-width 0)
 
   ;;;;; Autocommit after dictionary entry
   (defun my-org-capture-dictionary-finalize ()
