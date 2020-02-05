@@ -2209,7 +2209,7 @@ with DRILL_CARD_TYPE nil."
               )
           )
 
-        ;;  2020-02-06: NOTE: Not finished. Currently commits with previous 'word' capture data.
+        ;;  2020-02-06: NOTE: Not finished. Currently commits with previous 'dictionary' capture data.
         (if (string-equal key "w")
             (progn
               (setq phrase (car (cdr (split-string (car (split-string (plist-get org-capture-plist :template) " :drill:")) "* "))))
