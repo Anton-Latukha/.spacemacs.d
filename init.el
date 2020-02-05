@@ -1391,7 +1391,12 @@ before packages are loaded."
   (defun my-insert-note ()
     "Insert a NOTE comment"
     (interactive)
-    (insert (shell-command-to-string "echo -n '    # NOTE: '$(date +%Y-%m-%d)': '"))
+    (progn
+      (comment-dwim ())
+      (insert (concat " " (format-time-string "%Y-%m-%d") ": NOTE: " )
+              )
+      (evil-append-line 0)
+      )
     )
 
 ;;;;; my-helm-org-rifle-files
