@@ -654,6 +654,10 @@ This function should only modify configuration layer settings."
           :foreground
           "black"
           )
+         (mmm-default-submode-face
+          :background
+          "black"
+          )
          )
         )
 
