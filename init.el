@@ -2208,6 +2208,17 @@ with DRILL_CARD_TYPE nil."
                )
               )
           )
+
+        ;;  2020-02-06: NOTE: Not finished. Currently commits with previous 'word' capture data.
+        (if (string-equal key "w")
+            (progn
+              (setq phrase (car (cdr (split-string (car (split-string (plist-get org-capture-plist :template) " :drill:")) "* "))))
+              ;; asynchronously & silent
+              (my-async-shell-command
+               (concat "cd '" (f-parent (concat org-directory "/word/word.org")) "' && git add ./word.org && git commit -m 'add " word "' &> /dev/null && git push &> /dev/null && exit")
+               )
+              )
+          )
         )
       )
     )
