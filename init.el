@@ -2156,6 +2156,7 @@ with DRILL_CARD_TYPE nil."
         ;; Autocommit word/phrase added to dictionary.org with capture template
         (if (string-equal key "d")
             (progn
+              (setq word (car (cdr (split-string (car (split-string (plist-get org-capture-plist :template) " :drill:")) "* "))))
               ;; asynchronously & silent
               (my-async-shell-command
                (concat "cd '" (f-parent (concat org-directory "/dictionary/dictionary.org")) "' && git add ./dictionary.org && git commit -m 'add " word "' &> /dev/null && git push &> /dev/null && exit")
