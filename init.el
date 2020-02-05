@@ -429,6 +429,14 @@ This function should only modify configuration layer settings."
             ;; ("Upstream" 25 magit-repolist-column-upstream                ((:right-align t)))
             ("Path"    99 magit-repolist-column-path                   ())
             )
+
+          magit-repolist-column-flag-alist
+          '(
+            (magit-staged-files . "S")
+            (magit-unstaged-files . "U")
+            (magit-untracked-files . "F")
+            )
+
           )
 
 
