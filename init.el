@@ -423,6 +423,8 @@ This function should only modify configuration layer settings."
             ("State"    5 magit-repolist-column-dirty                  ())
             ("L"      1 magit-repolist-column-unpushed-to-upstream   ())
             ("U"      1 magit-repolist-column-unpulled-from-upstream ())
+            ("U" 25 my-magit-repolist-column-upstream-state ())
+            ;; ("U" 25 magit-repolist-column-unpulled-from-upstream ())
             ;; ("Ver" 25 magit-repolist-column-version                ((:right-align t)))
             ("Stash" 25 magit-repolist-column-stashes                ())
             ;; ("Branch" 25 magit-repolist-column-branch                ((:right-align t)))
