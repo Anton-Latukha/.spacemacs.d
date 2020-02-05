@@ -2044,7 +2044,9 @@ with DRILL_CARD_TYPE nil."
              ("module"      . ?\m)
              ("LANGUAGE"    . ?\ℒ)  ;ム
              ("deriving"    . ?\ට)  ;ᘐ ච ᘑ
-             ("newtype"     . ?\ﬦ)
+             ("data"        . ?\𝗗)
+             ("newtype"     . ?\𝗪)
+             ("type"        . ?\𝗔)
              ("Right"       . ?\𝕽)
              ("Left"        . ?\𝕷)
              ("*"           . ?\★)
