@@ -1526,6 +1526,30 @@ only the description"
       (org-refile)
       ))
 
+;;;;; my-magit-repolist-column-upstream-state
+
+  ;; Indicating upstream state differently
+  (defun my-magit-repolist-column-upstream-state (_id)
+    "Insert chars marking state of the current branch to upstream."
+    (--when-let (magit-get-upstream-branch)
+      (let ((upstream-status (magit-rev-diff-count "HEAD" (magit-get-upstream-branch)))
+            )
+        (magit--propertize-face
+         (if (equal upstream-status '(0 0))
+             " "
+           (if (equal (car upstream-status) 0)
+               "↓"
+             (if (equal (cadr upstream-status) 0)
+                 "↑"
+               "⥯" ;; ⇅
+               )
+             )
+           ) 'bold
+         )
+        )
+      )
+    )
+
 ;;;; Keybindings
 
 ;;;;; Global
