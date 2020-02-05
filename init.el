@@ -2140,7 +2140,8 @@ with DRILL_CARD_TYPE nil."
 
   ;;;;; Use eww as default Emacs browser
 
-  (setq browse-url-browser-function 'eww-browse-url)
+  ;; (setq browse-url-browser-function 'eww-browse-url)
+
 
   ;;;;; Autocommit after dictionary entry
   (defun my-org-capture-dictionary-finalize ()
