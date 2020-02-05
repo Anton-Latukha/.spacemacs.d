@@ -1347,7 +1347,6 @@ before packages are loaded."
            "* %a\n:properties:\n:added: %u\n:end:\n%:initial"
            :empty-lines-before 1
            :empty-lines-after 1
-           ;; (id cdf8e391-a200-4fd8-8613-356d74303010)
            )
 
           ("b" "Brain: add at the end" plain
