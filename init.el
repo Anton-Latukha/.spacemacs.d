@@ -1378,11 +1378,15 @@ before packages are loaded."
 
 ;;;; My functions
 
+;;;;; my-insert-current-date
+
   (defun my-insert-current-date ()
     "Insert ISO date"
     (interactive)
     (insert (format-time-string "%Y-%m-%d"))
     )
+
+;;;;; my-insert-note
 
   (defun my-insert-note ()
     "Insert a NOTE comment"
@@ -1390,11 +1394,15 @@ before packages are loaded."
     (insert (shell-command-to-string "echo -n '    # NOTE: '$(date +%Y-%m-%d)': '"))
     )
 
+;;;;; my-helm-org-rifle-files
+
   (defun my-helm-org-rifle-files ()
     "Find the org entry by matching content"
     (interactive)
     (helm-org-rifle-files (append my-org-refile-additional-targets org-agenda-files))
     )
+
+;;;;; my-org-toggle-tag-drill
 
   (defun my-org-toggle-tag-drill ()
     "Toggle :drill: tag"
@@ -1402,17 +1410,23 @@ before packages are loaded."
     (org-toggle-tag "drill")
     )
 
+;;;;; my-safe-exit
+
   (defun my-safe-exit ()
     "Saving all files on exit"
     (interactive)
     (save-buffers-kill-terminal t)
     )
 
+;;;;; my-archive-when-done
+
   ;; TODO: not used
   (defun my-archive-when-done ()
     "Archive current entry if it is marked as DONE (see `org-done-keywords')."
     (when (org-entry-is-done-p)
       (org-archive-subtree-default)))
+
+;;;;; my-org-link-delete-link
 
   ;;;; 2019-06-12: NOTE: Strips link from selected text
   ;;;; Taken from: https://emacs.stackexchange.com/questions/10707/in-org-mode-how-to-remove-a-link
@@ -1430,6 +1444,8 @@ only the description"
                 (let ((content (buffer-substring-no-properties content-begin content-end)))
                   (delete-region link-begin link-end)
                   (insert content)))))))
+
+;;;;; my-async-shell-command
 
   ;;;; Execute async shell operation without showing buffer result
 
@@ -1484,6 +1500,8 @@ only the description"
   ;;         )
   ;;   )
 
+;;;;; my-curren-org-file
+
   ;; Get my current org file name
   (defun my-current-org-file ()
     (delq nil
@@ -1491,6 +1509,8 @@ only the description"
            (buffer-file-name (current-buffer)))
           )
     )
+
+;;;;; my-local-org-refile
 
   ;; Refile only in current file
   (defun my-local-org-refile ()
@@ -2108,6 +2128,7 @@ with DRILL_CARD_TYPE nil."
   (add-hook 'org-export-before-processing-hook #'delete-org-comments)
 
   ;;;;; Global short key for NEXT capture template
+
   (define-key global-map (kbd "<f5>")
     (lambda () (interactive) (org-capture nil "n")))
 
