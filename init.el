@@ -692,6 +692,7 @@ This function should only modify configuration layer settings."
       ;; elfeed-enable-web-interface t
       ;; httpd-port 8081
       ;; url-queue-timeout 30
+      ;; elfeed-enable-goodies nil
       elfeed-goodies/powerline-default-separator 'wave
       elfeed-show-entry-switch 'switch-to-buffer
       )
