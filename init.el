@@ -2180,7 +2180,6 @@ with DRILL_CARD_TYPE nil."
     (let
         (
           (key  (plist-get org-capture-plist :key))
-          (word (car (cdr (split-string (car (split-string (plist-get org-capture-plist :template) " :drill:")) "* "))))
           )
 
       (if org-note-abort
