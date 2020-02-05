@@ -419,17 +419,16 @@ This function should only modify configuration layer settings."
             )
           magit-repolist-columns
           '(
-            ("Name"    25 magit-repolist-column-ident                  ())
-            ("State"    5 magit-repolist-column-dirty                  ())
-            ("L"      1 magit-repolist-column-unpushed-to-upstream   ())
-            ("U"      1 magit-repolist-column-unpulled-from-upstream ())
+            ("Name" 25 magit-repolist-column-ident ())
+            ("S" 1 magit-repolist-column-stashes ())
+            ("G" 1 magit-repolist-column-dirty ())
             ("U" 25 my-magit-repolist-column-upstream-state ())
+            ;; ("L" 1 magit-repolist-column-unpushed-to-upstream ())
             ;; ("U" 25 magit-repolist-column-unpulled-from-upstream ())
             ;; ("Ver" 25 magit-repolist-column-version                ((:right-align t)))
-            ("Stash" 25 magit-repolist-column-stashes                ())
             ;; ("Branch" 25 magit-repolist-column-branch                ((:right-align t)))
             ;; ("Upstream" 25 magit-repolist-column-upstream                ((:right-align t)))
-            ("Path"    99 magit-repolist-column-path                   ())
+            ("Path" 99 magit-repolist-column-path ())
             )
 
           magit-repolist-column-flag-alist
