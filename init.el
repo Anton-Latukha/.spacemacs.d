@@ -1316,7 +1316,7 @@ before packages are loaded."
 
           ("w" "Word entry" entry
            (file ,(concat org-directory "/word/word.org"))
-           "* %?\n"
+           "* %^{phrase}\n%?"
            :empty-lines-before 1
            :empty-lines-after 1
            )
