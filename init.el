@@ -1568,6 +1568,14 @@ only the description"
       )
     )
 
+;;;;; my-org-agenda-day-list
+
+  (defun my-org-agenda-day-list ()
+    "Open agenda the way I want"
+    (interactive)
+    (org-agenda-list () () 1)
+    )
+
 ;;;; Keybindings
 
 ;;;;; Global
