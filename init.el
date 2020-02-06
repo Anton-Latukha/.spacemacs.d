@@ -2253,7 +2253,6 @@ with DRILL_CARD_TYPE nil."
   (set-fringe-mode 0)
   (global-vi-tilde-fringe-mode 'nil)
 
-
   (add-hook 'org-capture-mode-hook 'evil-insert-state)
 
   (setq pdf-view-midnight-colors '("#bbbbbb" . "#000000" ))
