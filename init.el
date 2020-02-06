@@ -1586,7 +1586,7 @@ only the description"
     "on" 'my-insert-note
     "or" 'my-helm-org-rifle-files
     "op" 'sp-splice-sexp-killing-around
-    "oa" 'org-agenda-list
+    "oa" 'my-org-agenda-day-list
     "qq" 'my-safe-exit
     )
 
