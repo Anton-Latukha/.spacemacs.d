@@ -420,7 +420,7 @@ This function should only modify configuration layer settings."
           magit-repolist-columns
           '(
             ("Name" 25 magit-repolist-column-ident ())
-            ("S" 1 magit-repolist-column-stashes ())
+            ("S" 1 my-magit-repolist-column-stashes ())
             ("G" 1 magit-repolist-column-dirty ())
             ("U" 25 my-magit-repolist-column-upstream-state ())
             ("Path" 99 magit-repolist-column-path ())
