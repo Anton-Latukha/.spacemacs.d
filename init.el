@@ -1551,6 +1551,22 @@ only the description"
       )
     )
 
+;;;;; my-magit-repolist-column-stashes
+
+  ;; Indicate stash state differently
+
+  (defun my-magit-repolist-column-stashes (_id)
+    "Insert chars of stashes."
+    (let ((n (length (magit-list-stashes))))
+      (magit--propertize-face
+       (if (eq n '0)
+           " "
+         "✺"
+         ) 'bold
+       )
+      )
+    )
+
 ;;;; Keybindings
 
 ;;;;; Global
