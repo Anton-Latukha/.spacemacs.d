@@ -2258,6 +2258,12 @@ with DRILL_CARD_TYPE nil."
 
   (setq pdf-view-midnight-colors '("#bbbbbb" . "#000000" ))
 
+;;;; Run Agenda as initial buffer
+
+  (my-org-agenda-day-list)
+
+  (setq initial-buffer-choice (lambda () (get-buffer "*Org Agenda*")))
+
   )
 
 
