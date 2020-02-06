@@ -370,6 +370,7 @@ This function should only modify configuration layer settings."
       org-enable-reveal-js-support t
       org-agenda-dim-blocked-tasks 'invisible    ;; Make blocked tasks invisible, show only child tasks.
       org-edit-src-content-indentation 0    ;; Disable the freaking autoindentation of Babel code blocks that driven me nuts
+      org-agenda-window-setup 'only-window    ;; Delete all other windows, show agenda full frame
       )
 
 ;;;; LSP
