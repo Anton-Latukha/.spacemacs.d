@@ -371,6 +371,13 @@ This function should only modify configuration layer settings."
       org-agenda-dim-blocked-tasks 'invisible    ;; Make blocked tasks invisible, show only child tasks.
       org-edit-src-content-indentation 0    ;; Disable the freaking autoindentation of Babel code blocks that driven me nuts
       org-agenda-window-setup 'only-window    ;; Delete all other windows, show agenda full frame
+      org-latex-pdf-process
+      '(
+        "%latex -interaction nonstopmode -output-directory %o %f"
+        "%latex -interaction nonstopmode -output-directory %o %f"
+        "%latex -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -interaction nonstopmode -output-directory %o %f"
+        )
       )
 
 ;;;; LSP
