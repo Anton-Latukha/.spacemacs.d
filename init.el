@@ -378,6 +378,7 @@ This function should only modify configuration layer settings."
         "%latex -interaction nonstopmode -output-directory %o %f"
         "pdflatex -interaction nonstopmode -output-directory %o %f"
         )
+      org-latex-compiler "xelatex"
       )
 
 ;;;; LSP
