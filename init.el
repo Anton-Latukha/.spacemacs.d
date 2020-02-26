@@ -385,14 +385,15 @@ This function should only modify configuration layer settings."
 ;;;; LSP
 
      (lsp :variables
-          default-nix-wrapper (lambda (args)
-                                (append
-                                 (append (list "nix-shell" "-I" "." "--command" )
-                                         (list (mapconcat 'identity args " "))
-                                         )
-                                 (list (nix-current-sandbox))
-                                 )
-                                )
+          default-nix-wrapper
+          (lambda (args)
+            (append
+             (append (list "nix-shell" "-I" "." "--command" )
+                     (list (mapconcat 'identity args " "))
+                     )
+             (list (nix-current-sandbox))
+             )
+            )
           lsp-haskell-process-wrapper-function default-nix-wrapper
           )
 
