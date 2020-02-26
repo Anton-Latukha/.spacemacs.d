@@ -376,9 +376,10 @@ This function should only modify configuration layer settings."
         "%latex -interaction nonstopmode -output-directory %o %f"
         "%latex -interaction nonstopmode -output-directory %o %f"
         "%latex -interaction nonstopmode -output-directory %o %f"
+        ;; Added pdflatex to include PNG images into export
         "pdflatex -interaction nonstopmode -output-directory %o %f"
         )
-      org-latex-compiler "xelatex"
+      ;; org-latex-compiler "xelatex"    ;; 'xelatex' was wrongly encoding the LaTeX formulas
       )
 
 ;;;; LSP
