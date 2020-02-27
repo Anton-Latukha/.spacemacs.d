@@ -373,11 +373,13 @@ This function should only modify configuration layer settings."
       org-agenda-window-setup 'only-window    ;; Delete all other windows, show agenda full frame
       org-latex-pdf-process
       '(
-        "%latex -interaction nonstopmode -output-directory %o %f"
-        "%latex -interaction nonstopmode -output-directory %o %f"
-        "%latex -interaction nonstopmode -output-directory %o %f"
+        ;; `-shell-escape' is jailbreak to permit calls of external utils, enabled for `minted' Pygments code highlighting
+        "%latex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "%latex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "%latex -shell-escape -interaction nonstopmode -output-directory %o %f"
         ;; Added pdflatex to include PNG images into export
-        "pdflatex -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         )
       ;; org-latex-compiler "xelatex"    ;; 'xelatex' was wrongly encoding the LaTeX formulas
       )
