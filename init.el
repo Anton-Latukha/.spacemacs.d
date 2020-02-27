@@ -382,6 +382,7 @@ This function should only modify configuration layer settings."
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         )
       ;; org-latex-compiler "xelatex"    ;; 'xelatex' was wrongly encoding the LaTeX formulas
+      org-latex-inputenc-alist '(("utf8" . "utf8x"))    ;; Add Unicode char support, also extends ("mathletters" "ucs" nil)
       )
 
 ;;;; LSP
