@@ -2277,6 +2277,11 @@ with DRILL_CARD_TYPE nil."
 
   (setq initial-buffer-choice (lambda () (get-buffer "*Org Agenda*")))
 
+  (add-to-list 'org-latex-packages-alist
+               '("" "tikz" t))
+
+  (add-to-list 'org-latex-packages-alist
+               '("" "tikz-cd" t))
   )
 
 
