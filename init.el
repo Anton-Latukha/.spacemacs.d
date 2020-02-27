@@ -2282,6 +2282,12 @@ with DRILL_CARD_TYPE nil."
 
   (add-to-list 'org-latex-packages-alist
                '("" "tikz-cd" t))
+
+  (eval-after-load "preview"
+    '(add-to-list 'preview-default-preamble "\\PreviewEnvironment{tikzpicture}" t))
+
+  (eval-after-load "preview"
+    '(add-to-list 'preview-default-preamble "\\PreviewEnvironment{tikzcd}" t))
   )
 
 
