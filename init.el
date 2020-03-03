@@ -1474,8 +1474,7 @@ only the description"
   (defun my-async-shell-command
       (command)
     (progn
-      (async-shell-command
-       command)
+      (async-shell-command command)
       ;; Close buffer with force
       (evil-normal-state)
       (evil-normal-state)
