@@ -49,7 +49,9 @@ This function should only modify configuration layer settings."
                      enable-flyspell-auto-completion t
                      )
 
-     syntax-checking
+     (syntax-checking :variables
+                      flycheck-proselint-executable "proselint"
+                      )
 
      javascript
      shell-scripts
