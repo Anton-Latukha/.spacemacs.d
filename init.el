@@ -126,7 +126,6 @@ This function should only modify configuration layer settings."
       my-org-refile-additional-targets
       '(
         "~/org/Notes.org"
-        "~/org/haskell/haskell.org"
         "~/org/nix/nix.org"
         "~/org/tex/tex.org"
         "~/org/org/org.org"
