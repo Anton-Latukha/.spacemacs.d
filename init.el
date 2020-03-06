@@ -2324,6 +2324,10 @@ with DRILL_CARD_TYPE nil."
   (spaceline-toggle-purpose-off)
   (spaceline-toggle-buffer-position-off)
 
+;;;; Autosave
+
+  (setq auto-save-interval 25)    ;; It is programming - autosave more aggressively
+
   )
 
 
