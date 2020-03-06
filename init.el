@@ -2155,9 +2155,10 @@ with DRILL_CARD_TYPE nil."
 
 ;;;; Line number
 
-  (setq display-line-numbers-width '5)
-  (setq display-line-numbers-grow-only 't)    ;; Do not shrink the number line width
-  (setq display-line-numbers-width-start 't)    ;; Calculate width of the column from the start
+  (setq display-line-numbers-width 5)
+  (setq display-line-numbers-grow-only t)    ;; Do not shrink the number line width
+  (setq display-line-numbers-width-start t)    ;; Calculate width of the column from the start
+  ;; (global-display-line-numbers-mode nil)
 
 ;;;; Saving Emacs Desktop
 
