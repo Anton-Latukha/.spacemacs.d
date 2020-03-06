@@ -2136,7 +2136,7 @@ with DRILL_CARD_TYPE nil."
 
 ;;;; Custom Org-mode priorities
 
-  ;;;;; Org-priority regexp
+;;;;; Org-priority regexp
 
   (setq org-priority-regexp ".*?\\(\\[\\([0-9][0-9]\\)\\] ?\\)")
 
@@ -2151,13 +2151,13 @@ with DRILL_CARD_TYPE nil."
        (list 'face (org-get-priority-face (string-to-char (match-string 2)))
              'font-lock-fontified t))))
 
-  ;;;;; Org-priority range declaration
+;;;;; Org-priority range declaration
 
   (setq org-highest-priority 99)
   (setq org-default-priority 49)
   (setq org-lowest-priority 00)
 
-  ;;;;; Overload default priority function with my own
+;;;;; Overload default priority function with my own
 
   (defun org-get-priority (s)
     "My custom overload to find priority cookie and return priority."
@@ -2175,16 +2175,16 @@ with DRILL_CARD_TYPE nil."
 
   (setq haskell-font-lock-symbols 't)  ;; Enable font ligatures
 
-  ;;;;; For being safe that opening a PDF uses pdf-tools and not DocView - enable PDF tools
+;;;;; For being safe that opening a PDF uses pdf-tools and not DocView - enable PDF tools
 
   (pdf-tools-install)
 
-  ;;;;; Highlight LaTeX blocks
+;;;;; Highlight LaTeX blocks
 
   (setq org-highlight-latex-and-related '(latex))
 
-  ;;;;; Remove org comments from org document for use with export hook
-  ;; https://emacs.stackexchange.com/questions/22574/orgmode-export-how-to-prevent-a-new-line-for-comment-lines
+;;;;; Remove org comments from org document for use with export hook
+;; https://emacs.stackexchange.com/questions/22574/orgmode-export-how-to-prevent-a-new-line-for-comment-lines
   (defun delete-org-comments (backend)
     (loop for comment in (reverse (org-element-map (org-element-parse-buffer)
                                       'comment 'identity))
@@ -2196,22 +2196,22 @@ with DRILL_CARD_TYPE nil."
   ;; add to export hook
   (add-hook 'org-export-before-processing-hook #'delete-org-comments)
 
-  ;;;;; Global short key for NEXT capture template
+;;;;; Global short key for NEXT capture template
 
   (define-key global-map (kbd "<f5>")
     (lambda () (interactive) (org-capture nil "n")))
 
-  ;;;;; Add paths to search private layers in
+;;;;; Add paths to search private layers in
 
   ;; TODO: This does not work, I have symlinks into: ~/.emacs.d/private/
   (add-to-list 'dotspacemacs-configuration-layer-path "~/.spacemacs.d/lisp/private-layers/")
   (add-to-list 'dotspacemacs-configuration-layer-path "~/.spacemacs.d/lisp/private-layers/eww/")
 
-  ;;;;; Use eww as default Emacs browser
+;;;;; Use eww as default Emacs browser
 
   ;; (setq browse-url-browser-function 'eww-browse-url)
 
-  ;;;;; FIXME: ('B' does not work): In elfeed 'b' is for eww, 'B' is for default browser
+;;;;; FIXME: ('B' does not work): In elfeed 'b' is for eww, 'B' is for default browser
 
   ;; browse article in gui browser instead of eww
   (defun bjm/elfeed-show-visit-gui ()
@@ -2226,7 +2226,7 @@ with DRILL_CARD_TYPE nil."
   ;; (setq elfeed-show-entry-switch 'switch-to-buffer)
   ;; (setq elfeed-search-trailing-width 0)
 
-  ;;;;; Autocommit after dictionary entry
+;;;;; Autocommit after dictionary entry
   (defun my-org-capture-dictionary-finalize ()
     "Autocommit entry after capture to dictionary"
     (let
