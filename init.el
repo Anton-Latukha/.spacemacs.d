@@ -2328,6 +2328,10 @@ with DRILL_CARD_TYPE nil."
 
   (setq auto-save-interval 25)    ;; It is programming - autosave more aggressively
 
+;;;; misc comented Shipyard
+
+  ;; (setq display-time-default-load-average nil)    ;; Should disable - but does not work. Probably Spacemacs somehow enables/forces that load average in other way
+
   )
 
 
