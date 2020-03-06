@@ -385,6 +385,10 @@ This function should only modify configuration layer settings."
       ;; org-latex-compiler "xelatex"    ;; 'xelatex' was wrongly encoding the LaTeX formulas
       org-latex-inputenc-alist '(("utf8" . "utf8x"))    ;; Add Unicode char support, also extends ("mathletters" "ucs" nil)
       org-latex-listings 'minted    ;; Use Python Pygments highlighter. Needs `org-latex-pdf-process' with `-shell-escape'
+      org-latex-packages-alist '(
+                                 ("" "tikz-cd" t)
+                                 ("" "tikz" t)
+                                 )
       )
 
 ;;;; LSP
@@ -2276,11 +2280,6 @@ with DRILL_CARD_TYPE nil."
 
   (setq initial-buffer-choice (lambda () (get-buffer "*Org Agenda*")))
 
-  (add-to-list 'org-latex-packages-alist
-               '("" "tikz" t))
-
-  (add-to-list 'org-latex-packages-alist
-               '("" "tikz-cd" t))
 
   (eval-after-load "preview"
     '(add-to-list 'preview-default-preamble "\\PreviewEnvironment{tikzpicture}" t))
