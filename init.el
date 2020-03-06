@@ -1616,6 +1616,18 @@ only the description"
       )
     )
 
+  ;; Org-mode has internal commands (org-entry-is-done-p), but it does not exposes them to external scope
+  ;; (defun my-org-agenda-archive-done-tasks ()
+  ;;   "Archive entries if they are marked as DONE (see `org-done-keywords')."
+  ;;   (interactive)
+  ;;   (org-map-entries (my-org-map-archive) 'nil 'file))
+  ;; (defun my-org-map-archive ()
+  ;;   (if (org-entry-is-done-p)
+  ;;       (org-archive-subtree-default)
+  ;;     ()
+  ;;     )
+  ;;   )
+
 ;;;; Keybindings
 
 ;;;;; Global
