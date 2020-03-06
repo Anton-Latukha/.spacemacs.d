@@ -1600,6 +1600,21 @@ only the description"
     (org-agenda-list () () 1)
     )
 
+;;;;; my-local-org-publish
+
+  (defun my-local-org-publish-book ()
+    "Export current buffer in HTML, then in PDF"
+    (interactive)
+    (progn
+      (org-html-export-to-html)
+      (org-latex-export-to-pdf)
+        ;; asynchronously & silent
+      (my-async-shell-command
+       (concat "fish -c 'publish-book'")
+       )
+      )
+    )
+
 ;;;; Keybindings
 
 ;;;;; Global
@@ -1624,6 +1639,7 @@ only the description"
     "or" 'org-drill-resume
     "oR" 'org-drill
     "ol" 'my-local-org-refile
+    "oP" 'my-local-org-publish-book
     )
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html/")
