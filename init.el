@@ -51,6 +51,7 @@ This function should only modify configuration layer settings."
 
      (syntax-checking :variables
                       flycheck-proselint-executable "proselint"
+                      flycheck-textlint-executable "textlint"
                       )
 
      javascript
