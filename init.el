@@ -2134,7 +2134,9 @@ with DRILL_CARD_TYPE nil."
      )
    )
 
-  (setq linum-format "%4d ")
+  (setq display-line-numbers-width '5)
+  (setq display-line-numbers-grow-only 't)    ;; Do not shrink the number line width
+  (setq display-line-numbers-width-start 't)    ;; Calculate width of the column from the start
 
 ;;;; Saving Emacs Desktop
 
