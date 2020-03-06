@@ -1489,44 +1489,6 @@ only the description"
       )
     )
 
-  ;;;; Example of a more intriquiret refile
-  ;; (defun my-local-org-refile (arg)
-  ;;   "Refile to /level/ in /file/ by using use /prefix args/: 2+/this/[none], 1+/this/1, 1/choose-file/2"
-  ;;   (interactive "P")
-  ;;   (cond
-  ;;    ((not (null arg))
-  ;;     (let ((val (car current-prefix-arg))
-  ;;           (current-prefix-arg nil)
-  ;;           (org-refile-use-outline-path 'file)
-  ;;           (org-reverse-note-order nil))
-  ;;       (cond ((= val 4)
-  ;;              (call-interactively 'org-refile))
-  ;;             ((= val 16)
-  ;;              (let* ((fil (read-file-name "Enter destination file: "))
-  ;;                     (xfil (expand-file-name fil))
-  ;;                     (_ (when (not (file-exists-p xfil))
-  ;;                          (with-temp-file xfil (insert))))
-  ;;                     (org-refile-targets
-  ;;                      `((,xfil :maxlevel . 10))))
-  ;;                (progn (call-interactively 'org-refile)
-  ;;                       (find-file xfil)))))))
-  ;;    (t
-  ;;     (call-interactively 'org-refile))))
-
-  ;; Refile to open buffers
-  ;; (defun my-local-org-files-list ()
-  ;;   (delq nil
-  ;;         (mapcar (lambda (buffer)
-  ;;                   (buffer-file-name buffer))
-  ;;                 (org-buffer-list 'files t)
-  ;;                 )))
-
-  ;; (defun my-local-org-files-list ()
-  ;;   (delq nil
-  ;;         (buffer-file-name (current-buffer))
-  ;;         )
-  ;;   )
-
 ;;;;; my-curren-org-file
 
   ;; Get my current org file name
@@ -1612,6 +1574,45 @@ only the description"
        )
       )
     )
+;;;;; misc commented Shipyard
+
+  ;;;; Example of a more intriquiret refile
+  ;; (defun my-local-org-refile (arg)
+  ;;   "Refile to /level/ in /file/ by using use /prefix args/: 2+/this/[none], 1+/this/1, 1/choose-file/2"
+  ;;   (interactive "P")
+  ;;   (cond
+  ;;    ((not (null arg))
+  ;;     (let ((val (car current-prefix-arg))
+  ;;           (current-prefix-arg nil)
+  ;;           (org-refile-use-outline-path 'file)
+  ;;           (org-reverse-note-order nil))
+  ;;       (cond ((= val 4)
+  ;;              (call-interactively 'org-refile))
+  ;;             ((= val 16)
+  ;;              (let* ((fil (read-file-name "Enter destination file: "))
+  ;;                     (xfil (expand-file-name fil))
+  ;;                     (_ (when (not (file-exists-p xfil))
+  ;;                          (with-temp-file xfil (insert))))
+  ;;                     (org-refile-targets
+  ;;                      `((,xfil :maxlevel . 10))))
+  ;;                (progn (call-interactively 'org-refile)
+  ;;                       (find-file xfil)))))))
+  ;;    (t
+  ;;     (call-interactively 'org-refile))))
+
+  ;; Refile to open buffers
+  ;; (defun my-local-org-files-list ()
+  ;;   (delq nil
+  ;;         (mapcar (lambda (buffer)
+  ;;                   (buffer-file-name buffer))
+  ;;                 (org-buffer-list 'files t)
+  ;;                 )))
+
+  ;; (defun my-local-org-files-list ()
+  ;;   (delq nil
+  ;;         (buffer-file-name (current-buffer))
+  ;;         )
+  ;;   )
 
   ;; Org-mode has internal commands (org-entry-is-done-p), but it does not exposes them to external scope
   ;; (defun my-org-agenda-archive-done-tasks ()
