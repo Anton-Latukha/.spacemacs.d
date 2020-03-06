@@ -2318,6 +2318,14 @@ with DRILL_CARD_TYPE nil."
   (setq org-latex-default-packages-alist (cons '("mathletters" "ucs" nil) org-latex-default-packages-alist))    ;; Extend the Unicode support of ("utf8" . "utf8x"), runs before else packages loaded
 
 
+  (spaceline-toggle-buffer-size-off)
+  (spaceline-toggle-minor-modes-off)
+  (spaceline-toggle-version-control-off)
+  (spaceline-toggle-buffer-encoding-abbrev-off)
+  (spaceline-toggle-major-mode-off)
+  (spaceline-toggle-purpose-off)
+  (spaceline-toggle-buffer-position-off)
+
   )
 
 
