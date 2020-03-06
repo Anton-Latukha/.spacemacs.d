@@ -1595,6 +1595,7 @@ only the description"
     "Open agenda the way I want"
     (interactive)
     (org-agenda-list () () 1)
+    (org-agenda-redo)
     )
 
 ;;;;; my-local-org-publish
