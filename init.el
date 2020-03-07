@@ -2333,6 +2333,13 @@ with DRILL_CARD_TYPE nil."
 
   ;; (setq display-time-default-load-average nil)    ;; Should disable - but does not work. Probably Spacemacs somehow enables/forces that load average in other way
 
+;;;; misc
+
+;;;;; Setting-up org-goto
+
+  (setq org-goto-interface 'outline-path-completion)
+  (setq org-outline-path-complete-in-steps nil)
+
   )
 
 
