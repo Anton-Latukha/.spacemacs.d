@@ -2320,6 +2320,7 @@ with DRILL_CARD_TYPE nil."
   (setq initial-buffer-choice (lambda () (get-buffer "*Org Agenda*")))
 
   (setq org-preview-latex-default-process 'dvisvgm)  ;; imagemagick
+  (setq org-latex-hyperref-template "\\hypersetup{\n pdfauthor={%a},\n pdftitle={%t},\n pdfkeywords={%k},\n pdfsubject={%d},\n pdfcreator={%c},\n pdflang={%L},\n colorlinks=true,\n linkcolor=blue,\n urlcolor=cyan,\n filecolor=magenta}\n")
 
   (eval-after-load "preview"
     '(add-to-list 'preview-default-preamble "\\PreviewEnvironment{tikzpicture}" t))
