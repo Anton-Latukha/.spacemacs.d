@@ -2326,6 +2326,15 @@ with DRILL_CARD_TYPE nil."
     '(add-to-list 'preview-default-preamble "\\PreviewEnvironment{tikzcd}" t))
   (setq org-latex-default-packages-alist (cons '("mathletters" "ucs" nil) org-latex-default-packages-alist))    ;; Extend the Unicode support of ("utf8" . "utf8x"), runs before else packages loaded
 
+;;;; Custom modeline
+  ;; This example from official documetation throws ungooglifying error
+  ;; (defun spaceline-custom-theme (&rest additional-segments)
+  ;;   "My custom spaceline theme."
+  ;;   (spaceline-compile
+  ;;     '(major-mode (minor-modes :when active) buffer-id)
+  ;;     '((line-column :separator " | " :priority 3)
+  ;;       ,@additional-segments))
+  ;;   (setq-default mode-line-format '("%e" (:eval (spaceline-ml-main)))))
 
   (spaceline-toggle-buffer-size-off)
   (spaceline-toggle-minor-modes-off)
