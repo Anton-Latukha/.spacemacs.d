@@ -375,18 +375,24 @@ This function should only modify configuration layer settings."
       org-agenda-window-setup 'only-window    ;; Delete all other windows, show agenda full frame
       org-latex-pdf-process
       '(
-        ;; `-shell-escape' is jailbreak to permit calls of external utils, enabled for `minted' Pygments code highlighting
-        "%latex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "%latex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "%latex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "%latex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        ;; All below no longer needed
-        ;; "texi2dvi --pdf --clean --verbose --batch -shell-escape -interaction nonstopmode -output-directory %o %f"
-        ;; "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        ;; "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        ;; "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        ;; "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
+        "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
+        "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
+        "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
         )
+      ;; Lualatex is more powerful, but generates page for every formula
+      ;; '(
+      ;;   "%lualatex -shell-escape -enc -interaction nonstopmode -output-directory %o %f"
+      ;;   "%lualatex -shell-escape -enc -interaction nonstopmode -output-directory %o %f"
+      ;;   "%lualatex -shell-escape -enc -interaction nonstopmode -output-directory %o %f"
+      ;;   "%lualatex -shell-escape -enc -interaction nonstopmode -output-directory %o %f"
+      ;;   )
+      ;; All below no longer needed
+      ;; "texi2dvi --pdf --clean --verbose --batch -shell-escape -interaction nonstopmode -output-directory %o %f"
+      ;; "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+      ;; "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+      ;; "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+      ;; "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
       ;; org-latex-compiler "xelatex"    ;; 'xelatex' was wrongly encoding the LaTeX formulas
       org-latex-inputenc-alist '(("utf8" . "utf8x"))    ;; Add Unicode char support, also extends ("mathletters" "ucs" nil)
       org-latex-listings 'minted    ;; Use Python Pygments highlighter. Needs `org-latex-pdf-process' with `-shell-escape'
