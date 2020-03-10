@@ -398,10 +398,10 @@ This function should only modify configuration layer settings."
       ;; org-latex-compiler "xelatex"    ;; 'xelatex' was wrongly encoding the LaTeX formulas
       ;; org-latex-inputenc-alist '(("utf8" . "utf8x"))    ;; Add Unicode char support, also extends ("mathletters" "ucs" nil)
       org-latex-listings 'minted    ;; Use Python Pygments highlighter. Needs `org-latex-pdf-process' with `-shell-escape'
-      org-latex-packages-alist '(
-                                 ("" "tikz-cd" t)
-                                 ("" "tikz" t)
-                                 )
+      ;; org-latex-packages-alist '(
+      ;;                            ("" "tikz" t)
+      ;;                            ("" "tikz-cd" t)
+      ;;                            )
       )
 
 ;;;; LSP
