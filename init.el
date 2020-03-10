@@ -2324,7 +2324,6 @@ with DRILL_CARD_TYPE nil."
 
   (eval-after-load "preview"
     '(add-to-list 'preview-default-preamble "\\PreviewEnvironment{tikzcd}" t))
-  (setq org-latex-default-packages-alist (cons '("mathletters" "ucs" nil) org-latex-default-packages-alist))    ;; Extend the Unicode support of ("utf8" . "utf8x"), runs before else packages loaded
 
 ;;;; Custom modeline
   ;; This example from official documetation throws ungooglifying error
