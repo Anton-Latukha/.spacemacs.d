@@ -1572,9 +1572,9 @@ only the description"
     (org-agenda-redo)
     )
 
-;;;;; my-local-org-publish
+;;;;; my-local-org-book-publish
 
-  (defun my-local-org-publish-book ()
+  (defun my-local-org-book-publish ()
     "Export current buffer in HTML, then in PDF"
     (interactive)
     (progn
@@ -1661,7 +1661,7 @@ only the description"
     "or" 'org-drill-resume
     "oR" 'org-drill
     "ol" 'my-local-org-refile
-    "oP" 'my-local-org-publish-book
+    "oP" 'my-local-org-book-publish
     )
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html/")
