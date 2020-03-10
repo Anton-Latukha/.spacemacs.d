@@ -2348,8 +2348,6 @@ with DRILL_CARD_TYPE nil."
 
   ;; (setq org-export-latex-format-toc-function 'org-export-latex-no-toc)
 
-  (setq org-babel-inline-result-wrap "%s")
-
 ;;;; Custom modeline
   ;; This example from official documetation throws ungooglifying error
   ;; (defun spaceline-custom-theme (&rest additional-segments)
