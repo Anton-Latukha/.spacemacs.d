@@ -2319,6 +2319,7 @@ with DRILL_CARD_TYPE nil."
 
   (setq initial-buffer-choice (lambda () (get-buffer "*Org Agenda*")))
 
+  (setq org-preview-latex-default-process 'dvisvgm)  ;; imagemagick
 
   (eval-after-load "preview"
     '(add-to-list 'preview-default-preamble "\\PreviewEnvironment{tikzpicture}" t))
