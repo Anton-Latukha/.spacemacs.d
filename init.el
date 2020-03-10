@@ -1578,6 +1578,7 @@ only the description"
     "Export current buffer in HTML, then in PDF"
     (interactive)
     (progn
+      (shell-command "fish -c 'book-prepare'")
       (org-html-export-to-html)
       (org-latex-export-to-pdf)
         ;; asynchronously & silent
