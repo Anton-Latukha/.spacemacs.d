@@ -402,6 +402,13 @@ This function should only modify configuration layer settings."
       ;;                            ("" "tikz" t)
       ;;                            ("" "tikz-cd" t)
       ;;                            )
+
+      ;; Works perfectly, generates fast, shows high-class, needs Emacs to support svg display
+      org-preview-latex-default-process 'dvisvgm  ;; imagemagick
+
+      ;; Setting hyperref in LaTeX overrids this template, and has a side effect - adds epty space to the previews
+       org-latex-hyperref-template "\\hypersetup{\n pdfauthor={%a},\n pdftitle={%t},\n pdfkeywords={%k},\n pdfsubject={%d},\n pdfcreator={%c},\n pdflang={%L},\n colorlinks=true,\n linkcolor=blue,\n urlcolor=cyan,\n filecolor=magenta}\n"
+
       )
 
 ;;;; LSP
@@ -2318,11 +2325,6 @@ with DRILL_CARD_TYPE nil."
   (my-org-agenda-day-list)
 
   (setq initial-buffer-choice (lambda () (get-buffer "*Org Agenda*")))
-
-  ;; Works perfectly, generates fast, shows high-class, needs Emacs to support svg display
-  (setq org-preview-latex-default-process 'dvisvgm)  ;; imagemagick
-  ;; Setting hyperref in LaTeX overrids this template, and has a side effect - adds epty space to the previews
-  (setq org-latex-hyperref-template "\\hypersetup{\n pdfauthor={%a},\n pdftitle={%t},\n pdfkeywords={%k},\n pdfsubject={%d},\n pdfcreator={%c},\n pdflang={%L},\n colorlinks=true,\n linkcolor=blue,\n urlcolor=cyan,\n filecolor=magenta}\n")
 
   (eval-after-load "preview"
     '(add-to-list 'preview-default-preamble "\\PreviewEnvironment{tikzpicture}" t))
