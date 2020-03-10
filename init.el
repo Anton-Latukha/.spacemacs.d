@@ -359,7 +359,7 @@ This function should only modify configuration layer settings."
       org-catch-invisible-edits 'smart  ;; Determins behaviour when you do invisible edits in (...)
 
       ;; org-bullets-bullet-list '(" ")    ;; no bullets, needs org-bullets package
-      org-ellipsis "…"    ;; folding symbol
+      org-ellipsis "…"    ;; ⤵ folding symbol
       org-pretty-entities t    ;; show parsed special syntax (unicode) insted of source code
       org-hide-emphasis-markers t    ;; show actually italicized text instead of /italicized text/
       org-agenda-block-separator ""
