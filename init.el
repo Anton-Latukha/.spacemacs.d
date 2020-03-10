@@ -2326,6 +2326,22 @@ with DRILL_CARD_TYPE nil."
   (eval-after-load "preview"
     '(add-to-list 'preview-default-preamble "\\PreviewEnvironment{tikzcd}" t))
 
+  ;; (setq org-latex-image-default-width "2\\linewidth")
+  ;; (setq org-latex-image-default-scale "5")
+
+  ;; (setq org-latex-pdf-process '("texi2dvi --max-iterations=20 --expand --tidy --pdf --verbose --batch %f"))
+
+  ;; (setq org-latex-default-packages-alist (cons '("mathletters" "ucs" nil) org-latex-default-packages-alist))    ;; Extend the Unicode support of ("utf8" . "utf8x"), runs before else packages loaded ;; Package is unmaintained from 2014, and Latex Unicode become much better
+
+  ;; (setq org-table-export-default-format "orgtbl-to-latex")
+
+  ;;(defun org-export-latex-no-toc (depth)
+  ;;  (when depth
+  ;; (format "%% Org-mode is exporting headings to %s levels.\n"
+              ;; depth)))
+
+  ;; (setq org-export-latex-format-toc-function 'org-export-latex-no-toc)
+
 ;;;; Custom modeline
   ;; This example from official documetation throws ungooglifying error
   ;; (defun spaceline-custom-theme (&rest additional-segments)
