@@ -374,6 +374,8 @@ This function should only modify configuration layer settings."
       org-edit-src-content-indentation 0    ;; Disable the freaking autoindentation of Babel code blocks that driven me nuts
       org-agenda-window-setup 'only-window    ;; Delete all other windows, show agenda full frame
       org-latex-pdf-process
+      ;; `-shell-escape' is jailbreak to permit calls of external utils, enabled for `minted' Pygments code highlighting
+      ;; `--enc' allows UTF-8 symbols
       '(
         "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
         "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
