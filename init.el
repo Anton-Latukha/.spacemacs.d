@@ -2321,6 +2321,7 @@ with DRILL_CARD_TYPE nil."
 
   ;; Works perfectly, generates fast, shows high-class, needs Emacs to support svg display
   (setq org-preview-latex-default-process 'dvisvgm)  ;; imagemagick
+  ;; Setting hyperref in LaTeX overrids this template, and has a side effect - adds epty space to the previews
   (setq org-latex-hyperref-template "\\hypersetup{\n pdfauthor={%a},\n pdftitle={%t},\n pdfkeywords={%k},\n pdfsubject={%d},\n pdfcreator={%c},\n pdflang={%L},\n colorlinks=true,\n linkcolor=blue,\n urlcolor=cyan,\n filecolor=magenta}\n")
 
   (eval-after-load "preview"
