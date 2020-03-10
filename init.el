@@ -2326,12 +2326,6 @@ with DRILL_CARD_TYPE nil."
 
   (setq initial-buffer-choice (lambda () (get-buffer "*Org Agenda*")))
 
-  (eval-after-load "preview"
-    '(add-to-list 'preview-default-preamble "\\PreviewEnvironment{tikzpicture}" t))
-
-  (eval-after-load "preview"
-    '(add-to-list 'preview-default-preamble "\\PreviewEnvironment{tikzcd}" t))
-
   ;; (setq org-latex-image-default-width "2\\linewidth")
   ;; (setq org-latex-image-default-scale "5")
 
