@@ -1581,9 +1581,7 @@ only the description"
       (org-html-export-to-html)
       (org-latex-export-to-pdf)
         ;; asynchronously & silent
-      (my-async-shell-command
-       (concat "fish -c 'publish-book'")
-       )
+      (my-async-shell-command "fish -c 'book-publish'")
       )
     )
 ;;;;; misc commented Shipyard
