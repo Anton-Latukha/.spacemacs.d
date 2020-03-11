@@ -378,6 +378,8 @@ This function should only modify configuration layer settings."
       ;; `--enc' allows UTF-8 symbols
       '(
         "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
+        "%bib %b"
+        "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
         "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
         "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
         "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
