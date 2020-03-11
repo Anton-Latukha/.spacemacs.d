@@ -2347,14 +2347,6 @@ with DRILL_CARD_TYPE nil."
   ;; (setq org-export-latex-format-toc-function 'org-export-latex-no-toc)
 
 ;;;; Custom modeline
-  ;; This example from official documetation throws ungooglifying error
-  ;; (defun spaceline-custom-theme (&rest additional-segments)
-  ;;   "My custom spaceline theme."
-  ;;   (spaceline-compile
-  ;;     '(major-mode (minor-modes :when active) buffer-id)
-  ;;     '((line-column :separator " | " :priority 3)
-  ;;       ,@additional-segments))
-  ;;   (setq-default mode-line-format '("%e" (:eval (spaceline-ml-main)))))
 
   (spaceline-toggle-buffer-size-off)
   (spaceline-toggle-minor-modes-off)
