@@ -418,6 +418,8 @@ This function should only modify configuration layer settings."
 
       ;; org-babel-inline-result-wrap "%s"
 
+      org-latex-compiler "lualatex"
+
       )
 
 ;;;; LSP
