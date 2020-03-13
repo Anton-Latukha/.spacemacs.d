@@ -410,7 +410,7 @@ This function should only modify configuration layer settings."
       org-preview-latex-default-process 'dvisvgm  ;; imagemagick
 
       ;; Setting hyperref in LaTeX overrides this template, and has a side effect - adds epty space to the previews
-      org-latex-hyperref-template "\\hypersetup{\n pdfauthor={%a},\n pdftitle={%t},\n pdfkeywords={%k},\n pdfsubject={%d},\n pdfcreator={%c},\n pdflang={%L},\n colorlinks=true,\n linkcolor=purple,\n urlcolor=magenta,\n filecolor=magenta,\n bookmarksdepth=10}\n"
+      org-latex-hyperref-template "\\hypersetup{\n pdfauthor={%a},\n pdftitle={%t},\n pdfkeywords={%k},\n pdfsubject={%d},\n pdfcreator={%c},\n pdflang={%L},\n colorlinks=true,\n linkcolor=indigo,\n urlcolor=darkslateblue,\n filecolor=darkslateblue,\n bookmarksdepth=10}\n"
 
       ;; org-babel-inline-result-wrap "%s"
 
