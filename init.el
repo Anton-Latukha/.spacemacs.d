@@ -767,7 +767,7 @@ This function should only modify configuration layer settings."
 
      speed-reading
 
-     eww
+     ;; eww
 
      helpful    ;; Better help buffers
 
