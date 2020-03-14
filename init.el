@@ -793,6 +793,8 @@ This function should only modify configuration layer settings."
      pretty-mode
      telega ;; Emacs Telega.el client TODO: Wait when https://github.com/syl20bnr/spacemacs/issues/12800 solved
      org-drill ;; Moved-out of org-mode at 9.3
+     command-log-mode
+     interaction-log
      )
 
 ;;;; Misc package options
