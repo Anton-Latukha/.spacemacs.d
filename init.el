@@ -408,7 +408,7 @@ This function should only modify configuration layer settings."
       org-latex-listings 'minted    ;; Use Python Pygments highlighter. Needs `org-latex-pdf-process' with `-shell-escape'
 
       ;; Works perfectly, generates fast, shows high-class, needs Emacs to support svg display
-      org-preview-latex-default-process 'dvisvgm  ;; imagemagick
+      org-preview-latex-default-process 'luadvisvgm  ;; luapdf2svg, lua2svg, imagemagick
 
       ;; Setting hyperref in LaTeX overrides this template, and has a side effect - adds epty space to the previews
       org-latex-hyperref-template "\\hypersetup{\n pdfauthor={%a},\n pdftitle={%t},\n pdfkeywords={%k},\n pdfsubject={%d},\n pdfcreator={%c},\n pdflang={%L},\n colorlinks=true,\n linkcolor=blue,\n urlcolor=violet,\n filecolor=violet,\n bookmarksdepth=10}\n"
