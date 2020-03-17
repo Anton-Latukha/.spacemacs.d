@@ -425,6 +425,24 @@ This function should only modify configuration layer settings."
 
       org-latex-compiler "lualatex"
 
+      org-latex-default-packages-alist
+      '(
+        ("AUTO" "inputenc" t ("pdflatex"))
+        ("T1" "fontenc" t ("pdflatex"))
+        ("" "graphicx" t)
+        ("" "grffile" t ("pdflatex"))
+        ("" "grffile" t ("xelatex"))
+        ("" "longtable" nil)
+        ("" "wrapfig" nil)
+        ("" "rotating" nil)
+        ("normalem" "ulem" t)
+        ("" "amsmath" t)
+        ("" "textcomp" t)
+        ("" "amssymb" t)
+        ("" "capt-of" nil)
+        ("" "hyperref" nil)
+        )
+
       org-latex-packages-alist    ; 2020-03-14: NOTE: On changing the org env, dvisvgm needs recompile previews and it fails due to some error in the latex environment
       '(
       ;;   ("" "tabularx" t)
