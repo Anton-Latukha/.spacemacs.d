@@ -172,6 +172,9 @@ This function should only modify configuration layer settings."
       ;; List of always declared tags, function my-org-auto-tag matches and autoadds occuring words from it
 
       org-agenda-time-grid nil    ;; Disable the time grid
+
+;;;;; Tags
+
       org-tag-alist
       '(
         ("advanced")
@@ -356,6 +359,9 @@ This function should only modify configuration layer settings."
         ("xmonad")
         ("zsh")
         )
+
+;;;;; Misc
+
       org-cycle-separator-lines 0 ;; 0 - turns off empty lines between collapsed headers
       org-catch-invisible-edits 'smart  ;; Determins behaviour when you do invisible edits in (...)
 
