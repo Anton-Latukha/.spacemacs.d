@@ -2444,6 +2444,18 @@ with DRILL_CARD_TYPE nil."
 
   (setq auto-window-vscroll nil)    ;; Allows to scroll withough wrapped long lines, but hands the Emacs
 
+
+  ;; Export with LuaTeX -> dvisvgm
+  (add-to-list 'org-preview-latex-process-alist
+               '(luadvisvgm :programs
+                            ("lualatex" "dvisvgm")
+                            :description "dvi > svg" :message "you need to install the programs: lualatex and dvisvgm." :image-input-type "dvi" :image-output-type "svg" :image-size-adjust
+                            (1.7 . 1.5)
+                            :latex-compiler
+                            ("lualatex --output-format dvi --shell-escape --interaction=nonstopmode --output-directory=%o %f")
+                            :image-converter
+                            ("dvisvgm %f -n -b min -c %S -o %O"))
+               )
   )
 
 
