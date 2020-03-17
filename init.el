@@ -1667,7 +1667,10 @@ only the description"
     "Export current buffer in HTML, then in PDF"
     (interactive)
     (progn
+      (save-buffer)
       (shell-command "fish -c 'book-prepare'")
+      (sit-for 1)
+      (my-revert-buffer-force)
       (org-html-export-to-html)
       (org-latex-export-to-pdf)
         ;; asynchronously & silent
