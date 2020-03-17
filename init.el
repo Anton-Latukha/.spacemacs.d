@@ -214,6 +214,7 @@ This function should only modify configuration layer settings."
         ("config")
         ("configuration")
         ("container")
+        ("const")
         ("continuation")
         ("contrib")
         ("course")
