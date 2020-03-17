@@ -1635,6 +1635,14 @@ only the description"
     (org-agenda-redo)
     )
 
+;;;;; my-revert-buffer-force
+
+  (defun my-revert-buffer-force ()
+    "Silently force revert buffer."
+    (interactive)
+    (revert-buffer :noconfirm :ignore-auto)
+    )
+
 ;;;;; my-local-org-haskell-book-publish
 
   (defun my-local-org-book-publish ()
