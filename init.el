@@ -272,6 +272,7 @@ This function should only modify configuration layer settings."
         ("ltp")
         ("mantra")
         ("math")
+        ("maybe")
         ("medium")
         ("memory")
         ("middle")
