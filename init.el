@@ -1724,7 +1724,7 @@ only the description"
     "or" 'org-drill-resume
     "oR" 'org-drill
     "ol" 'my-local-org-refile
-    "oP" 'my-local-org-book-publish
+    "oP" 'my-local-org-haskell-book-publish
     )
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html/")
