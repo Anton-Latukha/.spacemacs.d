@@ -1903,7 +1903,7 @@ with DRILL_CARD_TYPE nil."
           ;;              :order 1)
           ;; ;; After the last group, the agenda will display items that didn't
           ;; ;; match any of these groups, with the default order position of 99
-          (:name "Flow"
+          (:name "Main"
                  :tag "work"
                  :order 1)
           (:name "Habit"
