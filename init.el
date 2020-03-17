@@ -455,6 +455,11 @@ This function should only modify configuration layer settings."
          ("\\paragraph{%s}" . "\\paragraph*{%s}")
          ("\\subparagraph{%s}" . "\\subparagraph*{%s}")
          ("\\subsubparagraph{%s}" . "\\subsubparagraph*{%s}")
+         ("\\subsubsubparagraph{%s}" . "\\subsubsubparagraph*{%s}")
+         ("\\subsubsubsubparagraph{%s}" . "\\subsubsubsubparagraph*{%s}")
+         ("\\subsubsubsubsubparagraph{%s}" . "\\subsubsubsubsubparagraph*{%s}")
+         ("\\subsubsubsubsubsubparagraph{%s}" . "\\subsubsubsubsubsubparagraph*{%s}")
+         ("\\subsubsubsubsubsubsubparagraph{%s}" . "\\subsubsubsubsubsubsubparagraph*{%s}")
          )
        )
 
