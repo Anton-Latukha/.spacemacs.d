@@ -1908,6 +1908,9 @@ with DRILL_CARD_TYPE nil."
                  :order 1)
           (:name "Habit"
                  :tag "habit"
+                 :order 2)
+          (:name "Const"
+                 :tag "const"
                  :order 9)
           )
         )
