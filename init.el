@@ -1635,7 +1635,7 @@ only the description"
     (org-agenda-redo)
     )
 
-;;;;; my-local-org-book-publish
+;;;;; my-local-org-haskell-book-publish
 
   (defun my-local-org-book-publish ()
     "Export current buffer in HTML, then in PDF"
