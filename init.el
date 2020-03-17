@@ -2456,6 +2456,18 @@ with DRILL_CARD_TYPE nil."
                             :image-converter
                             ("dvisvgm %f -n -b min -c %S -o %O"))
                )
+
+  ;; (add-to-list 'org-preview-latex-process-alist
+  ;;              '(luapdf2svg :programs
+  ;;                           ("lualatex" "pdf2svg")
+  ;;                           :description "pdf > svg" :message "you need to install the programs: lualatex and pdf2svg." :image-input-type "pdf" :image-output-type "svg" :image-size-adjust
+  ;;                           (1.0 . 1.0)
+  ;;                           :latex-compiler
+  ;;                           ("lualatex --output-format pdf --shell-escape --interaction=nonstopmode --output-directory=%o %f")
+  ;;                           :image-converter
+  ;;                           ("pdf2svg %f %O"))
+  ;;              )
+
   )
 
 
