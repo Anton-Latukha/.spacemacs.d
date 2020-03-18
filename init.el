@@ -1663,7 +1663,7 @@ only the description"
 
 ;;;;; my-local-org-haskell-book-publish
 
-  (defun my-local-org-book-publish ()
+  (defun my-local-org-haskell-book-publish ()
     "Export current buffer in HTML, then in PDF"
     (interactive)
     (progn
