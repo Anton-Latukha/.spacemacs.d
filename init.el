@@ -425,6 +425,29 @@ This function should only modify configuration layer settings."
 
       org-latex-compiler "lualatex"
 
+      ;; org-preview-latex-process-alist
+      ;; '(
+      ;;   (dvipng :programs
+      ;;           ("latex" "dvipng")
+      ;;           :description "dvi > png" :message "you need to install the programs: latex and dvipng." :image-input-type "dvi" :image-output-type "png" :image-size-adjust
+      ;;           (1.0 . 1.0)
+      ;;           :latex-compiler
+      ;;           ("latex -interaction nonstopmode -output-directory %o %f")
+      ;;           :image-converter
+      ;;           ("dvipng -D %D -T tight -o %O %f"))
+      ;;            :image-converter
+      ;;            ("dvisvgm %f -n -b min -c %S -o %O"))
+      ;;   (imagemagick :programs
+      ;;                ("latex" "convert")
+      ;;                :description "pdf > png" :message "you need to install the programs: latex and imagemagick." :image-input-type "pdf" :image-output-type "png" :image-size-adjust
+      ;;                (1.0 . 1.0)
+      ;;                :latex-compiler
+      ;;                ("pdflatex -interaction nonstopmode -output-directory %o %f")
+      ;;                :image-converter
+      ;;                ("convert -density %D -trim -antialias %f -quality 100 %O")
+      ;;                )
+      ;;   )
+
       org-latex-default-packages-alist
       '(
         ("AUTO" "inputenc" t ("pdflatex"))
