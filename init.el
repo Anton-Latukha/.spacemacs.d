@@ -2476,8 +2476,10 @@ with DRILL_CARD_TYPE nil."
 
 ;;;;; Setting-up org-goto
 
-  (setq org-goto-interface 'outline-path-completion)
-  (setq org-outline-path-complete-in-steps nil)
+  (custom-set-variables
+   '(org-goto-interface 'outline-path-completion)
+   '(org-outline-path-complete-in-steps nil)
+   )
 
 ;;;;; Disable the long-line gradual scroll
   (custom-set-variables
