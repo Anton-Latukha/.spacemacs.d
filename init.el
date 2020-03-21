@@ -2490,7 +2490,10 @@ with DRILL_CARD_TYPE nil."
   ;; (add-to-list 'org-preview-latex-process-alist luamagick)
   ;; (setq org-preview-latex-default-process 'luamagick)
 
-  (setq auto-window-vscroll nil)    ;; Allows to scroll withough wrapped long lines, but hands the Emacs
+;;;;; Disable the long-line gradual scroll
+  (custom-set-variables
+   '(auto-window-vscroll nil)    ;; Allows to scroll partially trough wrapped long lines, but hangs the Emacs
+   )
 
 
   ;; Export with LuaTeX -> dvisvgm
