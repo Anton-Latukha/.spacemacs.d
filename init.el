@@ -879,6 +879,7 @@ This function should only modify configuration layer settings."
      org-drill ;; Moved-out of org-mode at 9.3
      ;; command-log-mode                   ; 2020-03-21: NOTE: Is this useful debug packages, or they are supersided with internal Emacs funtionality
      ;; interaction-log                   ; 2020-03-21: NOTE: Is this useful debug packages, or they are supersided with internal Emacs funtionality
+     yequake    ;; Drop-down Quake-life frame
      )
 
 ;;;; Misc package options
