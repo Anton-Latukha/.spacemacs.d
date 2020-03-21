@@ -1993,8 +1993,6 @@ with DRILL_CARD_TYPE nil."
 
   (org-super-agenda-mode t)
 
-  ;; (add-hook 'haskell-mode-hook #'structured-haskell-mode)
-
 ;;;; Managing code with Outlines using =outshine=
 
   (add-hook 'outline-minor-mode-hook #'outshine-mode)
@@ -2534,6 +2532,8 @@ with DRILL_CARD_TYPE nil."
   ;;                           :image-converter
   ;;                           ("inkscape --vacuum-defs --without-gui --export-background-opacity='0.0' --export-area-drawing=%O %f"))
   ;;              )
+
+  (add-hook 'haskell-mode-hook #'structured-haskell-mode)
 
   )
 
