@@ -528,7 +528,7 @@ This function should only modify configuration layer settings."
 ;;;; Haskell
 
      (haskell :variables
-              haskell-enable-hindent t
+              haskell-enable-hindent nil
               haskell-completion-backend 'lsp
               haskell-process-type 'cabal-new-repl
               )
