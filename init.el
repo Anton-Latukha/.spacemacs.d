@@ -2533,6 +2533,11 @@ with DRILL_CARD_TYPE nil."
   ;;                           ("inkscape --vacuum-defs --without-gui --export-background-opacity='0.0' --export-area-drawing=%O %f"))
   ;;              )
 
+;;;;; Config to use Structured Haskell
+
+  ;; (eval-after-load "evil-maps"
+  ;;   (dolist (map '(evil-normal-state-map))
+  ;;     (define-key (eval map) "\C-j" nil)))
 
 ;;;;; Hook for Structured Haskell
 
