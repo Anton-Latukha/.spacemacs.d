@@ -2367,7 +2367,7 @@ with DRILL_CARD_TYPE nil."
 ;;;;; Global short key for NEXT capture template
 
   (define-key global-map (kbd "<f5>")
-    (lambda () (interactive) (org-capture nil "n")))
+    (lambda () (interactive) (org-capture nil "N")))
 
 ;;;;; Add paths to search private layers in
 
