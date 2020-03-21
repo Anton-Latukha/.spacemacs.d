@@ -1495,9 +1495,9 @@ before packages are loaded."
            :empty-lines-after 1
            )
 
-          ("n" "NEXT:" entry
+          ("N" "NEXT:" entry
            (id ebc243d3-f040-49a0-940d-fbfd16b46edd)
-           "* NEXT: %?\nSCHT: %t"
+           "* NEXT: %^{Name}\nSCHT: %t\n\n%?"
            :empty-lines-before 1
            :empty-lines-after 1
            )
