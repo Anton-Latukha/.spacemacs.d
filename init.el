@@ -1439,72 +1439,75 @@ before packages are loaded."
 
 ;;;; Org capture templates
 
-  (setq org-capture-templates
-        `(
 
-          ;; ("P" "Protocol" entry (id 5fef2047-2983-41aa-90e7-5cd0cdf6a5b7)
-          ;;  "* %^{Title}\n:PROPERTIES:\n:ADDED: %u\n:SOURCE: %c\n:END:\n#+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n%?")
-          ;; ("L" "Protocol Link" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
-          ;;  "* [[%:link][%:description]] %?\n:PROPERTIES:\n:ADDED: %u\n:END:")
+  (custom-set-variables
+   '(org-capture-templates
+     `(
 
-          ("d" "Dictionary entry" entry
-           (file ,(concat org-directory "/dictionary/dictionary.org"))
-           "* %^{word} :drill:\n%\\1 - %^{phonetic} - %?"
-           :empty-lines-before 1
-           :empty-lines-after 1
-           )
+       ;; ("P" "Protocol" entry (id 5fef2047-2983-41aa-90e7-5cd0cdf6a5b7)
+       ;;  "* %^{Title}\n:PROPERTIES:\n:ADDED: %u\n:SOURCE: %c\n:END:\n#+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n%?")
+       ;; ("L" "Protocol Link" entry (id 8e4beb2c-27d3-49b6-a1ff-599df21a510c)
+       ;;  "* [[%:link][%:description]] %?\n:PROPERTIES:\n:ADDED: %u\n:END:")
 
-          ("w" "Word entry" entry
-           (file ,(concat org-directory "/word/word.org"))
-           "* %^{phrase}\n%?"
-           :empty-lines-before 1
-           :empty-lines-after 1
-           )
-
-          ("t" "TODO:" entry
-           (id 8ec8520c-0d07-4d02-9700-f9f204df91b8)
-           "* TODO: %^{Name} %?"
-           :empty-lines-before 1
-           :empty-lines-after 1
-           )
-
-          ("n" "Note" entry
-           (file+headline ,(concat org-directory "/Notes.org") "Inbox")
-           "* %^{Name}\n\n%?\n"
-           :empty-lines-before 1
-           :empty-lines-after 1
-           )
-
-          ("c" "Capture Generale" entry
-           (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
-           "* %?"
-           :empty-lines-before 1
-           :empty-lines-after 1
-           )
-
-          ("W" "Web site" entry
-           (file ,(concat org-directory "/Web-archive save.org"))
-           "* %a\n:properties:\n:added: %u\n:end:\n%:initial"
-           :empty-lines-before 1
-           :empty-lines-after 1
-           )
-
-          ("b" "Brain: add at the end" plain
-           (function org-brain-goto-end)
-           "* %i%?" :empty-lines 1
-           :empty-lines-before 1
-           :empty-lines-after 1
-           )
-
-          ("N" "NEXT:" entry
-           (id ebc243d3-f040-49a0-940d-fbfd16b46edd)
-           "* NEXT: %^{Name}\nSCHT: %t\n\n%?"
-           :empty-lines-before 1
-           :empty-lines-after 1
-           )
-
-          )
+       ("d" "Dictionary entry" entry
+        (file ,(concat org-directory "/dictionary/dictionary.org"))
+        "* %^{word} :drill:\n%\\1 - %^{phonetic} - %?"
+        :empty-lines-before 1
+        :empty-lines-after 1
         )
+
+       ("w" "Word entry" entry
+        (file ,(concat org-directory "/word/word.org"))
+        "* %^{phrase}\n%?"
+        :empty-lines-before 1
+        :empty-lines-after 1
+        )
+
+       ("t" "TODO:" entry
+        (id 8ec8520c-0d07-4d02-9700-f9f204df91b8)
+        "* TODO: %^{Name} %?"
+        :empty-lines-before 1
+        :empty-lines-after 1
+        )
+
+       ("n" "Note" entry
+        (file+headline ,(concat org-directory "/Notes.org") "Inbox")
+        "* %^{Name}\n\n%?\n"
+        :empty-lines-before 1
+        :empty-lines-after 1
+        )
+
+       ("c" "Capture Generale" entry
+        (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
+        "* %?"
+        :empty-lines-before 1
+        :empty-lines-after 1
+        )
+
+       ("W" "Web site" entry
+        (file ,(concat org-directory "/Web-archive save.org"))
+        "* %a\n:properties:\n:added: %u\n:end:\n%:initial"
+        :empty-lines-before 1
+        :empty-lines-after 1
+        )
+
+       ("b" "Brain: add at the end" plain
+        (function org-brain-goto-end)
+        "* %i%?" :empty-lines 1
+        :empty-lines-before 1
+        :empty-lines-after 1
+        )
+
+       ("N" "NEXT:" entry
+        (id ebc243d3-f040-49a0-940d-fbfd16b46edd)
+        "* NEXT: %^{Name}\nSCHT: %t\n\n%?"
+        :empty-lines-before 1
+        :empty-lines-after 1
+        )
+
+       )
+     )
+   )
 
   ;; On client launch - show org-agenda week buffer
   ;; This does not work due to Spacemacs initial buffer builds itself at startup
