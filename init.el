@@ -2479,19 +2479,6 @@ with DRILL_CARD_TYPE nil."
   (setq org-goto-interface 'outline-path-completion)
   (setq org-outline-path-complete-in-steps nil)
 
-  ;; Seems to work, but I don't know if it is, PDF looked diffrent, need to compare
-  ;; (setq luamagick '(luamagick :programs ("lualatex" "convert")
-  ;;                             :description "pdf > png"
-  ;;                             :message "you need to install lualatex and imagemagick."
-  ;;                             :use-xcolor t
-  ;;                             :image-input-type "pdf"
-  ;;                             :image-output-type "png"
-  ;;                             :image-size-adjust (1.0 . 1.0)
-  ;;                             :latex-compiler ("lualatex -interaction nonstopmode -output-directory %o %f")
-  ;;                             :image-converter ("convert -density %D -trim -antialias %f -quality 100 %O")))
-  ;; (add-to-list 'org-preview-latex-process-alist luamagick)
-  ;; (setq org-preview-latex-default-process 'luamagick)
-
 ;;;;; Disable the long-line gradual scroll
   (custom-set-variables
    '(auto-window-vscroll nil)    ;; Allows to scroll partially trough wrapped long lines, but hangs the Emacs
