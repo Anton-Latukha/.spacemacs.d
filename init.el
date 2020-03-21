@@ -1467,9 +1467,9 @@ before packages are loaded."
            :empty-lines-after 1
            )
 
-          ("N" "Note" entry
-           (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
-           "* %^{Name} %?"
+          ("n" "Note" entry
+           (file+headline ,(concat org-directory "/Notes.org") "Inbox")
+           "* %^{Name}\n\n%?\n"
            :empty-lines-before 1
            :empty-lines-after 1
            )
