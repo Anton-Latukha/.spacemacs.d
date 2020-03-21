@@ -1981,22 +1981,25 @@ with DRILL_CARD_TYPE nil."
      )
    )
 
-  (setq org-agenda-prefix-format
-        '(
-          ;; (agenda . " %i %-12:c%?-12t% s")
-          ;; (todo . " %i %-12:c")
-          ;; (tags . " %i %-12:c")
-          ;; (search . " %i %-12:c")
-          ;; (agenda  . "  • ")
-          ;; (agenda  . "  ")
-          ;; (agenda . " %i %-5t%-5s")
-          (agenda . "  %i")
-          ;; (timeline  . "  % s")
-          (todo  . " %i %-12:c")
-          (tags  . " %i %-12:c")
-          (search . " %i %-12:c")
-          )
-        )
+  (custom-set-variables
+   '(
+     org-agenda-prefix-format
+     '(
+       ;; (agenda . " %i %-12:c%?-12t% s")
+       ;; (todo . " %i %-12:c")
+       ;; (tags . " %i %-12:c")
+       ;; (search . " %i %-12:c")
+       ;; (agenda  . "  • ")
+       ;; (agenda  . "  ")
+       ;; (agenda . " %i %-5t%-5s")
+       (agenda . "  %i")
+       ;; (timeline  . "  % s")
+       (todo  . " %i %-12:c")
+       (tags  . " %i %-12:c")
+       (search . " %i %-12:c")
+       )
+     )
+   )
 
   (org-super-agenda-mode t)
 
