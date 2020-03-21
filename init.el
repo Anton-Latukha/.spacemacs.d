@@ -502,6 +502,10 @@ This function should only modify configuration layer settings."
          ("\\subsubsubsubsubsubparagraph{%s}" . "\\subsubsubsubsubsubparagraph*{%s}")
          ("\\subsubsubsubsubsubsubparagraph{%s}" . "\\subsubsubsubsubsubsubparagraph*{%s}")
          )
+
+        ;; org-format-latex-options
+        ;; '(:foreground default :background "Transparent" :scale 2.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers ("begin" "$1" "$" "$$" "\\(" "\\["))
+
        )
 
       )
