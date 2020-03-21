@@ -1792,8 +1792,10 @@ only the description"
   (require 'org-protocol-capture-html)
   ;; (setq recentf-max-saved-items 30)
 
-  ;; Just follow those symlinc files
-  (setq vc-follow-symlinks t)
+  ;; Just follow those symlink files
+  (custom-set-variables
+   '(vc-follow-symlinks t)
+   )
 
   ;; Convert code blocks #+FOO -> #+foo
   (defun my-lower-case-org-keywords ()
