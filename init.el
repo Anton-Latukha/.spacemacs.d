@@ -2530,15 +2530,17 @@ with DRILL_CARD_TYPE nil."
   (add-hook 'haskell-mode-hook #'structured-haskell-mode)
 
 ;;;;; Yequake config
-  (setq yequake-frames
-        '(("org-capture"
-           (buffer-fns . (yequake-org-capture))
-           (width . 0.75)
-           (height . 0.5)
-           (alpha . 0.95)
-           (frame-parameters . ((undecorated . t)
-                                (skip-taskbar . t)
-                                (sticky . t))))))
+
+  (custom-set-variables
+   '(yequake-frames
+     '(("org-capture"
+        (buffer-fns . (yequake-org-capture))
+        (width . 0.75)
+        (height . 0.5)
+        (alpha . 0.95)
+        (frame-parameters . ((undecorated . t)
+                             (skip-taskbar . t)
+                             (sticky . t)))))))
   )
 
 
