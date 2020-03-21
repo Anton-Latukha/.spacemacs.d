@@ -2407,6 +2407,7 @@ with DRILL_CARD_TYPE nil."
   ;; (setq elfeed-search-trailing-width 0)
 
 ;;;;; Autocommit after dictionary entry
+
   (defun my-org-capture-dictionary-finalize ()
     "Autocommit entry after capture to dictionary"
     (let
@@ -2443,6 +2444,8 @@ with DRILL_CARD_TYPE nil."
 
   (add-hook 'org-capture-after-finalize-hook #'my-org-capture-dictionary-finalize)
 
+;;;;; Disable fringe around Emacs windows
+
   (set-fringe-mode 0)
   (global-vi-tilde-fringe-mode 'nil)
 
@@ -2450,6 +2453,7 @@ with DRILL_CARD_TYPE nil."
 
   (add-hook 'org-capture-mode-hook #'evil-insert-state)
 
+;;;;; PDF view setup
 
   (setq pdf-view-midnight-colors '("#bbbbbb" . "#000000" ))
 
@@ -2459,7 +2463,7 @@ with DRILL_CARD_TYPE nil."
 
   (setq initial-buffer-choice (lambda () (get-buffer "*Org Agenda*")))
 
-;;;; Custom modeline
+;;;; Modeline configuration
 
   (spaceline-toggle-buffer-size-off)
   (spaceline-toggle-minor-modes-off)
@@ -2493,6 +2497,7 @@ with DRILL_CARD_TYPE nil."
    '(auto-window-vscroll nil)    ;; Allows to scroll partially trough wrapped long lines, but hangs the Emacs
    )
 
+;;;;; Org-LaTeX process setup
 
   ;; Export with LuaTeX -> dvisvgm
   (add-to-list 'org-preview-latex-process-alist
@@ -2527,6 +2532,9 @@ with DRILL_CARD_TYPE nil."
   ;;                           :image-converter
   ;;                           ("inkscape --vacuum-defs --without-gui --export-background-opacity='0.0' --export-area-drawing=%O %f"))
   ;;              )
+
+
+;;;;; Hook for Structured Haskell
 
   (add-hook 'haskell-mode-hook #'structured-haskell-mode)
 
