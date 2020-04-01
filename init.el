@@ -880,6 +880,8 @@ This function should only modify configuration layer settings."
      ;; command-log-mode                   ; 2020-03-21: NOTE: Is this useful debug packages, or they are supersided with internal Emacs funtionality
      ;; interaction-log                   ; 2020-03-21: NOTE: Is this useful debug packages, or they are supersided with internal Emacs funtionality
      yequake    ;; Drop-down Quake-life frame
+     quick-peek    ;; Show declaration of the entity
+     org-quick-peek    ;; Inline peeks at agenda items and linked nodes in Org-mode
      )
 
 ;;;; Misc package options
