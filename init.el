@@ -2535,13 +2535,16 @@ with DRILL_CARD_TYPE nil."
 
 ;;;;; Config to use Structured Haskell
 
-  ;; (eval-after-load "evil-maps"
-  ;;   (dolist (map '(evil-normal-state-map))
-  ;;     (define-key (eval map) "\C-j" nil)))
 
 ;;;;; Hook for Structured Haskell
 
   (add-hook 'haskell-mode-hook #'structured-haskell-mode)
+
+;;;;;; drafts
+
+  ;; (eval-after-load "evil-maps"
+  ;;   (dolist (map '(evil-normal-state-map))
+  ;;     (define-key (eval map) "\C-j" nil)))
 
 ;;;;; Yequake config
 
