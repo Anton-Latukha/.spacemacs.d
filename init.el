@@ -1708,6 +1708,7 @@ only the description"
       (my-async-shell-command "fish -c 'book-publish'")
       )
     )
+
 ;;;;; misc commented Shipyard
 
   ;;;; Example of a more intriquiret refile
@@ -2533,10 +2534,12 @@ with DRILL_CARD_TYPE nil."
   ;;                           ("inkscape --vacuum-defs --without-gui --export-background-opacity='0.0' --export-area-drawing=%O %f"))
   ;;              )
 
-;;;;; Config to use Structured Haskell
+;;;;; Config to use Structured Haskell mode (SHM)
+
+;;;;;; Integrate keymap on `haskell-mode` into Spacemacs Evil
 
 
-;;;;; Hook for Structured Haskell
+;;;;;; Hooks for Structured Haskell
 
   (add-hook 'haskell-mode-hook #'structured-haskell-mode)
 
