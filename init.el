@@ -2540,7 +2540,7 @@ with DRILL_CARD_TYPE nil."
 
 ;;;;;; Integrate keymap on `haskell-mode` into Spacemacs Evil
 
-  (evil-define-key 'normal haskell-mode-map
+  (evil-define-key '(normal) haskell-mode-map
     ;; (kbd "TAB") 'org-cycle
     ;; ">" 'org-shiftmetaright
     ;; "<" 'org-shiftmetaleft
