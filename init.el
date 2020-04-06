@@ -468,8 +468,8 @@ This function should only modify configuration layer settings."
 
       org-latex-packages-alist    ; 2020-03-14: NOTE: On changing the org env, dvisvgm needs recompile previews and it fails due to some error in the latex environment
       '(
-      ;;   ("" "tabularx" t)
-      ;;   ("" "tabu" t)
+        ("" "tabularx" t)
+        ("" "tabu" t)
         ("" "booktabs" t)
         )
 
