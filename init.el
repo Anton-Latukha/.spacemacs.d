@@ -2570,6 +2570,16 @@ with DRILL_CARD_TYPE nil."
         (frame-parameters . ((undecorated . t)
                              (skip-taskbar . t)
                              (sticky . t)))))))
+
+;;;;; Enable NixOS packages also (Setup seems done it already)
+  ;; (require 'package)
+
+  ;; optional. makes unpure packages archives unavailable
+  ;; (setq package-archives nil)
+
+  ;; optional. use this if you install emacs packages to the system profile
+  ;; (add-to-list 'package-directory-list "/run/current-system/sw/share/emacs/site-lisp/elpa")
+
   )
 
 
