@@ -882,6 +882,7 @@ This function should only modify configuration layer settings."
      yequake    ;; Drop-down Quake-life frame
      ;; quick-peek    ;; Show declaration of the entity
      ;; org-quick-peek    ;; Inline peeks at agenda items and linked nodes in Org-mode  ;; 2020-04-01: NOTE: There is no MELPA package, needs to be loaded manually.
+     telega
      )
 
 ;;;; Misc package options
