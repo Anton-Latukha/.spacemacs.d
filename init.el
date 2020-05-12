@@ -856,6 +856,11 @@ This function should only modify configuration layer settings."
 
      helpful    ;; Better help buffers
 
+     (typography
+      :variables
+      typography-enable-typographic-editing t
+      )
+
      )
 
    ;; List of additional packages that will be installed without being
