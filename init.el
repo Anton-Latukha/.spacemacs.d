@@ -2136,6 +2136,8 @@ with DRILL_CARD_TYPE nil."
 
   ;; (global-prettify-symbols-mode 1)
 
+;;;;; Python symbols
+
   (add-hook
    'python-mode-hook
    (lambda ()
@@ -2162,6 +2164,8 @@ with DRILL_CARD_TYPE nil."
              ("Iterable" . #x1d50a)
              ("Any" .      #x2754)
              ("Union" .    #x22c3)))))
+
+;;;;; Haskell symbols
 
   (add-hook
    'haskell-mode-hook
