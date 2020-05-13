@@ -858,7 +858,7 @@ This function should only modify configuration layer settings."
 
      (typography
       :variables
-      typography-enable-typographic-editing t
+      typography-enable-typographic-editing nil
       )
 
      )
