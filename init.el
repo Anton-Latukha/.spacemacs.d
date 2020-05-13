@@ -1465,6 +1465,13 @@ before packages are loaded."
         :empty-lines-after 1
         )
 
+       ("D" "Haskell Draft" entry
+        (file+headline ,(concat org-directory "/haskell/README.org") "Draft")
+        "* %?"
+        :empty-lines-before 1
+        :empty-lines-after 1
+        )
+
        ("w" "Word entry" entry
         (file ,(concat org-directory "/word/word.org"))
         "* %^{phrase}\n%?"
