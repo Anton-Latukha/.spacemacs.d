@@ -2558,7 +2558,8 @@ with DRILL_CARD_TYPE nil."
 ;;;;;; Integrate keymap on `haskell-mode` into Spacemacs Evil
 
   (evil-define-key '(normal) haskell-mode-map
-    ;; (kbd "TAB") 'org-cycle
+    (kbd "TAB") 'outshine-cycle  ;; Integration with the outshine
+    (kbd "<backtab>") 'outshine-kbd-<backtab>    ;; Integration with the outshine
     ;; ">" 'org-shiftmetaright
     ;; "<" 'org-shiftmetaleft
     ")" 'shm/goto-parent-end
