@@ -2566,7 +2566,7 @@ with DRILL_CARD_TYPE nil."
 
 ;;;;;; Hooks for Structured Haskell
 
-  (add-hook 'haskell-mode-hook #'structured-haskell-mode)
+  ;; (add-hook 'haskell-mode-hook #'structured-haskell-mode)  ;; Toggle structured-haskell-mode
 
 ;;;;;; drafts
 
