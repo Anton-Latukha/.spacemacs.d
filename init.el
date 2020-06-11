@@ -840,6 +840,8 @@ This function should only modify configuration layer settings."
       pdf-view-display-size 'fit-page    ;; Use fit-page by default
       pdf-annot-activate-created-annotations t    ;; Automatically start annotating what is highlighted
       pdf-view-resize-factor 1.1    ;; Grain of the zooming step
+;;;;; PDF view setup. Make PDF midnight black, coloring here since it recets setting of the layer
+      pdf-view-midnight-colors '("#ffffff" . "#000000" )
       )
 
 ;;;; Other layers
@@ -2474,9 +2476,6 @@ with DRILL_CARD_TYPE nil."
 
   (add-hook 'org-capture-mode-hook #'evil-insert-state)
 
-;;;;; PDF view setup. Make PDF midnight black, coloring here since it recets setting of the layer
-
-  (setq pdf-view-midnight-colors '("#ffffff" . "#000000" ))
 
 ;;;; Run Agenda as initial buffer
 
