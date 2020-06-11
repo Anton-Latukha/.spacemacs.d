@@ -2475,7 +2475,7 @@ with DRILL_CARD_TYPE nil."
 
   (add-hook 'org-capture-mode-hook #'evil-insert-state)
 
-;;;;; PDF view setup
+;;;;; PDF view setup. Make PDF midnight black, coloring here since it recets setting of the layer
 
   (setq pdf-view-midnight-colors '("#ffffff" . "#000000" ))
 
