@@ -2477,7 +2477,7 @@ with DRILL_CARD_TYPE nil."
 
 ;;;;; PDF view setup
 
-  (setq pdf-view-midnight-colors '("#bbbbbb" . "#000000" ))
+  (setq pdf-view-midnight-colors '("#ffffff" . "#000000" ))
 
 ;;;; Run Agenda as initial buffer
 
