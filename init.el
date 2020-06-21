@@ -549,6 +549,7 @@ This function should only modify configuration layer settings."
             ("~/src/zGarage/" . 1)
             ("/etc/nixos/" . 0)
             ("~/" . 0)
+            ("~/.mozilla/" . 0)
             ("~/.emacs.d/" . 0)
             ("~/.spacemacs.d/" . 0)
             ("~/.config/" . 0)
