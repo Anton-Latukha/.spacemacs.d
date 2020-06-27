@@ -120,7 +120,7 @@ This function should only modify configuration layer settings."
       org-pomodoro-finished-sound "/home/pyro/.spacemacs.d/.audio/bell (+8dB).wav"
       org-pomodoro-killed-sound-p t
       org-pomodoro-killed-sound "/home/pyro/.spacemacs.d/.audio/wrapper (norm).wav"
-      org-pomodoro-long-break-frequency 4
+      org-pomodoro-long-break-frequency 2
       org-pomodoro-ask-upon-killing t
       org-pomodoro-length 25
       org-pomodoro-format "%s"
