@@ -2599,6 +2599,8 @@ with DRILL_CARD_TYPE nil."
   ;; optional. use this if you install emacs packages to the system profile
   ;; (add-to-list 'package-directory-list "/run/current-system/sw/share/emacs/site-lisp/elpa")
 
+;;;;; PDF view setup. Make PDF midnight black, coloring here since it recets setting of the layer
+  (setq pdf-view-midnight-colors '("#ffffff" . "#000000" ))
 
   )
 
