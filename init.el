@@ -2602,6 +2602,10 @@ with DRILL_CARD_TYPE nil."
 ;;;;; PDF view setup. Make PDF midnight black, coloring here since it recets setting of the layer
   (setq pdf-view-midnight-colors '("#ffffff" . "#000000" ))
 
+;;;; Side-load org-sync patched fork
+
+  (add-to-list 'load-path "~/.spacemacs.d/lisp/org-sync")
+
   )
 
 
