@@ -2619,10 +2619,82 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(auto-save-interval 25)
+ '(auto-window-vscroll nil t)
+ '(display-line-numbers-grow-only t)
+ '(display-line-numbers-width 5)
+ '(display-line-numbers-width-start t)
  '(evil-want-Y-yank-to-eol nil)
+ '(org-agenda-prefix-format
+   (quote
+    ((agenda . "  %i")
+     (todo . " %i %-12:c")
+     (tags . " %i %-12:c")
+     (search . " %i %-12:c"))))
+ '(org-capture-templates
+   (\`
+    (("d" "Dictionary entry" entry
+      (file
+       (\,
+        (concat org-directory "/dictionary/dictionary.org")))
+      "* %^{word} :drill:
+%\\1 - %^{phonetic} - %?" :empty-lines-before 1 :empty-lines-after 1)
+     ("D" "Haskell Draft" entry
+      (file+headline
+       (\,
+        (concat org-directory "/haskell/README.org"))
+       "Draft")
+      "* %?" :empty-lines-before 1 :empty-lines-after 1)
+     ("w" "Word entry" entry
+      (file
+       (\,
+        (concat org-directory "/word/word.org")))
+      "* %^{phrase}
+%?" :empty-lines-before 1 :empty-lines-after 1)
+     ("t" "TODO:" entry
+      (id 8ec8520c-0d07-4d02-9700-f9f204df91b8)
+      "* TODO: %^{Name} %?" :empty-lines-before 1 :empty-lines-after 1)
+     ("n" "Note" entry
+      (file+headline
+       (\,
+        (concat org-directory "/Notes.org"))
+       "Inbox")
+      "* %^{Name}
+
+%?
+" :empty-lines-before 1 :empty-lines-after 1)
+     ("c" "Capture Generale" entry
+      (id 2d452153-8cc0-42a3-a2b0-eac119c445fb)
+      "* %?" :empty-lines-before 1 :empty-lines-after 1)
+     ("W" "Web site" entry
+      (file
+       (\,
+        (concat org-directory "/Web-archive save.org")))
+      "* %a
+:properties:
+:added: %u
+:end:
+%:initial" :empty-lines-before 1 :empty-lines-after 1)
+     ("b" "Brain: add at the end" plain
+      (function org-brain-goto-end)
+      "* %i%?" :empty-lines 1 :empty-lines-before 1 :empty-lines-after 1)
+     ("N" "NEXT:" entry
+      (id ebc243d3-f040-49a0-940d-fbfd16b46edd)
+      "* NEXT: %^{Name}
+SCHT: %t
+
+%?" :empty-lines-before 1 :empty-lines-after 1))))
+ '(org-goto-interface (quote outline-path-completion))
+ '(org-outline-path-complete-in-steps nil)
+ '(org-super-agenda-groups
+   (quote
+    ((:name "Maybe" :tag "maybe" :order 3)
+     (:name "Main" :tag "work" :order 1)
+     (:name "Habit" :tag "habit" :order 2)
+     (:name "Const" :tag "const" :order 9))))
  '(package-selected-packages
    (quote
-    (interaction-log pdf-tools elfeed-org elfeed-goodies ace-jump-mode noflet elfeed dap-mode bui tree-mode org-drill persist telega copy-as-format selectric-mode emojify emoji-cheat-sheet-plus company-emoji pretty-mode ox-twbs ox-gfm org-sticky-header org-re-reveal outshine outorg org-super-agenda ts zeal-at-point yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package treemacs-projectile treemacs-evil toc-org tide tagedit systemd symon symbol-overlay sunshine string-inflection sql-indent spotify spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs rainbow-mode rainbow-identifiers rainbow-delimiters pytest pyenv-mode py-isort pug-mode prettier-js popwin plantuml-mode pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pandoc-mode ox-pandoc overseer orgit org-projectile org-present org-pomodoro org-mime org-journal org-download org-cliplink org-bullets org-brain open-junk-file nodejs-repl nix-sandbox nix-mode nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-gitflow macrostep lsp-ui lsp-treemacs lsp-python-ms lsp-haskell lorem-ipsum livid-mode live-py-mode link-hint json-navigator js2-refactor js-doc jinja2-mode intero insert-shebang indent-guide importmagic impatient-mode hungry-delete hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-spotify-plus helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-nixos-options helm-mode-manager helm-make helm-lsp helm-hoogle helm-gitignore helm-git-grep helm-flx helm-descbinds helm-dash helm-css-scss helm-company helm-c-yasnippet helm-ag haskell-snippets google-translate golden-ratio gnuplot gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy font-lock+ flyspell-popup flyspell-correct-helm flycheck-pos-tip flycheck-package flycheck-haskell flycheck-bashate flx-ido fish-mode fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline dockerfile-mode docker direnv diminish devdocs define-word dante cython-mode csv-mode company-web company-terraform company-tern company-statistics company-shell company-nixos-options company-lsp company-ghci company-ghc company-cabal company-ansible company-anaconda column-enforce-mode color-identifiers-mode cmm-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile attrap ansible-doc ansible aggressive-indent ace-link ace-jump-helm-line ac-ispell)))
+    (tern interaction-log pdf-tools elfeed-org elfeed-goodies ace-jump-mode noflet elfeed dap-mode bui tree-mode org-drill persist telega copy-as-format selectric-mode emojify emoji-cheat-sheet-plus company-emoji pretty-mode ox-twbs ox-gfm org-sticky-header org-re-reveal outshine outorg org-super-agenda ts zeal-at-point yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package treemacs-projectile treemacs-evil toc-org tide tagedit systemd symon symbol-overlay sunshine string-inflection sql-indent spotify spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs rainbow-mode rainbow-identifiers rainbow-delimiters pytest pyenv-mode py-isort pug-mode prettier-js popwin plantuml-mode pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pandoc-mode ox-pandoc overseer orgit org-projectile org-present org-pomodoro org-mime org-journal org-download org-cliplink org-bullets org-brain open-junk-file nodejs-repl nix-sandbox nix-mode nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-gitflow macrostep lsp-ui lsp-treemacs lsp-python-ms lsp-haskell lorem-ipsum livid-mode live-py-mode link-hint json-navigator js2-refactor js-doc jinja2-mode intero insert-shebang indent-guide importmagic impatient-mode hungry-delete hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-spotify-plus helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-nixos-options helm-mode-manager helm-make helm-lsp helm-hoogle helm-gitignore helm-git-grep helm-flx helm-descbinds helm-dash helm-css-scss helm-company helm-c-yasnippet helm-ag haskell-snippets google-translate golden-ratio gnuplot gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy font-lock+ flyspell-popup flyspell-correct-helm flycheck-pos-tip flycheck-package flycheck-haskell flycheck-bashate flx-ido fish-mode fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline dockerfile-mode docker direnv diminish devdocs define-word dante cython-mode csv-mode company-web company-terraform company-tern company-statistics company-shell company-nixos-options company-lsp company-ghci company-ghc company-cabal company-ansible company-anaconda column-enforce-mode color-identifiers-mode cmm-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile attrap ansible-doc ansible aggressive-indent ace-link ace-jump-helm-line ac-ispell)))
  '(safe-local-variable-values
    (quote
     ((eval org-sbe "setup")
@@ -2630,7 +2702,19 @@ This function is called at the very end of Spacemacs initialization."
      (typescript-backend . lsp)
      (javascript-backend . tern)
      (javascript-backend . lsp))))
- '(wakatime-python-bin nil))
+ '(vc-follow-symlinks t)
+ '(wakatime-python-bin nil)
+ '(yequake-frames
+   (quote
+    (("org-capture"
+      (buffer-fns yequake-org-capture)
+      (width . 0.75)
+      (height . 0.5)
+      (alpha . 0.95)
+      (frame-parameters
+       (undecorated . t)
+       (skip-taskbar . t)
+       (sticky . t)))))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
