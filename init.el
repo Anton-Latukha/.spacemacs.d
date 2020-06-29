@@ -2606,7 +2606,7 @@ with DRILL_CARD_TYPE nil."
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/lisp/org-sync")
 
-;;;;;  Load the org-sync backends "I need"
+;;;;; Load the org-sync backends "I need"
   (mapc 'load
         '("org-sync" "org-sync-bb" "org-sync-github" "org-sync-redmine"))
 
