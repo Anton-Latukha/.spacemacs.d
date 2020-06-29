@@ -1737,6 +1737,14 @@ only the description"
       (insert-file-contents filePath)
       (buffer-string)))
 
+;;;;; my-get-file-char-range-as-string
+
+  (defun my-get-file-char-range-as-string (filePath beginChar endChar)
+    "Return filePath's file content beggining from char (starts with 0) and ending on char."
+    (with-temp-buffer
+      (insert-file-contents filePath nil beginChar endChar)
+      (buffer-string)))
+
 ;;;;; misc commented Shipyard
 
   ;;;; Example of a more intriquiret refile
