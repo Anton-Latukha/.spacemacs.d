@@ -1729,6 +1729,14 @@ only the description"
       )
     )
 
+;;;;; my-get-file-as-string
+
+  (defun my-get-file-as-string (filePath)
+    "Return filePath's file content."
+    (with-temp-buffer
+      (insert-file-contents filePath)
+      (buffer-string)))
+
 ;;;;; misc commented Shipyard
 
   ;;;; Example of a more intriquiret refile
