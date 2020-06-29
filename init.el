@@ -2604,7 +2604,7 @@ with DRILL_CARD_TYPE nil."
 
 ;;;; Side-load org-sync patched fork
 
-  (add-to-list 'load-path "~/.spacemacs.d/lisp/org-sync")
+  (add-to-list 'load-path "~/.spacemacs.d/lisp/lisp/org-sync")
 
 ;;;;;  Load the org-sync backends "I need"
   (mapc 'load
