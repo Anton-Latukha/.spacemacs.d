@@ -2610,6 +2610,7 @@ with DRILL_CARD_TYPE nil."
   (mapc 'load
         '("org-sync" "org-sync-bb" "org-sync-github" "org-sync-redmine"))
 
+;;;; )
   )
 
 
