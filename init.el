@@ -2627,7 +2627,8 @@ with DRILL_CARD_TYPE nil."
         '("org-sync" "org-sync-bb" "org-sync-github" "org-sync-redmine"))
 ;;;;; Load authkey for Org-sync to manage the remote
 
-  (setq org-sync-github-auth '("Anton-Latukha" . (my-get-file-char-range-as-string "/i/Personal/Technical/Files/Secure/token-rogue-org-sync" 0 40)))
+  (setq my-token-github-org-sync (my-get-file-char-range-as-string "/i/Personal/Technical/Files/Secure/token-rogue-github-org-sync" 0 40))
+  (setq org-sync-github-auth `("Anton-Latukha" . ,my-token-github-org-sync))
 
 ;;;; )
   )
