@@ -1537,7 +1537,7 @@ before packages are loaded."
   ;;(setq display-time-24hr-format t)
   (display-time-mode t)
 
-  ;; 2019-02-20: FIXME: TMP fix for '<s[TAB]' - when there PR merge https://github.com/syl20bnr/spacemacs/issues/11798
+  ;; 2019-02-20: Maybe TMP fix for '<s[TAB]' - when there PR closes the https://github.com/syl20bnr/spacemacs/issues/11798
   (require 'org-tempo)
 
   ;; Trigger autosave before quitting org-agenda
