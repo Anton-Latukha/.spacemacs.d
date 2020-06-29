@@ -2625,6 +2625,9 @@ with DRILL_CARD_TYPE nil."
 ;;;;; Load the org-sync backends "I need"
   (mapc 'load
         '("org-sync" "org-sync-bb" "org-sync-github" "org-sync-redmine"))
+;;;;; Load authkey for Org-sync to manage the remote
+
+  (setq org-sync-github-auth '("Anton-Latukha" . (my-get-file-char-range-as-string "/i/Personal/Technical/Files/Secure/token-rogue-org-sync" 0 40)))
 
 ;;;; )
   )
