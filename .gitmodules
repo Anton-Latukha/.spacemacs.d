@@ -7,3 +7,6 @@
 [submodule "private-layer-eww"]
 	path = lisp/private-layers/eww
 	url = https://github.com/coljamkop/eww-layer.git
+[submodule "org-sync"]
+	path = lisp/lisp/org-sync
+	url = https://github.com/inful/org-sync.git
