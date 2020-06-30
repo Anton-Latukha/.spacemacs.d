@@ -850,7 +850,7 @@ This function should only modify configuration layer settings."
 
      unicode-fonts
 
-     ;; github
+     github
 
      copy-as-format
 
