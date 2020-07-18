@@ -657,6 +657,10 @@ This function should only modify configuration layer settings."
           org-property-value
           :foreground "gray18"
           )
+         (
+          org-drawer
+          :foreground "gray18"
+          )
 
          (
           default
