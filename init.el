@@ -2656,6 +2656,8 @@ with DRILL_CARD_TYPE nil."
 
 ;;;; Org-roam config
   (add-hook 'after-init-hook #'org-roam-mode)
+  (add-hook 'after-init-hook #'org-roam--build-cache-async)
+
 ;;;; 
   )
 
