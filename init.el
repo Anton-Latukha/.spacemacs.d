@@ -2658,7 +2658,7 @@ with DRILL_CARD_TYPE nil."
   (add-hook 'org-mode-hook #'org-roam-mode)
   (add-hook 'org-roam-mode #'org-roam--build-cache-async)
 
-  (setq org-roam-directory "~/org/")
+  (setq org-roam-directory org-directory)
   (spacemacs/declare-prefix-for-mode 'org-mode "r" "roam")
   (spacemacs/set-leader-keys-for-minor-mode 'org-roam-mode
     "r r" 'org-roam
@@ -2667,6 +2667,8 @@ with DRILL_CARD_TYPE nil."
     "r i" 'org-roam-insert
     "r v" 'org-roam-show-graph
     )
+
+  (setq org-roam-index-file (concat org-directory "/index.org"))
 
 ;;;; 
   )
