@@ -2654,21 +2654,21 @@ with DRILL_CARD_TYPE nil."
 ;;         (replace-regexp-in-string (concat "\\`" dir) "" file)))
 ;;     )
 
-;;;; Org-roam config
-  (add-hook 'org-mode-hook #'org-roam-mode)
-  (add-hook 'org-roam-mode #'org-roam--build-cache-async)
+;; ;;;; Org-roam config ;;  2020-08-24: FIXME: Org-roam is bugged-out, enable on release
+;;   (add-hook 'org-mode-hook #'org-roam-mode)
+;;   (add-hook 'org-roam-mode #'org-roam--build-cache-async)
 
-  (setq org-roam-directory org-directory)
-  (spacemacs/declare-prefix-for-mode 'org-mode "r" "roam")
-  (spacemacs/set-leader-keys-for-minor-mode 'org-roam-mode
-    "r r" 'org-roam
-    "r d" 'org-roam-today
-    "r f" 'org-roam-find-file
-    "r i" 'org-roam-insert
-    "r v" 'org-roam-show-graph
-    )
+;;   (setq org-roam-directory org-directory)
+;;   (spacemacs/declare-prefix-for-mode 'org-mode "r" "roam")
+;;   (spacemacs/set-leader-keys-for-minor-mode 'org-roam-mode
+;;     "r r" 'org-roam
+;;     "r d" 'org-roam-today
+;;     "r f" 'org-roam-find-file
+;;     "r i" 'org-roam-insert
+;;     "r v" 'org-roam-show-graph
+;;     )
 
-  (setq org-roam-index-file (concat org-directory "/index.org"))
+;;   (setq org-roam-index-file (concat org-directory "/index.org"))
 
 ;;;; 
   )
