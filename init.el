@@ -524,6 +524,8 @@ This function should only modify configuration layer settings."
              )
             )
           lsp-haskell-process-wrapper-function default-nix-wrapper
+          ;; lsp-haskell-process-path-hie 'haskell-language-server-wrapper
+          lsp-haskell-process-path-hie 'ghcide ; 2020-09-02: NOTE: try using ghcide instead of Haskell-language-server
           )
 
 ;;;; Haskell
