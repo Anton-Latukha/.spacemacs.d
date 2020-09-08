@@ -62,7 +62,7 @@ This function should only modify configuration layer settings."
      markdown
      yaml
 
-     sql
+     ;; sql
 
      systemd
      (terraform :variables terraform-auto-format-on-save t)
