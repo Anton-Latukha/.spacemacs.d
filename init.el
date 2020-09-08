@@ -901,7 +901,7 @@ This function should only modify configuration layer settings."
      ;; quick-peek    ;; Show declaration of the entity
      ;; org-quick-peek    ;; Inline peeks at agenda items and linked nodes in Org-mode  ;; 2020-04-01: NOTE: There is no MELPA package, needs to be loaded manually.
      telega
-     org-roam
+     ;; org-roam                           ; 2020-09-08: NOTE: Curerntly loading from ~/.spacemacs.d/lisp/org-roam until release
      )
 
 ;;;; Misc package options
