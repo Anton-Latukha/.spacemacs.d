@@ -76,6 +76,7 @@ This function should only modify configuration layer settings."
 
      (org
       :variables
+      org-directory "~/org/"
       ;; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
       org-enable-org-journal-support t
       org-agenda-files
