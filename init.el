@@ -1756,6 +1756,14 @@ only the description"
       (insert-file-contents filePath nil beginChar endChar)
       (buffer-string)))
 
+;;;;; my-mantra
+
+  (defun my-mantra ()
+    "Mantra"
+    (interactive)
+    (find-file (concat org-directory "/mantra/mantra-en.org"))
+    )
+
 ;;;;; misc commented Shipyard
 
   ;;;; Example of a more intriquiret refile
@@ -1819,6 +1827,7 @@ only the description"
     "or" 'my-helm-org-rifle-files
     "op" 'sp-splice-sexp-killing-around
     "oa" 'my-org-agenda-day-list
+    "om" 'my-mantra
     "qq" 'my-safe-exit
     )
 
