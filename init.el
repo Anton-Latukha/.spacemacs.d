@@ -534,7 +534,7 @@ This function should only modify configuration layer settings."
      (haskell :variables
               haskell-enable-hindent nil
               ;; haskell-completion-backend 'lsp
-              haskell-completion-backend 'dante ; 2020-09-02: NOTE: use Dante instead LSP backend
+              ;; haskell-completion-backend 'dante ; 2020-09-02: NOTE: use Dante instead LSP backend
               haskell-process-type 'cabal-new-repl
               )
 
