@@ -535,7 +535,7 @@ This function should only modify configuration layer settings."
             )
           lsp-haskell-process-path-hie 'haskell-language-server-wrapper
           ;; lsp-haskell-process-path-hie 'ghcide ; 2020-09-02: NOTE: try using ghcide instead of Haskell-language-server
-          lsp-haskell-process-args-hie "-d -l /tmp/hie.log"
+          lsp-haskell-process-args-hie "-d -l /tmp/hls.log"
           )
 
 ;;;; Haskell
