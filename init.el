@@ -2645,7 +2645,7 @@ with DRILL_CARD_TYPE nil."
 
 ;;;; Side-load org-sync patched fork
 
-  (add-to-list 'load-path "~/.spacemacs.d/lisp/lisp/org-sync")
+  (add-to-list 'load-path "~/.spacemacs.d/lisp/lisp/org-sync") ; 2020-09-19: NOTE: Adds support for the Magit GitHub forge
 
 ;;;;; Load the org-sync backends "I need"
   (mapc 'load
