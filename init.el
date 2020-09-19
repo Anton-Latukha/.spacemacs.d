@@ -2704,12 +2704,6 @@ with DRILL_CARD_TYPE nil."
 ;;;; misc
 
   (add-hook 'haskell-mode-hook #'lsp)
-  ;; (add-hook 'haskell-mode-hook #'nix-haskell-mode)
-  ;; (use-package nix-haskell
-  ;;   :hook (haskell-mode . nix-haskell-mode))
-
-  ;; (add-to-list 'load-path "~/.spacemacs.d/lisp/lsp-mode") ; 2020-09-19: NOTE: Guy ridicilously removed the Nix support because of commit authorship minor issue. He reintroduced it into a new release, but release did not came out so far.
-  ;; (require 'lsp-mode)
 
 ;;;; 
   )
