@@ -515,24 +515,18 @@ This function should only modify configuration layer settings."
 ;;;; LSP
 
      (lsp :variables
-          ;; default-nix-wrapper
-          ;; (lambda (args)
-          ;;   (append
-          ;;    (append (list "nix-shell" "-I" "." "--command" )
-          ;;            (list (mapconcat 'identity args " "))
-          ;;            )
-          ;;    ;; (list (nix-current-sandbox))
-          ;;    (list (concat (lsp-haskell--get-root) "/shell.nix"))
-          ;;    )
-          ;;   )
-          lsp-haskell-process-wrapper-function (lambda (argv)
-            (append
-             (append (list "nix-shell" "-I" "." "--command" )
-                     (list (mapconcat 'identity argv " "))
-                     )
-             (list (concat (lsp-haskell--get-root) "/shell.nix"))
+          default-nix-wrapper
+            (lambda (args)
+              (append
+               (append
+                (list "nix-shell" "-I" "." "--command")
+                (list (mapconcat 'identity args " "))
+               )
+                ;; (list (nix-current-sandbox)) ; 2020-09-19: NOTE: Uses nix-sandbox package
+               (list (concat (lsp-haskell--get-root) "/shell.nix"))
+              )
              )
-            )
+          lsp-haskell-process-wrapper-function default-nix-wrapper
           lsp-haskell-process-path-hie 'haskell-language-server-wrapper
           ;; lsp-haskell-process-path-hie 'ghcide ; 2020-09-02: NOTE: try using ghcide instead of Haskell-language-server
           lsp-haskell-process-args-hie "-d -l /tmp/hls.log"
