@@ -515,27 +515,36 @@ This function should only modify configuration layer settings."
 ;;;; LSP
 
      (lsp :variables
-          default-nix-wrapper
-          (lambda (args)
+          ;; default-nix-wrapper
+          ;; (lambda (args)
+          ;;   (append
+          ;;    (append (list "nix-shell" "-I" "." "--command" )
+          ;;            (list (mapconcat 'identity args " "))
+          ;;            )
+          ;;    ;; (list (nix-current-sandbox))
+          ;;    (list (concat (lsp-haskell--get-root) "/shell.nix"))
+          ;;    )
+          ;;   )
+          lsp-haskell-process-wrapper-function (lambda (argv)
             (append
              (append (list "nix-shell" "-I" "." "--command" )
-                     (list (mapconcat 'identity args " "))
+                     (list (mapconcat 'identity argv " "))
                      )
-             (list (nix-current-sandbox))
+             (list (concat (lsp-haskell--get-root) "/shell.nix"))
              )
             )
-          lsp-haskell-process-wrapper-function default-nix-wrapper
-          ;; lsp-haskell-process-path-hie 'haskell-language-server-wrapper
-          lsp-haskell-process-path-hie 'ghcide ; 2020-09-02: NOTE: try using ghcide instead of Haskell-language-server
+          lsp-haskell-process-path-hie 'haskell-language-server-wrapper
+          ;; lsp-haskell-process-path-hie 'ghcide ; 2020-09-02: NOTE: try using ghcide instead of Haskell-language-server
+          lsp-haskell-process-args-hie "-d -l /tmp/hie.log"
           )
 
 ;;;; Haskell
 
      (haskell :variables
-              haskell-enable-hindent nil
-              ;; haskell-completion-backend 'lsp
+              haskell-enable-hindent 't
+              haskell-completion-backend 'lsp
               ;; haskell-completion-backend 'dante ; 2020-09-02: NOTE: use Dante instead LSP backend
-              haskell-process-type 'cabal-new-repl
+              haskell-process-type 'cabal-repl
               )
 
 ;;;; Git
@@ -904,6 +913,7 @@ This function should only modify configuration layer settings."
      ;; org-roam                           ; 2020-09-08: NOTE: Curerntly loading from ~/.spacemacs.d/lisp/org-roam until release
      ;; sqlite3  ; For src Org-roam loading
      ;; emacsql-sqlite3  ; For src Org-roam loading
+     ;; nix-haskell-mode                   ; 2020-09-18: NOTE: Provide Nix integration for interactive-haskell-mode
      )
 
 ;;;; Misc package options
@@ -1977,7 +1987,6 @@ with DRILL_CARD_TYPE nil."
   ;;;; NOTE: 2019-08-02: Trying to make literate Haskell work in HIE
   ;; (require 'lsp)
   ;; (require 'lsp-haskell)
-  ;; (add-hook 'literate-haskell-mode-hook #'lsp-haskell-enable)
   ;; (add-hook 'literate-haskell-mode-hook #'lsp)
 
   (add-hook 'haskell-mode-hook #'direnv-update-environment) ;; If direnv configured
@@ -2100,10 +2109,10 @@ with DRILL_CARD_TYPE nil."
 
   ;; From https://github.com/travisbhartwell/nix-emacs#flycheck
   ;; Flycheck can find executables of checkers that would be only accessible via nix-shell
-  ;; (setq flycheck-command-wrapper-function
-  ;;       (lambda (command) (apply 'nix-shell-command (nix-current-sandbox) command))
-  ;;       flycheck-executable-find
-  ;;       (lambda (cmd) (nix-executable-find (nix-current-sandbox) cmd)))
+  (setq flycheck-command-wrapper-function
+        (lambda (command) (apply 'nix-shell-command (nix-current-sandbox) command))
+        flycheck-executable-find
+        (lambda (cmd) (nix-executable-find (nix-current-sandbox) cmd)))
 
 ;;;; Pretty-fonts
 
@@ -2264,7 +2273,7 @@ with DRILL_CARD_TYPE nil."
              ("Monoid"      . ?\⭙) ;;⊕𐃏𐀏⫘ ⦻ꕕ⭙⛒⨂
              ("mappend"     . ?\⨯)
              ("<>"          . ?\⨯) ;; ×⨯
-             ("mempty"      . ?\𝟣) ;;
+             ("mempty"      . ?\𝟣) ;; ⥠
              ("id"          . ?\𝟙) ;; 𝟭𝟙
              ("Functor"     . ?\⮝) ;;╒ ⚯↗➚𝑭⇗
              ("fmap"        . ?\⮝) ;;╒ ⚯
@@ -2692,6 +2701,16 @@ with DRILL_CARD_TYPE nil."
 
   ;; (setq org-roam-index-file (concat org-roam-directory "/index.org"))
 
+;;;; misc
+
+  (add-hook 'haskell-mode-hook #'lsp)
+  ;; (add-hook 'haskell-mode-hook #'nix-haskell-mode)
+  ;; (use-package nix-haskell
+  ;;   :hook (haskell-mode . nix-haskell-mode))
+
+  ;; (add-to-list 'load-path "~/.spacemacs.d/lisp/lsp-mode") ; 2020-09-19: NOTE: Guy ridicilously removed the Nix support because of commit authorship minor issue. He reintroduced it into a new release, but release did not came out so far.
+  ;; (require 'lsp-mode)
+
 ;;;; 
   )
 
@@ -2769,7 +2788,7 @@ SCHT: %t
      (:name "Habit" :tag "habit" :order 2)
      (:name "Const" :tag "const" :order 9)))
  '(package-selected-packages
-   '(emacsql-sqlite3 tern interaction-log pdf-tools elfeed-org elfeed-goodies ace-jump-mode noflet elfeed dap-mode bui tree-mode org-drill persist telega copy-as-format selectric-mode emojify emoji-cheat-sheet-plus company-emoji pretty-mode ox-twbs ox-gfm org-sticky-header org-re-reveal outshine outorg org-super-agenda ts zeal-at-point yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package treemacs-projectile treemacs-evil toc-org tide tagedit systemd symon symbol-overlay sunshine string-inflection sql-indent spotify spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs rainbow-mode rainbow-identifiers rainbow-delimiters pytest pyenv-mode py-isort pug-mode prettier-js popwin plantuml-mode pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pandoc-mode ox-pandoc overseer orgit org-projectile org-present org-pomodoro org-mime org-journal org-download org-cliplink org-bullets org-brain open-junk-file nodejs-repl nix-sandbox nix-mode nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-gitflow macrostep lsp-ui lsp-treemacs lsp-python-ms lsp-haskell lorem-ipsum livid-mode live-py-mode link-hint json-navigator js2-refactor js-doc jinja2-mode intero insert-shebang indent-guide importmagic impatient-mode hungry-delete hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-spotify-plus helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-nixos-options helm-mode-manager helm-make helm-lsp helm-hoogle helm-gitignore helm-git-grep helm-flx helm-descbinds helm-dash helm-css-scss helm-company helm-c-yasnippet helm-ag haskell-snippets google-translate golden-ratio gnuplot gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy font-lock+ flyspell-popup flyspell-correct-helm flycheck-pos-tip flycheck-package flycheck-haskell flycheck-bashate flx-ido fish-mode fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline dockerfile-mode docker direnv diminish devdocs define-word dante cython-mode csv-mode company-web company-terraform company-tern company-statistics company-shell company-nixos-options company-lsp company-ghci company-ghc company-cabal company-ansible company-anaconda column-enforce-mode color-identifiers-mode cmm-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile attrap ansible-doc ansible aggressive-indent ace-link ace-jump-helm-line ac-ispell))
+   '(nix-haskell-mode emacsql-sqlite3 tern interaction-log pdf-tools elfeed-org elfeed-goodies ace-jump-mode noflet elfeed dap-mode bui tree-mode org-drill persist telega copy-as-format selectric-mode emojify emoji-cheat-sheet-plus company-emoji pretty-mode ox-twbs ox-gfm org-sticky-header org-re-reveal outshine outorg org-super-agenda ts zeal-at-point yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package treemacs-projectile treemacs-evil toc-org tide tagedit systemd symon symbol-overlay sunshine string-inflection sql-indent spotify spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs rainbow-mode rainbow-identifiers rainbow-delimiters pytest pyenv-mode py-isort pug-mode prettier-js popwin plantuml-mode pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pandoc-mode ox-pandoc overseer orgit org-projectile org-present org-pomodoro org-mime org-journal org-download org-cliplink org-bullets org-brain open-junk-file nodejs-repl nix-sandbox nix-mode nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-gitflow macrostep lsp-ui lsp-treemacs lsp-python-ms lsp-haskell lorem-ipsum livid-mode live-py-mode link-hint json-navigator js2-refactor js-doc jinja2-mode intero insert-shebang indent-guide importmagic impatient-mode hungry-delete hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-spotify-plus helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-nixos-options helm-mode-manager helm-make helm-lsp helm-hoogle helm-gitignore helm-git-grep helm-flx helm-descbinds helm-dash helm-css-scss helm-company helm-c-yasnippet helm-ag haskell-snippets google-translate golden-ratio gnuplot gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy font-lock+ flyspell-popup flyspell-correct-helm flycheck-pos-tip flycheck-package flycheck-haskell flycheck-bashate flx-ido fish-mode fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline dockerfile-mode docker direnv diminish devdocs define-word dante cython-mode csv-mode company-web company-terraform company-tern company-statistics company-shell company-nixos-options company-lsp company-ghci company-ghc company-cabal company-ansible company-anaconda column-enforce-mode color-identifiers-mode cmm-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile attrap ansible-doc ansible aggressive-indent ace-link ace-jump-helm-line ac-ispell))
  '(safe-local-variable-values
    '((org-roam-db-location . "./org-roam.db")
      (org-roam-directory . ".")
