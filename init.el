@@ -540,13 +540,12 @@ This function should only modify configuration layer settings."
                   (list "nix-shell" "-I" "." "--command")
                   (list (mapconcat 'identity args " "))
                   )
-                 (list (nix-current-sandbox)) ; 2020-09-19: NOTE: Uses nix-sandbox package
-                 ;; (list (concat (lsp-haskell--get-root) "/shell.nix"))
+                 (list (nix-current-sandbox))
                  )
                 )
               haskell-enable-hindent 't
               haskell-completion-backend 'lsp
-              ;; haskell-completion-backend 'dante ; 2020-09-02: NOTE: use Dante instead LSP backend
+              ;; haskell-completion-backend 'dante
               haskell-process-type 'cabal-repl ; 2020-10-10: NOTE: cabal-new-repl is obsolete in favour of cabal-repl
               haskell-process-wrapper-function default-nix-wrapper
               )
