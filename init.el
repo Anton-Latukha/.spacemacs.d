@@ -140,8 +140,8 @@ This function should only modify configuration layer settings."
         (org-agenda-files :maxlevel . 9)
         (my-org-refile-additional-targets :maxlevel . 9)
         )
-      org-outline-path-complete-in-steps nil         ; Refile in a single go
-      org-refile-use-outline-path 'file                  ; Show full paths for refiling, value 'file' includes the files themself.
+      org-outline-path-complete-in-steps nil ; Refile in a single go
+      org-refile-use-outline-path 'file ; Show full paths for refiling, value 'file' includes the files themself.
       org-habit-graph-column 130
       org-habit-preceding-days 56
 
@@ -775,7 +775,7 @@ This function should only modify configuration layer settings."
 
      (pdf
       :variables
-      pdf-view-display-size 'fit-page    ;; Use fit-page by default
+      pdf-view-display-size 'fit-page    ;; fit-page by default
       pdf-annot-activate-created-annotations t    ;; Automatically start annotating what is highlighted
       pdf-view-resize-factor 1.1    ;; Grain of the zooming step
 ;;;;; PDF view setup. Make PDF midnight black, coloring here since it recets setting of the layer
