@@ -77,7 +77,6 @@ This function should only modify configuration layer settings."
      (org
       :variables
       org-directory "~/org/"
-      ;; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
       org-enable-org-journal-support t
       org-agenda-files
       '(
@@ -100,7 +99,7 @@ This function should only modify configuration layer settings."
       org-scheduled-string "SCHT:"
       org-todo-keyword-faces
       '(
-        ;; Func list-colors-display to see color names
+        ;; To see color names: func `list-colors-display`
         ;;("TODO:" . (:foreground "dark orange" :weight bold))
         ("NEXT:" . (:foreground "green" :weight bold))
         ("PAUS:" . (:foreground "grey" :weight bold))
@@ -388,16 +387,6 @@ This function should only modify configuration layer settings."
 
       org-latex-pdf-process
       ;; `-shell-escape' is jailbreak to permit calls of external utils, enabled for `minted' Pygments code highlighting
-      ;; `--enc' allows UTF-8 symbols
-      ;; '(
-      ;;   "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
-      ;;   ;; "%bib %b"
-      ;;   "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
-      ;;   "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
-      ;;   "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
-      ;;   "%latex -shell-escape -enc -etex -interaction nonstopmode -output-directory %o %f"
-      ;;   )
-      ;; Lualatex is more powerful, but generates page for every formula
       '(
         "%latex --shell-escape -etex --interaction=nonstopmode --output-directory=%o %f"
         "%bib %b"
