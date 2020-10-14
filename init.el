@@ -760,7 +760,7 @@ This function should only modify configuration layer settings."
 
      (elfeed
       :variables
-      rmh-elfeed-org-files (list "~/org/elfeed.org")
+      rmh-elfeed-org-files (list (concat org-directory "elfeed.org"))
       elfeed-db-directory "~/.cache/elfeed/"
       elfeed-initial-tags '(unread)
       ;; elfeed-enable-web-interface t
