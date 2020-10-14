@@ -522,8 +522,8 @@ This function should only modify configuration layer settings."
                 (list "nix-shell" "-I" "." "--command")
                 (list (mapconcat 'identity args " "))
                )
-                ;; (list (nix-current-sandbox)) ; 2020-09-19: NOTE: Uses nix-sandbox package
-               (list (concat (lsp-haskell--get-root) "/shell.nix"))
+                (list (nix-current-sandbox)) ; 2020-09-19: NOTE: Uses nix-sandbox package
+               ;; (list (concat (lsp-haskell--get-root) "/shell.nix"))
               )
              )
           lsp-haskell-process-wrapper-function default-nix-wrapper
