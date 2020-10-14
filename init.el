@@ -648,26 +648,11 @@ This function should only modify configuration layer settings."
         (
          spacemacs-dark
 
-         ;; Font locking
-         ;; (font-lock-comment-face :slant italic)
-         ;; (web-mode-html-attr-name-face :inherit font-lock-variable-name-face
-         ;;                               :foreground nil)
-         ;; ;; Modeline
-         ;; (powerline-active1 :box (:color "#999999"
-         ;;                                 :line-width 1
-         ;;                                 :style released-button)
-         ;;                    :background "#5a5a5a")))
          (
           org-tag
           :foreground "gray18"
           :weight bold
           :height 0.8)
-
-         ;;;; This was a try to make all drawer almost invisible. It mimics the source face code and fails miserably.
-         ;; (org-drawer ((class '((class color) (min-colors 89)) (
-         ;;                                                       :foreground "gray18"
-         ;;                                                       :background "gray18")
-         ;;                                                       )))
 
          (
           org-property-value
