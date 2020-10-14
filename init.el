@@ -461,9 +461,6 @@ This function should only modify configuration layer settings."
          ("\\subsubsubsubsubsubsubparagraph{%s}" . "\\subsubsubsubsubsubsubparagraph*{%s}")
          )
 
-        ;; org-format-latex-options
-        ;; '(:foreground default :background "Transparent" :scale 2.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers ("begin" "$1" "$" "$$" "\\(" "\\["))
-
        )
 
       )
@@ -554,17 +551,11 @@ This function should only modify configuration layer settings."
 
      python
      typescript
-     (plantuml
-      ;; :variables
-      ;; plantuml-java-command "/run/current-system/sw/bin/plantuml"
-      ;; plantuml-jar-path " "
-      ;; org-plantuml-jar-path "/run/current-system/sw/bin/plantuml"
-      )
+     plantuml
 
-     ;; == Tools
+;;;; Tools
      ansible
-     (
-      dash
+     (dash
       :variables ; Dash macOS & Zeal offline documentation tools
       helm-dash-docset-newpath "~/.local/share/Zeal/Zeal/docsets"
       )
