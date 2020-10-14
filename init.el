@@ -568,8 +568,7 @@ This function should only modify configuration layer settings."
      (
       shell
       :variables
-      shell-default-shell 'ansi-term
-      ;; shell-default-shell 'eshell
+      shell-default-shell 'ansi-term  ;; Alternatives: 'eshell
       shell-default-term-shell "/run/current-system/sw/bin/fish"
       )
 
@@ -588,7 +587,7 @@ This function should only modify configuration layer settings."
 ;;;; Theming
 
      (theming
-      :variables ;; Streamlines faces modifications
+      :variables
 
       theming-modifications
       '(
@@ -715,14 +714,10 @@ This function should only modify configuration layer settings."
          (haskell-keyword-face
           :foreground
           "#00dede"
-          ;; "#00ffff"
-          ;; "#0084ff"
           )
          (haskell-operator-face
           :foreground
           "#00dede"
-          ;; "#00ffff"
-          ;; "dodger blue"
           )
          (font-lock-string-face
           :foreground
@@ -750,16 +745,6 @@ This function should only modify configuration layer settings."
           )
          )
         )
-
-      ;; See: https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-faces.el
-      ;; (custom-theme-set-faces
-      ;;  'user
-      ;;  ;; Customize the Emacs theme to set all tags the same
-      ;;  `(org-tag                   ((t (:foreground "gray18" :weight bold :height 0.8))))
-      ;;  ;; So far not really working
-      ;;  `(org-drawer                ((t (:foreground "black" :weight bold :height 0.8))))
-      ;;  `(org-property-value        ((t (:foreground "black" :weight bold :height 0.8))))
-      ;;  )
 
       )
 
