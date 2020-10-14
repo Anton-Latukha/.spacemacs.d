@@ -1864,7 +1864,7 @@ with DRILL_CARD_TYPE nil."
 
   (add-hook 'org-font-lock-set-keywords-hook #'org-hidden-links-hook-function)
 
-  ;; (add-hook 'haskell-mode-hook 'spacemacs/toggle-highlight-long-lines-on)
+  (add-hook 'haskell-mode-hook 'spacemacs/toggle-highlight-long-lines-on)
 
   (add-hook 'haskell-mode-hook #'direnv-update-environment) ;; If direnv configured
 
