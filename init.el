@@ -395,14 +395,6 @@ This function should only modify configuration layer settings."
         "%latex --shell-escape -etex --interaction=nonstopmode --output-directory=%o %f"
         "%latex --shell-escape -etex --interaction=nonstopmode --output-directory=%o %f"
         )
-      ;; All below no longer needed
-      ;; "texi2dvi --pdf --clean --verbose --batch -shell-escape -interaction nonstopmode -output-directory %o %f"
-      ;; "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-      ;; "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-      ;; "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-      ;; "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-      ;; org-latex-compiler "xelatex"    ;; 'xelatex' was wrongly encoding the LaTeX formulas
-      ;; org-latex-inputenc-alist '(("utf8" . "utf8x"))    ;; Add Unicode char support, also extends ("mathletters" "ucs" nil)
       org-latex-listings 'minted    ;; Use Python Pygments highlighter. Needs `org-latex-pdf-process' with `-shell-escape'
       org-latex-minted-options '(("breaklines" "true"))    ;; Allow exporting with word-wrap in code blocks
 
