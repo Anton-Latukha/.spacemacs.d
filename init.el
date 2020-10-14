@@ -753,7 +753,6 @@ This function should only modify configuration layer settings."
      (wakatime
       :variables
       wakatime-api-key  "b5292c00-f691-4070-9a8c-2a3b61e6e360"
-      ;; use the actual wakatime path
       wakatime-cli-path "/run/current-system/sw/bin/wakatime"
       )
 
@@ -824,11 +823,7 @@ This function should only modify configuration layer settings."
      pretty-mode
      telega ;; Emacs Telega.el client TODO: Wait when https://github.com/syl20bnr/spacemacs/issues/12800 solved
      org-drill ;; Moved-out of org-mode at 9.3
-     ;; command-log-mode                   ; 2020-03-21: NOTE: Is this useful debug packages, or they are supersided with internal Emacs funtionality
-     ;; interaction-log                   ; 2020-03-21: NOTE: Is this useful debug packages, or they are supersided with internal Emacs funtionality
      yequake    ;; Drop-down Quake-life frame
-     ;; quick-peek    ;; Show declaration of the entity
-     ;; org-quick-peek    ;; Inline peeks at agenda items and linked nodes in Org-mode  ;; 2020-04-01: NOTE: There is no MELPA package, needs to be loaded manually.
      ;; org-roam                           ; 2020-09-08: NOTE: Curerntly loading from ~/.spacemacs.d/lisp/org-roam until release
      ;; sqlite3  ; For src Org-roam loading
      ;; emacsql-sqlite3  ; For src Org-roam loading
