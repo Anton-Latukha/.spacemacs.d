@@ -153,11 +153,13 @@ This function should only modify configuration layer settings."
 
       org-log-into-drawer t    ; if t log into the :LOGBOOK: drawer
 
+      org-agenda-time-grid nil
+
       ;; org-agenda-time-grid
       ;; (quote
       ;;  (
       ;;   (daily today require-timed)
-      ;;   (400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200 2300 2400)
+      ;;   (400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000)
       ;;   "      "
       ;;   "----------------"
       ;;   )
@@ -170,8 +172,6 @@ This function should only modify configuration layer settings."
       ;;                               (search category-keep))
 
       ;; List of always declared tags, function my-org-auto-tag matches and autoadds occuring words from it
-
-      org-agenda-time-grid nil    ;; Disable the time grid
 
 ;;;;; Tags
 
