@@ -171,9 +171,9 @@ This function should only modify configuration layer settings."
       ;;                               (tags priority-down category-keep)
       ;;                               (search category-keep))
 
-      ;; List of always declared tags, function my-org-auto-tag matches and autoadds occuring words from it
-
 ;;;;; Tags
+
+      ;; List of always declared tags, function my-org-auto-tag matches and autoadds occuring words from it
 
       org-tag-alist
       '(
