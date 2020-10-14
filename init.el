@@ -1797,38 +1797,6 @@ Inspiration: https://code.orgmode.org/bzg/org-mode/commit/13424336a6f30c50952d29
           (replace-match (downcase (match-string-no-properties 1)) :fixedcase nil nil 1))
         (message "Lower-cased %d matches" count))))
 
-  ;; NOTE: 2019-05-02: Not completely figured-out a form and this list was not working properly
-  ;; ;; Special symbols for org-entities-help
-  ;; (nconc org-entities-user
-  ;;        (
-  ;;         ;; name    LaTeX    mathp HTML   ASCII Latin1 UTF-8
-  ;;         '("vdots" "\\vdots{}" t "&x2999" "..." "..." "⁞")
-  ;;         ))
-
-  ;; Setting of org-tempo does not work because instead custom strings in expressions seems now accept only hardcoded template strings
-  ;; (setq tempo-interactive t)
-
-  ;; (defvar my-org-tempo-tags nil
-  ;;   "Tempo tags for Org mode")
-
-  ;; (add-hook 'org-mode-hook '(lambda ()
-	;; 		                      (tempo-use-tag-list 'my-org-tempo-tags)
-	;; 		                      ))
-
-  ;; (tempo-define-template "my-tempo-template-org-haskell"
-  ;;                        '("#+begin_src haskell" n p n "#+end_src" >
-  ;;                          )
-  ;;                        "<z"
-  ;;                        "Insert Haskell template"
-  ;;                        'my-org-tempo-tags)
-
-  ;; (tempo-define-template "my-property"
-  ;;                        '(":PROPERTIES:" p ":END:" >
-  ;;                          )
-  ;;                        "<p"
-  ;;                        "Insert a property tempate"
-  ;;                        'my-org-tempo-tags)
-
   ;; Read words from heading, match with tag dictionary, try trim 's' from the end and match, and autoset tags
   (defun my-org-auto-tag ()
     (interactive)
@@ -1897,11 +1865,6 @@ with DRILL_CARD_TYPE nil."
   (add-hook 'org-font-lock-set-keywords-hook #'org-hidden-links-hook-function)
 
   ;; (add-hook 'haskell-mode-hook 'spacemacs/toggle-highlight-long-lines-on)
-
-  ;;;; NOTE: 2019-08-02: Trying to make literate Haskell work in HIE
-  ;; (require 'lsp)
-  ;; (require 'lsp-haskell)
-  ;; (add-hook 'literate-haskell-mode-hook #'lsp)
 
   (add-hook 'haskell-mode-hook #'direnv-update-environment) ;; If direnv configured
 
