@@ -2575,7 +2575,7 @@ with DRILL_CARD_TYPE nil."
     "r v" 'org-roam-show-graph
     )
 
-  ;; (setq org-roam-index-file (concat org-roam-directory "/index.org"))
+  (setq org-roam-index-file (concat org-roam-directory "/index.org"))
 
 ;;;; misc
   (add-hook 'haskell-mode-hook #'lsp)
