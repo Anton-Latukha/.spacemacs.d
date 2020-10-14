@@ -824,7 +824,7 @@ This function should only modify configuration layer settings."
      telega ;; Emacs Telega.el client TODO: Wait when https://github.com/syl20bnr/spacemacs/issues/12800 solved
      org-drill ;; Moved-out of org-mode at 9.3
      yequake    ;; Drop-down Quake-life frame
-     ;; org-roam                           ; 2020-09-08: NOTE: Curerntly loading from ~/.spacemacs.d/lisp/org-roam until release
+     org-roam                           ; 2020-09-08: NOTE: Curerntly loading from ~/.spacemacs.d/lisp/org-roam until release
      ;; sqlite3  ; For src Org-roam loading
      ;; emacsql-sqlite3  ; For src Org-roam loading
      ;; nix-haskell-mode                   ; 2020-09-18: NOTE: Provide Nix integration for interactive-haskell-mode
@@ -2558,23 +2558,22 @@ with DRILL_CARD_TYPE nil."
     )
 
 ;; ;;;; Org-roam config ;;  2020-08-24: FIXME: Org-roam is bugged-out, enable on release
-  ;; (add-to-list 'load-path "~/.spacemacs.d/lisp/emacs-sqlite3/")
-  ;; (require 'sqlite3)
-  ;; (require 'emacssql-sqlite3)
-  ;; (add-to-list 'load-path "~/.spacemacs.d/lisp/org-roam/")
-  ;; (require 'org-roam)
-  ;; (add-hook 'org-mode-hook #'org-roam-mode)
-  ;; (add-hook 'org-roam-mode #'org-roam--build-cache-async)
+  (add-to-list 'load-path "~/.spacemacs.d/lisp/emacs-sqlite3/")
+  (require 'sqlite3)
+  (require 'emacssql-sqlite3)
+  (require 'org-roam)
+  (add-hook 'org-mode-hook #'org-roam-mode)
+  (add-hook 'org-roam-mode #'org-roam--build-cache-async)
 
-  ;; (setq org-roam-directory org-directory)
-  ;; (spacemacs/declare-prefix-for-mode 'org-mode "r" "roam")
-  ;; (spacemacs/set-leader-keys-for-minor-mode 'org-roam-mode
-  ;;   "r r" 'org-roam
-  ;;   "r d" 'org-roam-today
-  ;;   "r f" 'org-roam-find-file
-  ;;   "r i" 'org-roam-insert
-  ;;   "r v" 'org-roam-show-graph
-  ;;   )
+  (setq org-roam-directory org-directory)
+  (spacemacs/declare-prefix-for-mode 'org-mode "r" "roam")
+  (spacemacs/set-leader-keys-for-minor-mode 'org-roam-mode
+    "r r" 'org-roam
+    "r d" 'org-roam-today
+    "r f" 'org-roam-find-file
+    "r i" 'org-roam-insert
+    "r v" 'org-roam-show-graph
+    )
 
   ;; (setq org-roam-index-file (concat org-roam-directory "/index.org"))
 
