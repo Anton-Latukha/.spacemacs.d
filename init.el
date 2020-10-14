@@ -149,7 +149,7 @@ This function should only modify configuration layer settings."
       org-startup-indented nil
       ;; Turn off manual indentation completely
       org-adapt-indentation nil
-      org-brain-path "~/org/"
+      org-brain-path org-directory
 
       org-log-into-drawer t    ; if t log into the :LOGBOOK: drawer
 
