@@ -2705,8 +2705,8 @@ with DRILL_CARD_TYPE nil."
   ;; (setq org-roam-index-file (concat org-roam-directory "/index.org"))
 
 ;;;; misc
-
   (add-hook 'haskell-mode-hook #'lsp)
+  (add-hook 'haskell-literate-mode-hook #'lsp)
 
 ;;;; 
   )
