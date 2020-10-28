@@ -569,7 +569,7 @@ This function should only modify configuration layer settings."
       shell
       :variables
       shell-default-shell 'ansi-term  ;; Alternatives: 'eshell
-      shell-default-term-shell "/run/current-system/sw/bin/fish"
+      shell-default-term-shell "fish"
       )
 
 ;;;; Geolocation
@@ -753,7 +753,7 @@ This function should only modify configuration layer settings."
      (wakatime
       :variables
       wakatime-api-key  "b5292c00-f691-4070-9a8c-2a3b61e6e360"
-      wakatime-cli-path "/run/current-system/sw/bin/wakatime"
+      wakatime-cli-path "wakatime"
       )
 
 ;;;; Elfeed
@@ -2346,7 +2346,7 @@ with DRILL_CARD_TYPE nil."
   (defun bjm/elfeed-show-visit-gui ()
     "Wrapper for elfeed-show-visit to use gui browser instead of eww"
     (interactive)
-    (let ((browse-url-generic-program "/run/current-system/sw/bin/firefox"))
+    (let ((browse-url-generic-program "firefox"))
       (elfeed-show-visit t)))
 
   ;; Trying to map Firefox browsing on B
@@ -2521,7 +2521,7 @@ with DRILL_CARD_TYPE nil."
   ;; (setq package-archives nil)
 
   ;; optional. use this if you install emacs packages to the system profile
-  ;; (add-to-list 'package-directory-list "/run/current-system/sw/share/emacs/site-lisp/elpa")
+  ;; (add-to-list 'package-directory-list "emacs/site-lisp/elpa")
 
 ;;;;; PDF view setup. Make PDF midnight black, coloring here since it recets setting of the layer
   (setq pdf-view-midnight-colors '("#ffffff" . "#000000" ))
