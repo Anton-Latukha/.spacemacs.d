@@ -2403,12 +2403,6 @@ with DRILL_CARD_TYPE nil."
   (add-hook 'org-capture-mode-hook #'evil-insert-state)
 
 
-;;;; Run Agenda as initial buffer
-
-  (my-org-agenda-day-list)
-
-  (setq initial-buffer-choice (lambda () (get-buffer "*Org Agenda*")))
-
 ;;;; Modeline configuration
 
   (spaceline-toggle-buffer-size-off)
@@ -2555,6 +2549,12 @@ with DRILL_CARD_TYPE nil."
 
   (setq org-roam-directory org-directory)
   (setq org-roam-index-file (concat org-roam-directory "/index.org"))
+
+;;;; Run Agenda as initial buffer
+
+  (my-org-agenda-day-list)
+
+  (setq initial-buffer-choice (lambda () (get-buffer "*Org Agenda*")))
 
 ;;;; misc
   (add-hook 'haskell-mode-hook #'lsp)
