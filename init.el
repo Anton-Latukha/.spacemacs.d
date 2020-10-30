@@ -825,8 +825,8 @@ This function should only modify configuration layer settings."
      org-drill ;; Moved-out of org-mode at 9.3
      yequake    ;; Drop-down Quake-life frame
      org-roam                           ; 2020-09-08: NOTE: Curerntly loading from ~/.spacemacs.d/lisp/org-roam until release
-     ;; sqlite3  ; For src Org-roam loading
      ;; emacsql-sqlite3  ; For src Org-roam loading
+     sqlite3  ; For src Org-roam loading
      ;; nix-haskell-mode                   ; 2020-09-18: NOTE: Provide Nix integration for interactive-haskell-mode
      )
 
