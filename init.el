@@ -68,7 +68,7 @@ This function should only modify configuration layer settings."
      (terraform :variables terraform-auto-format-on-save t)
      ;; tmux
 
-     nixos
+     ;; nixos
 
      colors    ; Too extreme fancy coloring
 
@@ -798,7 +798,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages
    '(
      direnv
-     nix-sandbox
+     ;; nix-sandbox                        ; 2020-10-27: NOTE: trying to fix HLS error, this is a pie in the sky
      haskell-snippets
      org-super-agenda
      shm ;; Structured Haskell mode
@@ -810,7 +810,6 @@ This function should only modify configuration layer settings."
      org-roam                           ; 2020-09-08: NOTE: Curerntly loading from ~/.spacemacs.d/lisp/org-roam until release
      ;; emacsql-sqlite3  ; For src Org-roam loading
      sqlite3  ; For src Org-roam loading
-     ;; nix-haskell-mode                   ; 2020-09-18: NOTE: Provide Nix integration for interactive-haskell-mode
      )
 
 ;;;; Misc package options
