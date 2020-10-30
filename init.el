@@ -1688,6 +1688,23 @@ only the description"
     (find-file (concat org-directory "/mantra/mantra-en.org"))
     )
 
+;;;;; my-default-nix-wrapper
+
+  ;; Seems as a mandatory Nix env creation, see commented code for the alternative identity allowing version
+  (defun my-default-nix-wrapper ()
+    "Wraps the command and its args into the Nix wrapper, uses nix-sandbox pkg from nix-emacs repo"
+    (lambda (command) (apply 'nix-shell-command (nix-current-sandbox) command))
+    )
+  ;; default-nix-wrapper (
+  ;;   lambda (args) (
+  ;;     append (
+  ;;       append (list "nix-shell" "-I" "." "--command") (list (mapconcat 'identity args " "))
+  ;;         ) (
+  ;;       list (nix-current-sandbox)
+  ;;       )
+  ;;   )
+  ;; )
+
 ;;;;; misc commented Shipyard
 
   ;;;; Example of a more intriquiret refile
