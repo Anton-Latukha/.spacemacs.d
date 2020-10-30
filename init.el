@@ -467,40 +467,23 @@ This function should only modify configuration layer settings."
 
 ;;;; LSP
 
-     (lsp :variables
-          default-nix-wrapper
-            (lambda (args)
-              (append
-               (append
-                (list "nix-shell" "-I" "." "--command")
-                (list (mapconcat 'identity args " "))
-               )
-                (list (nix-current-sandbox))
-              )
-             )
-          lsp-haskell-server-wrapper-function default-nix-wrapper
-          ;; lsp-haskell-server-path 'ghcide
-          ;; lsp-haskell-server-args "-d -l /tmp/hls.log"
-          )
+     (lsp
+      ;; :variables
+        ;; lsp-haskell-server-wrapper-function my-default-nix-wrapper
+        ;; lsp-haskell-server-path 'ghcide
+        ;; lsp-haskell-server-path 'haskell-language-server-wrapper
+        ;; lsp-haskell-server-args "-d -l /tmp/hls.log"
+      )
 
 ;;;; Haskell
 
-     (haskell :variables
-              default-nix-wrapper
-              (lambda (args)
-                (append
-                 (append
-                  (list "nix-shell" "-I" "." "--command")
-                  (list (mapconcat 'identity args " "))
-                  )
-                 (list (nix-current-sandbox))
-                 )
-                )
-              haskell-enable-hindent 't
-              haskell-completion-backend 'lsp
-              ;; haskell-completion-backend 'dante
-              haskell-process-type 'cabal-repl ; 2020-10-10: NOTE: cabal-new-repl is obsolete in favour of cabal-repl
-              haskell-process-wrapper-function default-nix-wrapper
+     (haskell
+      ;; :variables
+        ;; haskell-process-wrapper-function my-default-nix-wrapper
+        ;; haskell-process-type 'cabal-repl ; 2020-10-10: NOTE: cabal-new-repl is obsolete in favour of cabal-repl
+        ;; haskell-completion-backend 'lsp
+        ;; ;; haskell-completion-backend 'dante
+        ;; haskell-enable-hindent 't
               )
 
 ;;;; Git
