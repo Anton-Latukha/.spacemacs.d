@@ -2530,12 +2530,12 @@ with DRILL_CARD_TYPE nil."
     )
 
 ;; ;;;; Org-roam config ;;  2020-08-24: FIXME: Org-roam is bugged-out, enable on release
-  (add-to-list 'load-path "~/.spacemacs.d/lisp/emacs-sqlite3/")
-  (require 'sqlite3)
-  (require 'emacssql-sqlite3)
-  (require 'org-roam)
-  (add-hook 'org-mode-hook #'org-roam-mode)
-  (add-hook 'org-roam-mode #'org-roam--build-cache-async)
+  ;; (add-to-list 'load-path "~/.spacemacs.d/lisp/emacs-sqlite/")
+  ;; (require 'sqlite3)
+  ;; (require 'emacssql-sqlite)
+  ;; (require 'org-roam)
+  ;; (add-hook 'org-mode-hook #'org-roam-mode)
+  ;; (add-hook 'org-roam-mode #'org-roam--build-cache-async)
 
   (setq org-roam-directory org-directory)
   (spacemacs/declare-prefix-for-mode 'org-mode "r" "roam")
