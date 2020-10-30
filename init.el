@@ -52,6 +52,7 @@ This function should only modify configuration layer settings."
      (syntax-checking :variables
                       flycheck-proselint-executable "proselint"
                       flycheck-textlint-executable "textlint"
+                      ;; syntax-checking-enable-by-default nil ; 2020-10-27: NOTE: disables flycheck spellchecking process by default
                       )
 
      javascript
@@ -808,8 +809,8 @@ This function should only modify configuration layer settings."
      org-drill ;; Moved-out of org-mode at 9.3
      yequake    ;; Drop-down Quake-life frame
      org-roam                           ; 2020-09-08: NOTE: Curerntly loading from ~/.spacemacs.d/lisp/org-roam until release
-     ;; emacsql-sqlite3  ; For src Org-roam loading
      sqlite3  ; For src Org-roam loading
+     ;; emacssql-sqlite  ; For src Org-roam loading
      )
 
 ;;;; Misc package options
@@ -1863,7 +1864,7 @@ with DRILL_CARD_TYPE nil."
 
   (add-hook 'org-font-lock-set-keywords-hook #'org-hidden-links-hook-function)
 
-  (add-hook 'haskell-mode-hook 'spacemacs/toggle-highlight-long-lines-on)
+  ;; (add-hook 'haskell-mode-hook 'spacemacs/toggle-highlight-long-lines-on) ; 2020-10-15: NOTE: Recieved "This toggle is not supported with major mode: %S"
 
   (add-hook 'haskell-mode-hook #'direnv-update-environment) ;; If direnv configured
 
