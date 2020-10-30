@@ -978,7 +978,7 @@ It should only modify the values of Spacemacs settings."
    ;; separators look not too crappy.
    dotspacemacs-default-font
    '(
-     "Inconsolata LGC"
+     "Inconsolata"
      :size 15
      :weight normal
      :width normal
