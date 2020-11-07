@@ -808,9 +808,6 @@ This function should only modify configuration layer settings."
      telega ;; Emacs Telega.el client TODO: Wait when https://github.com/syl20bnr/spacemacs/issues/12800 solved
      org-drill ;; Moved-out of org-mode at 9.3
      yequake    ;; Drop-down Quake-life frame
-     org-roam                           ; 2020-09-08: NOTE: Curerntly loading from ~/.spacemacs.d/lisp/org-roam until release
-     sqlite3  ; For src Org-roam loading
-     ;; emacssql-sqlite  ; For src Org-roam loading
      )
 
 ;;;; Misc package options
