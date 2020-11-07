@@ -2303,9 +2303,6 @@ with DRILL_CARD_TYPE nil."
                              (skip-taskbar . t)
                              (sticky . t)))))))
 
-;;;;; Enable NixOS packages also (Setup seems done it already)
-  ;; (require 'package)
-
 ;;;;; PDF view setup. Make PDF midnight black, coloring here since it recets setting of the layer
   (setq pdf-view-midnight-colors '("#ffffff" . "#000000" ))
 
