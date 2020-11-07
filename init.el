@@ -1634,12 +1634,6 @@ only the description"
 
 ;;;;; misc commented Shipyard
 
-  ;; (defun my-local-org-files-list ()
-  ;;   (delq nil
-  ;;         (buffer-file-name (current-buffer))
-  ;;         )
-  ;;   )
-
   ;; Org-mode has internal commands (org-entry-is-done-p), but it does not exposes them to external scope
   ;; (defun my-org-agenda-archive-done-tasks ()
   ;;   "Archive entries if they are marked as DONE (see `org-done-keywords')."
