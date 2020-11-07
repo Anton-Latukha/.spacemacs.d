@@ -1857,28 +1857,6 @@ with DRILL_CARD_TYPE nil."
       (spacemacs|do-after-display-system-init
 
        (pretty-fonts-set-fontsets-for-fira-code)
-       ;;;; This symbols are not supported on my setup
-       ;; (pretty-fonts-set-fontsets
-       ;;  '(;; All-the-icons fontsets
-       ;;    ("fontawesome"
-       ;;     ;;                         
-       ;;     #xf07c #xf0c9 #xf0c4 #xf0cb #xf017 #xf101)
-
-       ;;    ("all-the-icons"
-       ;;     ;;    
-       ;;     #xe907 #xe928)
-
-       ;;    ("github-octicons"
-       ;;     ;;                               
-       ;;     #xf091 #xf059 #xf076 #xf075 #xe192  #xf016 #xf071)
-
-       ;;    ("material icons"
-       ;;     ;;              
-       ;;     #xe871 #xe918 #xe3e7  #xe5da
-       ;;     ;;              
-       ;;     #xe3d0 #xe3d1 #xe3d2 #xe3d4)
-       ;;    )
-       ;;  )
        )
       )
     )
