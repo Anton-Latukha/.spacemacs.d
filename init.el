@@ -1849,8 +1849,6 @@ with DRILL_CARD_TYPE nil."
 
   (add-to-list 'load-path "~/.spacemacs.d/lisp/pretty-fonts/")
   (require 'pretty-fonts)
-  ;; (pretty-fonts-set-kwds
-  ;;  '((pretty-fonts-fira-font prog-mode-hook org-mode-hook)))
 
   (defun display/init-pretty-fonts ()
     (use-package pretty-fonts
