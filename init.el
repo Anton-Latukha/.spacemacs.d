@@ -1395,10 +1395,6 @@ before packages are loaded."
      )
    )
 
-  ;; On client launch - show org-agenda week buffer
-  ;; This does not work due to Spacemacs initial buffer builds itself at startup
-  ;; (setq initial-buffer-choice '(lambda () (get-buffer org-agenda-list)))
-
   ;; Enable time in the bar
   ;;(setq display-time-24hr-format t)
   (display-time-mode t)
