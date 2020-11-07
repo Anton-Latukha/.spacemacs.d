@@ -2306,9 +2306,6 @@ with DRILL_CARD_TYPE nil."
 ;;;;; Enable NixOS packages also (Setup seems done it already)
   ;; (require 'package)
 
-  ;; optional. makes unpure packages archives unavailable
-  ;; (setq package-archives nil)
-
 ;;;;; PDF view setup. Make PDF midnight black, coloring here since it recets setting of the layer
   (setq pdf-view-midnight-colors '("#ffffff" . "#000000" ))
 
