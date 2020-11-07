@@ -1234,13 +1234,6 @@ before packages are loaded."
   ;; (global-aggressive-indent-mode 1)
   (spacemacs/toggle-indent-guide-globally-on)
   (spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines by default
-  ;; WND: Nix layer global mode intendation problem (https://github.com/NixOS/nix-mode/issues/36) by using relativev-intendation
-  ;;(eval-after-load 'nix-mode
-  ;;  (add-hook 'nix-mode-hook
-  ;;  (lambda ()
-  ;;  (setq-local indent-line-function #'indent-relative))))
-  ;; ----------------------------------------------------------------
-  ;; (add-hook 'haskell-mode-hook #'turn-on-haskell-unicode-input-method) ;; May be in conflict with Unicode visual replacement function that is also haskell-mode-hook
   (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines in org-mode - wrap them all
 
   (require 'org)
