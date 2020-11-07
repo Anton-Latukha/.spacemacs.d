@@ -79,6 +79,7 @@ This function should only modify configuration layer settings."
       :variables
       org-directory "~/org/"
       org-enable-org-journal-support t
+      org-enable-roam-support t
       org-agenda-files
       '(
         "~/org/Flow.org"
