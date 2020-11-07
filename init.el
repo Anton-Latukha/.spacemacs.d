@@ -1632,8 +1632,6 @@ only the description"
   ;;   )
   ;; )
 
-;;;;; misc commented Shipyard
-
 ;;;; Keybindings
 
 ;;;;; Global
