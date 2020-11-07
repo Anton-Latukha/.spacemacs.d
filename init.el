@@ -1855,10 +1855,6 @@ with DRILL_CARD_TYPE nil."
       :config
       ;; !! This is required to avoid segfault when using emacs as daemon !!
       (spacemacs|do-after-display-system-init
-       ;;;; Disabled this, because guy has ridicilous symbols set, and they override my setup.
-       ;; (pretty-fonts-add-hook 'prog-mode-hook pretty-fonts-fira-code-alist)
-       ;; (pretty-fonts-add-hook 'org-mode-hook  pretty-fonts-fira-code-alist)
-       ;; (pretty-fonts-add-hook 'haskell-mode-hook  pretty-fonts-fira-code-alist)
 
        (pretty-fonts-set-fontsets-for-fira-code)
        ;;;; This symbols are not supported on my setup
