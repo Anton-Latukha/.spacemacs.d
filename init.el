@@ -2344,10 +2344,10 @@ with DRILL_CARD_TYPE nil."
   (spacemacs/declare-prefix-for-mode 'org-mode "r" "roam")
   (spacemacs/set-leader-keys-for-minor-mode 'org-roam-mode
     "r r" 'org-roam
-    "r d" 'org-roam-today
+    "r d" 'org-roam-dailies-today
     "r f" 'org-roam-find-file
     "r i" 'org-roam-insert
-    "r v" 'org-roam-show-graph
+    "r v" 'org-roam-graph-show
     )
 
   (setq org-roam-directory org-directory)
