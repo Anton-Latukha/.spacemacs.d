@@ -2337,11 +2337,6 @@ with DRILL_CARD_TYPE nil."
         (replace-regexp-in-string (concat "\\`" dir) "" file)))
     )
 
-;; ;;;; Org-roam config ;;  2020-08-24: FIXME: Org-roam is bugged-out, enable on release
-  ;; (add-to-list 'load-path "~/.spacemacs.d/lisp/emacs-sqlite/")
-  ;; (require 'sqlite3)
-  ;; (require 'emacssql-sqlite)
-  ;; (require 'org-roam)
   ;; (add-hook 'org-mode-hook #'org-roam-mode)
   ;; (add-hook 'org-roam-mode #'org-roam--build-cache-async)
 
