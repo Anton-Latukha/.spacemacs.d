@@ -2084,11 +2084,6 @@ with DRILL_CARD_TYPE nil."
    )
   ;; (global-display-line-numbers-mode nil)
 
-;;;; Saving Emacs Desktop
-
-  ;; (setq  desktop-path '(("~/.spacemacs.d/desktops/")))
-  ;; (desktop-save-mode 1)
-
 ;;;; Custom Org-mode priorities
 
 ;;;;; Org-priority regexp
