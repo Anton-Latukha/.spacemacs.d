@@ -787,6 +787,8 @@ This function should only modify configuration layer settings."
       typography-enable-typographic-editing nil
       )
 
+     nixos
+
      )
 
    ;; List of additional packages that will be installed without being
