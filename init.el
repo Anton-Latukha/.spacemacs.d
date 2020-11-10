@@ -2351,9 +2351,6 @@ with DRILL_CARD_TYPE nil."
     "r v" 'org-roam-graph-show
     )
 
-  (setq org-roam-directory org-directory)
-  (setq org-roam-index-file (concat org-roam-directory "/index.org"))
-
 ;;;; Run Agenda as initial buffer
 
   (my-org-agenda-day-list)
