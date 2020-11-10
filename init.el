@@ -78,6 +78,7 @@ This function should only modify configuration layer settings."
      (org
       :variables
       org-directory "~/org/"
+      org-enable-sticky-header t
       org-enable-org-journal-support t
       org-enable-roam-support t
       org-agenda-files
