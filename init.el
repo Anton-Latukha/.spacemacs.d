@@ -1646,11 +1646,11 @@ only the description"
     "Org mode is to complex to be loaded at once. If file is clean in Git - then chop the tail off, open file, and reset the state of file to the git history."
     (interactive)
     (progn
-      (shell-command (concat "fish -c 'fundamental-haskell-book-open-hack " "~/org/haskell/README.org'"))
+      (shell-command (concat "fish -c 'fundamental-haskell-book-open-hack " fundamentalHaskellBookFile "'"))
       (sit-for 1)
-      (find-file (concat org-directory "/haskell/README.org"))
+      (find-file fundamentalHaskellBookFile)
       (sit-for 1)
-      (shell-command (concat "fish -c 'cd $OH && git checkout HEAD -- " org-directory "haskell/README.org'"))
+      (shell-command (concat "fish -c 'cd $OH && git checkout HEAD -- " fundamentalHaskellBookFile "'"))
       )
     )
 
