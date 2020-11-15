@@ -1666,6 +1666,7 @@ only the description"
     "op" 'sp-splice-sexp-killing-around
     "oa" 'my-org-agenda-day-list
     "om" 'my-mantra
+    "oh" 'my-org-haskell-book-open-hack
     "qq" 'my-safe-exit
     )
 
