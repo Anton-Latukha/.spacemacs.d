@@ -1409,6 +1409,10 @@ before packages are loaded."
   ;; Trigger autosave before quitting org-agenda
   (advice-add 'org-agenda-quit :before 'org-save-all-org-buffers)
 
+;;;; My constants
+  ;; Well, there are no normal constants in Emacs base, so variables.
+  (setq fundamentalHaskellBookRepo (concat org-directory "haskell/"))
+  (setq fundamentalHaskellBookFile (concat fundamentalHaskellBookRepo "README.org"))
 ;;;; My functions
 
 ;;;;; my-insert-current-date
