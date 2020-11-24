@@ -1783,9 +1783,7 @@ with DRILL_CARD_TYPE nil."
 
   (add-hook 'haskell-mode-hook #'direnv-update-environment) ;; If direnv configured
 
-  (custom-set-variables
-   '(
-     org-super-agenda-groups
+  (setq org-super-agenda-groups
      '(;; Each group has an implicit boolean OR operator between its selectors.
        (:name "Maybe"
               :tag "maybe"
@@ -1801,11 +1799,8 @@ with DRILL_CARD_TYPE nil."
               :order 9)
        )
      )
-   )
 
-  (custom-set-variables
-   '(
-     org-agenda-prefix-format
+  (setq org-agenda-prefix-format
      '(
        ;; (agenda . " %i %-12:c%?-12t% s")
        ;; (todo . " %i %-12:c")
@@ -1821,7 +1816,6 @@ with DRILL_CARD_TYPE nil."
        (search . " %i %-12:c")
        )
      )
-   )
 
   (org-super-agenda-mode t)
 
