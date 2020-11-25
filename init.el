@@ -385,6 +385,41 @@ This function should only modify configuration layer settings."
       org-agenda-dim-blocked-tasks 'invisible    ;; Make blocked tasks invisible, show only child tasks.
       org-edit-src-content-indentation 0    ;; Disable the freaking autoindentation of Babel code blocks that driven me nuts
       org-agenda-window-setup 'only-window    ;; Delete all other windows, show agenda full frame
+;;;;; Org-super-agenda
+
+      ;; org-super-agenda-mode t
+
+      org-agenda-prefix-format
+            '(
+              ;; (agenda . " %i %-12:c%?-12t% s")
+              ;; (todo . " %i %-12:c")
+              ;; (tags . " %i %-12:c")
+              ;; (search . " %i %-12:c")
+              ;; (agenda  . "  • ")
+              ;; (agenda  . "  ")
+              ;; (agenda . " %i %-5t%-5s")
+              (agenda . "  %i")
+              ;; (timeline  . "  % s")
+              (todo  . " %i %-12:c")
+              (tags  . " %i %-12:c")
+              (search . " %i %-12:c")
+              )
+
+      org-super-agenda-groups
+            '(;; Each group has an implicit boolean OR operator between its selectors.
+              (:name "Maybe"
+                     :tag "maybe"
+                     :order 3)
+              (:name "Main"
+                     :tag "work"
+                     :order 1)
+              (:name "Habit"
+                     :tag "habit"
+                     :order 2)
+              (:name "Const"
+                     :tag "const"
+                     :order 9)
+              )
 
 ;;;;; Latex setup
 
@@ -1242,6 +1277,10 @@ before packages are loaded."
 
   (require 'org)
 
+;;;; Required by org-super-agenda
+  ;;  2020-11-25: NOTE: Works only if to load before org-agenda buffers
+  (org-super-agenda-mode t)
+
   (nconc
    org-modules
    '(
@@ -1782,42 +1821,6 @@ with DRILL_CARD_TYPE nil."
   ;; (add-hook 'haskell-mode-hook 'spacemacs/toggle-highlight-long-lines-on) ; 2020-10-15: NOTE: Recieved "This toggle is not supported with major mode: %S"
 
   (add-hook 'haskell-mode-hook #'direnv-update-environment) ;; If direnv configured
-
-  (setq org-super-agenda-groups
-     '(;; Each group has an implicit boolean OR operator between its selectors.
-       (:name "Maybe"
-              :tag "maybe"
-              :order 3)
-       (:name "Main"
-              :tag "work"
-              :order 1)
-       (:name "Habit"
-              :tag "habit"
-              :order 2)
-       (:name "Const"
-              :tag "const"
-              :order 9)
-       )
-     )
-
-  (setq org-agenda-prefix-format
-     '(
-       ;; (agenda . " %i %-12:c%?-12t% s")
-       ;; (todo . " %i %-12:c")
-       ;; (tags . " %i %-12:c")
-       ;; (search . " %i %-12:c")
-       ;; (agenda  . "  • ")
-       ;; (agenda  . "  ")
-       ;; (agenda . " %i %-5t%-5s")
-       (agenda . "  %i")
-       ;; (timeline  . "  % s")
-       (todo  . " %i %-12:c")
-       (tags  . " %i %-12:c")
-       (search . " %i %-12:c")
-       )
-     )
-
-  (org-super-agenda-mode t)
 
 ;;;; Managing code with Outlines using =outshine=
 
