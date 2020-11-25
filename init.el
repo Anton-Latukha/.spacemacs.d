@@ -1270,6 +1270,9 @@ before packages are loaded."
   ;; Manually configured block
   ;;
   ;;
+
+  (setq my-custom-lisp-dir (concat dotspacemacs-directory "lisp/"))
+
   ;; FIXME: Agressive indentation broken for Haskell
   ;; (global-aggressive-indent-mode 1)
   (spacemacs/toggle-indent-guide-globally-on)
