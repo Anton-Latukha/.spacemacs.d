@@ -1726,7 +1726,7 @@ only the description"
     "oP" 'my-local-org-haskell-book-publish
     )
 
-  (add-to-list 'load-path "~/.spacemacs.d/lisp/org-protocol-capture-html/")
+  (add-to-list 'load-path (concat my-custom-lisp-dir "org-protocol-capture-html/"))
 
   (require 'org-protocol-capture-html)
   ;; (setq recentf-max-saved-items 30)
@@ -1828,7 +1828,7 @@ with DRILL_CARD_TYPE nil."
 
 ;;;; Pretty-fonts
 
-  (add-to-list 'load-path "~/.spacemacs.d/lisp/pretty-fonts/")
+  (add-to-list 'load-path (concat my-custom-lisp-dir "pretty-fonts/"))
   (require 'pretty-fonts)
 
   (defun display/init-pretty-fonts ()
@@ -2136,8 +2136,8 @@ with DRILL_CARD_TYPE nil."
 ;;;;; Add paths to search private layers in
 
   ;; TODO: This does not work, I have symlinks into: ~/.emacs.d/private/
-  (add-to-list 'dotspacemacs-configuration-layer-path "~/.spacemacs.d/lisp/private-layers/")
-  (add-to-list 'dotspacemacs-configuration-layer-path "~/.spacemacs.d/lisp/private-layers/eww/")
+  (add-to-list 'dotspacemacs-configuration-layer-path (concat my-custom-lisp-dir "private-layers/"))
+  (add-to-list 'dotspacemacs-configuration-layer-path (concat my-custom-lisp-dir "private-layers/eww/"))
 
 ;;;;; Use eww as default Emacs browser
 
@@ -2333,7 +2333,7 @@ with DRILL_CARD_TYPE nil."
 
 ;;;; Side-load org-sync patched fork
 
-  (add-to-list 'load-path "~/.spacemacs.d/lisp/lisp/org-sync") ; 2020-09-19: NOTE: Adds support for the Magit GitHub forge
+  (add-to-list 'load-path (concat my-custom-lisp-dir "lisp/org-sync")) ; 2020-09-19: NOTE: Adds support for the Magit GitHub forge
 
 ;;;;; Load the org-sync backends "I need"
   (mapc 'load
