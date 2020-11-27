@@ -825,6 +825,8 @@ This function should only modify configuration layer settings."
 
      nixos
 
+     json
+
      )
 
    ;; List of additional packages that will be installed without being
