@@ -1281,6 +1281,8 @@ before packages are loaded."
   (spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines by default
   (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines in org-mode - wrap them all
 
+  (unicode-fonts-setup)
+
   (require 'org)
 
 ;;;; Required by org-super-agenda
