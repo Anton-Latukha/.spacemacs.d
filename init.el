@@ -1827,6 +1827,7 @@ with DRILL_CARD_TYPE nil."
   (add-hook 'haskell-mode-hook #'direnv-update-environment) ;; If direnv configured
 
 ;;;; Pretty-fonts
+  ;;  2020-11-25: TODO: Remove this abomination after ~ligatures~ package arrives to MELPA
 
   (add-to-list 'load-path (concat my-custom-lisp-dir "pretty-fonts/"))
   (require 'pretty-fonts)
