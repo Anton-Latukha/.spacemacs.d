@@ -1715,6 +1715,7 @@ only the description"
     "om" 'my-mantra
     "oh" 'my-org-haskell-book-open-hack
     "qq" 'my-safe-exit
+    "oj" 'org-journal-new-entry
     )
 
 ;;;;; Local
