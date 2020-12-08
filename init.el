@@ -828,7 +828,11 @@ This function should only modify configuration layer settings."
 
      nixos
 
-     json
+     (json
+      :variables
+      json-backend 'lsp  ;; Requires OS `vscode/json-languageserver`
+      )
+)
 
      )
 
