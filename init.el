@@ -56,7 +56,9 @@ This function should only modify configuration layer settings."
                       )
 
      javascript
-     shell-scripts
+     (shell-scripts
+      :variables shell-scripts-backend 'lsp  ;; Requires OS `bash-language-server`
+      )
 
      csv
      html
