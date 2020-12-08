@@ -63,7 +63,7 @@ This function should only modify configuration layer settings."
      markdown
      (yaml
        :variables
-       yaml-enable-lsp t
+       yaml-enable-lsp t  ;; Requires OS installed `yaml-language-server'
      )
 
      ;; sql
