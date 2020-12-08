@@ -61,7 +61,10 @@ This function should only modify configuration layer settings."
      csv
      html
      markdown
-     yaml
+     (yaml
+       :variables
+       yaml-enable-lsp t
+     )
 
      ;; sql
 
