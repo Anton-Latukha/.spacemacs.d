@@ -124,7 +124,7 @@ This function should only modify configuration layer settings."
       org-pomodoro-play-sounds t
       ;; Play sound at start?
       org-pomodoro-start-sound-p t
-      my-org-pomodoro-sound-dir (concat dotspacemacs-directory ".audio")
+      my-org-pomodoro-sound-dir (concat dotspacemacs-directory "audio/")
       org-pomodoro-start-sound (concat my-org-pomodoro-sound-dir "bell (+8dB).wav")
       org-pomodoro-finished-sound (concat my-org-pomodoro-sound-dir "bell (+8dB).wav")
       org-pomodoro-killed-sound-p t
