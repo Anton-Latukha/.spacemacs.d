@@ -596,8 +596,8 @@ This function should only modify configuration layer settings."
      (
       shell
       :variables
-      shell-default-term-shell "fish"
       shell-default-shell 'vterm  ;; Alternatives: 'eshell
+      shell-default-term-shell "fish -l"
       )
 
 ;;;; Geolocation
