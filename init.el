@@ -513,6 +513,7 @@ This function should only modify configuration layer settings."
 
      (lsp
       ;; :variables
+      ;; lsp-haskell-formatting-provider "brittany"
         ;; lsp-haskell-server-wrapper-function my-default-nix-wrapper
         ;; lsp-haskell-server-path 'ghcide
         ;; lsp-haskell-server-path 'haskell-language-server-wrapper
