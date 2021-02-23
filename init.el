@@ -2418,6 +2418,9 @@ with DRILL_CARD_TYPE nil."
   (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\nix\\'")
   (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\data\\'")
   (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\result\\'")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\real-store\\'")
+
+
 ;;;; misc
   (add-hook 'haskell-mode-hook #'lsp)
   (add-hook 'haskell-literate-mode-hook #'lsp)
