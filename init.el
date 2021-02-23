@@ -2407,6 +2407,10 @@ with DRILL_CARD_TYPE nil."
 
   (add-hook 'mouse-leave-buffer-hook #'kill-minibuffer)
 
+;;;; LSP tuning performance
+
+  ;; Performance
+  (setq gc-cons-threshold 400000000)  ;; Garbage collector threshold 10^8 -> 2*10^8
 ;;;; misc
   (add-hook 'haskell-mode-hook #'lsp)
   (add-hook 'haskell-literate-mode-hook #'lsp)
