@@ -2411,6 +2411,7 @@ with DRILL_CARD_TYPE nil."
 
   ;; Performance
   (setq gc-cons-threshold 400000000)  ;; Garbage collector threshold 10^8 -> 2*10^8
+  (setq read-process-output-max 8388608) ;; Maximum read from the side-process, 1->8 MB
 ;;;; misc
   (add-hook 'haskell-mode-hook #'lsp)
   (add-hook 'haskell-literate-mode-hook #'lsp)
