@@ -2081,14 +2081,14 @@ with DRILL_CARD_TYPE nil."
              ("else"        . "⊬   ")
              ("forall"      . "∀     ")
              ("exists"      . "Ǝ     ") ;;ヨⴺƎᗱョᴲ∋ⱻॻՅ∍ᙐ℈ᗲЄє
-             ("instance"    . "𝐈       ")
+             ("instance"    . "𝐈")
              ("import"      . "i     ")
-             ("module"      . "m     ")
+             ("module"      . "m")
              ("LANGUAGE"    . "ℒ")  ;ム
-             ("deriving"    . "ට       ")  ;ᘐ ච ᘑ
-             ("data"        . "𝗗   ")
-             ("newtype"     . "𝗪      ")
-             ("type"        . "𝗔   ")
+             ("deriving"    . "ට")  ;ᘐ ච ᘑ
+             ("data"        . "𝗗")
+             ("newtype"     . "𝗪")
+             ("type"        . "𝗔")
              ("Right"       . "𝕽    ")
              ("Left"        . "𝕷   ")
              ;; ("*"           . ?\★)
