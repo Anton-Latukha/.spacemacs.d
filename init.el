@@ -1817,7 +1817,7 @@ only the description"
     "or" 'org-drill-resume
     "oR" 'org-drill
     "ol" 'my-local-org-refile
-    "oP" 'my-local-org-haskell-book-publish
+    "oP" 'my-org-haskell-book-publish
     )
 
   (add-to-list 'load-path (concat my-custom-lisp-dir "org-protocol-capture-html/"))
