@@ -2525,7 +2525,7 @@ with DRILL_CARD_TYPE nil."
   (add-hook 'haskell-mode-hook #'lsp)
   (add-hook 'haskell-literate-mode-hook #'lsp)
 
-  (setq server-socket-dir "/run/user/1000/emacs")
+  ;; (setq server-socket-dir "/run/user/1000/emacs")
 ;;;; 
   )
 
