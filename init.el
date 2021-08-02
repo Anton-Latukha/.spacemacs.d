@@ -1823,7 +1823,7 @@ only the description"
     "op" 'sp-splice-sexp-killing-around
     "oa" 'my-org-agenda-day-list
     "om" 'my-mantra
-    "oh" 'my-org-haskell-book-open-hack
+    ;; "oh" 'my-org-haskell-book-open-hack ; 2021-06-02: NOTE: This erases uncommitted result
     "qq" 'my-safe-exit
     "oj" 'org-journal-new-entry
     )
