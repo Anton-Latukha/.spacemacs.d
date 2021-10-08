@@ -1560,6 +1560,14 @@ before packages are loaded."
     (insert (format-time-string "%Y-%m-%d"))
     )
 
+;;;;; my-insert-undefined
+
+  (defun my-insert-undefined ()
+    "Insert 'undefined'"
+    (interactive)
+    (insert " undefined")
+    )
+
 ;;;;; my-insert-note
 
   (defun my-insert-note ()
@@ -1842,6 +1850,10 @@ only the description"
     "oR" 'org-drill
     "ol" 'my-local-org-refile
     "oP" 'my-org-haskell-book-publish
+    )
+
+  (spacemacs/set-leader-keys-for-major-mode 'haskell-mode
+    "ou" 'my-insert-undefined
     )
 
   (add-to-list 'load-path (concat my-custom-lisp-dir "org-protocol-capture-html/"))
