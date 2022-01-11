@@ -91,9 +91,9 @@ This function should only modify configuration layer settings."
         "~/org/Flow.org"
         "~/org/Habit flow.org"
         )
-      org-highest-priority ?A
-      org-default-priority ?E
-      org-lowest-priority ?E
+      org-highest-priority 99
+      org-default-priority 49
+      org-lowest-priority 0
       org-tags-match-list-sublevels 'indented ;; in tags search indent sublevels of entries
       ;;org-agenda-todo-list-sublevels nil ;; do not include sublevel TODOs into agenda result
       org-todo-keywords '((sequence "NEXT:(n@)" "PAUS:(p@)" "VIEW:(v!)" "|" "DONE:(d!)" "ODGE:(o!)" "ELEG:(e@)" "CANS:(c@)")) ;; "TODO:(t!)"
@@ -524,62 +524,66 @@ This function should only modify configuration layer settings."
 
      (haskell
       ;; :variables
-        ;; haskell-process-wrapper-function my-default-nix-wrapper
-        ;; haskell-process-type 'cabal-repl ; 2020-10-10: NOTE: cabal-new-repl is obsolete in favour of cabal-repl
-        ;; haskell-completion-backend 'lsp
-        ;; ;; haskell-completion-backend 'dante
-        ;; haskell-enable-hindent 't
-              )
+      ;;   haskell-process-wrapper-function my-default-nix-wrapper
+      ;;   haskell-process-type 'cabal-repl ; 2020-10-10: NOTE: cabal-new-repl is obsolete in favour of cabal-repl
+      ;;   haskell-process-auto-import-loaded-modules 't
+      ;;   haskell-process-suggest-remove-import-lines 't
+      ;;   haskell-process-suggest-hoogle-imports 't
+      ;; lsp-haskell-importlens-on nil
+      ;; lsp-haskell-server-path "/home/pyro/src/haskell/community/haskell-language-server/dist-newstyle/build/x86_64-linux/ghc-8.10.7/haskell-language-server-1.5.0.0/x/haskell-language-server/build/haskell-language-server/haskell-language-server"
+      ;; haskell-completion-backend 'lsp
+      ;; haskell-enable-hindent 't
+      )
 
 ;;;; Git
 
      (git :variables
           magit-repository-directories
           '(
-            ("~/org/" . 0)
-            ("~/src/" . 1)
-            ("~/src/haskell/" . 1)
-            ("~/src/haskell/my" . 1)
+            ("~/org/"                    . 0)
+            ("~/src/"                    . 1)
+            ("~/src/haskell/"            . 1)
+            ("~/src/haskell/my"          . 1)
             ("~/src/haskell/my/learning" . 1)
-            ("~/src/haskell/community" . 1)
-            ("~/src/nix/" . 1)
-            ("~/src/ref/" . 1)
-            ("~/src/synergy/" . 1)
-            ("~/src/zDone/" . 1)
-            ("~/src/zGarage/" . 1)
-            ("/etc/nixos/" . 0)
-            ("~/" . 0)
-            ("~/.mozilla/" . 0)
-            ("~/.config/" . 0)
-            ("~/.config/fish/" . 0)
-            ("~/.config/fish/functions" . 0)
-            ("~/.config/emacs/" . 0)
-            ("~/.config/spacemacs/" . 0)
-            ("~/.config/git/" . 0)
-            ("~/.config/systemd/user" . 0)
-            ("~/.config/nixpkgs/" . 0)
+            ("~/src/haskell/community"   . 1)
+            ("~/src/nix/"                . 1)
+            ("~/src/ref/"                . 1)
+            ("~/src/synergy/"            . 1)
+            ("~/src/zDone/"              . 1)
+            ("~/src/zGarage/"            . 1)
+            ("/etc/nixos/"               . 0)
+            ("~/"                        . 0)
+            ("~/.mozilla/"               . 0)
+            ("~/.config/"                . 0)
+            ("~/.config/fish/"           . 0)
+            ("~/.config/fish/functions"  . 0)
+            ("~/.config/emacs/"          . 0)
+            ("~/.config/spacemacs/"      . 0)
+            ("~/.config/git/"            . 0)
+            ("~/.config/systemd/user"    . 0)
+            ("~/.config/nixpkgs/"        . 0)
             )
           magit-repolist-columns
           '(
-            ("Name" 25 magit-repolist-column-ident ())
-            ("S" 1 my-magit-repolist-column-stashes ())
-            ("G" 1 magit-repolist-column-dirty ())
-            ("U" 25 my-magit-repolist-column-upstream-state ())
-            ("Path" 99 magit-repolist-column-path ())
+            ("Name" 25 magit-repolist-column-ident             ())
+            ("S"     1 my-magit-repolist-column-stashes        ())
+            ("G"     1 magit-repolist-column-dirty             ())
+            ("U"    25 my-magit-repolist-column-upstream-state ())
+            ("Path" 99 magit-repolist-column-path              ())
             )
 
           magit-repolist-column-flag-alist
           '(
-            (magit-staged-files . "S")
-            (magit-unstaged-files . "U")
+            (magit-staged-files    . "S")
+            (magit-unstaged-files  . "U")
             (magit-untracked-files . "F")
             )
-
-          )
+      )
 
 
      auto-completion    ;; Completion seems not of quality and unrelevant for now
 
+     dhall
      python
      typescript
      plantuml
@@ -611,7 +615,7 @@ This function should only modify configuration layer settings."
       geolocation-enable-weather-forecast t
 
       calendar-location-name "Kyiv, Ukraine"
-      calendar-latitude 50.4755605
+      calendar-latitude  50.4755605
       calendar-longitude 30.4039573
       )
 
