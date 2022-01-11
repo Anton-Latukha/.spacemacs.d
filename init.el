@@ -2550,3 +2550,4 @@ with DRILL_CARD_TYPE nil."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(defun dotspacemacs/emacs-custom-settings ())
